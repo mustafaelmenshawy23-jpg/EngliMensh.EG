@@ -602,3 +602,44 @@ The app's P6 U3 record is **“Vacation Plans”**, centered on holiday/travel a
 
 ### Evidence boundary
 These are direct student-book page observations from the supplied Primary 6 Term 1 PDF, supported by the OCR of the rendered pages. The OCR can distort some individual words, so the report records the clear lesson titles, vocabulary sets and grammar labels rather than relying on uncertain OCR spellings. Units 4–6 still have contents-page evidence only in this pass; their full lesson pages and the Primary 6 Assessment Book remain to be checked.
+
+
+## Primary 6 — detailed continuation: Units 3–6 (4 November 2026)
+
+The supplied 113-page Primary 6 Student Book was rendered page-by-page for this pass; OCR text below was checked against the rendered pages. These are student-book findings, not Assessment Book verification.
+
+### Unit 3 — “Community Builders”
+The sampled Unit 3 pages include community problem-solving and occupations that serve the community. Tasks ask learners to identify a local problem (traffic near school), propose solutions, listen to a dialogue about making posters to improve a park, and identify community roles such as paramedic, architect, mechanic, traffic officer and teacher. Another lesson asks learners to identify a community problem and design a solution; one project page addresses food waste in Egypt and the lack of easy ways to donate surplus food.
+
+The app's Primary 6 Unit 3 is “Vacation Plans”, centered on vacation activities/travel vocabulary (including quad biking) and future plans. This is a confirmed central-topic mismatch against the sampled community-service/problem-solving lessons in the official book.
+
+### Unit 4 — “Resources Around Us”
+The inspected lesson pages establish a strong environmental-resource and energy-conservation focus:
+- “Man-Made Resources” introduces resources people create and use.
+- An informational text explains energy use in Egypt (electricity, gas and solar power), renewable sources such as sun and wind, solar panels and saving energy.
+- A language lesson explicitly teaches **must / mustn't / should / shouldn't** for rules, prohibition and advice, with examples about turning off lights, not wasting water, recycling and not littering.
+- A further reading explains Egypt's underground minerals/resources, including oil, natural gas, gold and iron, and their uses.
+
+The app's P6 Unit 4 is “Celebrate Good Times!” with birthday-party vocabulary and celebration content. This is a confirmed title/topic/grammar-scope mismatch: the supplied book's sampled unit concerns resources, energy and conservation, while the app unit is celebrations.
+
+### Unit 5 — “Made in Egypt”
+The inspected Unit 5 pages include “A Trip Through Time”, travel and museum vocabulary (passport, brochure, exhibition, travel plan, information desk, guided tour), travel verbs (fly, pack, book), and reading/comprehension about Egyptian destinations and projects. A later reading is about **Benban Solar Park**, its solar energy, location near Aswan, solar panels and jobs created. The writing section explicitly teaches **opinion writing** and distinguishing fact from opinion. A review page practices past-simple verb forms and opinion matching.
+
+The app's P6 Unit 5 is “Amazing Journeys”, focused on historical travelers (Marco Polo and Ibn Battuta) and past continuous. There is partial thematic proximity through travel/journeys, but the supplied book's sampled content emphasizes Egyptian-made projects/places, Benban Solar Park and opinion writing; the app record's historical-traveler focus is not established as the same scope. Therefore record this as **partial travel-theme overlap with a confirmed unit-title/scope discrepancy**, not a claim that no travel overlap exists.
+
+### Unit 6 — “Water Savers”
+The inspected Unit 6 pages include a story about Noor, Ahmed and Farida noticing a dripping tap and a broken garden pipe, then proposing a school “Water Savers” initiative. The story is followed by comprehension, discussion of water waste and conservation, and action-oriented tasks. This directly supports the official Unit 6 environmental water-conservation focus.
+
+The app's P6 Unit 6 is “Taking Care”, with vocabulary around mint/herbs and natural care and a conditional **if** structure. The app title and sampled central content do not align with the official “Water Savers” story and water-conservation scope. This is a confirmed title/topic mismatch based on the available samples; a full grammar-by-grammar comparison still requires all Unit 6 pages.
+
+### Primary 6 tracker — revised evidence status
+| Unit | Official book title | App title | Detailed evidence / current finding |
+|---|---|---|---|
+| 1 | Amazing Places in Egypt | Green Cities | Sampled lesson pages; mismatch confirmed |
+| 2 | Our Home | We Are All Different | Sampled lesson pages; mismatch confirmed |
+| 3 | Community Builders | Vacation Plans | Sampled community-service/problem-solving pages; mismatch confirmed |
+| 4 | Resources Around Us | Celebrate Good Times! | Sampled energy/resources/minerals pages; mismatch confirmed |
+| 5 | Made in Egypt | Amazing Journeys | Sampled Egyptian travel/projects/Benban Solar Park and opinion writing; partial travel overlap, scope discrepancy |
+| 6 | Water Savers | Taking Care | Sampled water-conservation story; mismatch confirmed |
+
+The sample-page evidence now extends across all six Primary 6 units, but it is not a full audit of every lesson, exercise, answer key, generated question, or Assessment Book. The matching Primary 6 Assessment Book has not yet been located. No app records or question banks were changed; no APK was built.
