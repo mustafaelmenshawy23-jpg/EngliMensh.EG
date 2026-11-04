@@ -935,3 +935,27 @@ These are direct mismatches in the user-facing Prep card/lesson/exam data source
 5. Add tests for exact title consistency across the unit card, lesson viewer, adaptive exam and MOE mock for all 9 grades and all 6 units.
 
 No source implementation was changed in this pass because a safe content replacement requires the full official unit transcription and page mapping. No APK was built.
+
+## Primary lesson media reuse audit — quantified mapping check (4 November 2026)
+
+The hard-coded `primaryDialogueVideoEmbeds` map in `src/components/PrimaryLessonViewer.tsx` was parsed directly from the current branch. It contains **36 grade/unit keys** (Primary 1–6 × six units) but only **7 distinct YouTube embed IDs**:
+
+| Embed ID | Number of unit keys mapped |
+|---|---:|
+| `8v_4o74Vz8c` | 8 |
+| `tVlcKp3bWH8` | 6 |
+| `fN1CmbGTz-Y` | 7 |
+| `q1xNzLO9K5M` | 7 |
+| `L13_mK_YJCY` | 3 |
+| `V6jD1b7XmR8` | 3 |
+| `hT_nvWreIhg` | 2 |
+
+This confirms systematic reuse: each of the seven IDs is assigned to multiple different grade/unit records. The map comments also use legacy unit titles that conflict with the 2026/2027 Student Book unit titles already documented above. This count alone does not prove what each video contains; the videos still require individual playback/transcript verification. Until that check is complete, none of these links can be treated as verified lesson-specific media. The existing generic fallback behavior is also unsafe because an unmapped unit can receive a default video rather than an explicit “media unavailable” state.
+
+### Required correction
+- Build a lesson-to-media mapping only where the exact video is checked against the corresponding official lesson and its transcript/content.
+- Do not reuse a video across unrelated unit keys merely to fill every slot.
+- Remove generic default playback for missing mappings; show a clear unavailable state or approved supplementary resource label.
+- Keep the video source, checked date, lesson/unit key, and verification note alongside every approved mapping.
+
+No video mapping or application source was changed in this pass. This is a quantified audit finding only; no APK was built.
