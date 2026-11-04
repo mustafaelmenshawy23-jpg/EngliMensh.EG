@@ -252,3 +252,26 @@ Further Unit 1 mismatches established from the supplied book index/sample eviden
 - Primary 3–6 mismatches are recorded in the preceding section.
 
 Important scope note: question-bank title alignment with the app curriculum is not evidence of alignment with the Ministry books. The banks use a shared builder (`buildVerifiedP1P2Suite`) and contain extensive generated practice; all prompts, answer keys, distractors, grammar scope, and unit mapping still need direct source comparison. No exam content was modified in this pass.
+
+
+## Preparatory Unit 1 and Primary 1–2 cross-check (4 November 2026)
+
+The implementation's first-unit titles were checked against the supplied preparatory book contents and the recorded primary book indexes:
+
+| Grade | App Unit 1 | Supplied book Unit 1 | Result |
+|---|---|---|---|
+| Primary 1 | Hello! | Welcome to My School | Title/topic mismatch |
+| Primary 2 | Meet My Family | Let’s Get Started! | Title/topic mismatch |
+| Prep 1 | My Family and Me | Life in a Digital World | Title/topic mismatch |
+| Prep 2 | Coming Home | Gen Alpha | Title/topic mismatch |
+| Prep 3 | Around Town | Personal Identity | Title/topic mismatch |
+
+App source locations:
+- Primary 1–2: `src/data/primary1And2Curriculum.ts`.
+- Preparatory: `src/data/prepStageData.ts` (legacy lesson database) and `src/data/preparatoryCurriculumData.ts` (catalog factory). Prep 1 Unit 1 is also explicitly authored in the latter as “My Family and Me”.
+- Student-book source: user-provided Term 1 PDFs and their indexes / sampled pages as listed in the intake section. The Prep 1 PDF sample pp. 14–16 specifically supports book Unit 1 “Life in a Digital World” and Lesson 1 “A Day in My Digital Life”. Prep 2 and Prep 3 book Unit 1 names are taken from the supplied book indexes previously transcribed in this audit; detailed lesson-page checks remain pending.
+
+This extends the Unit 1 title discrepancy to all six primary grades and all three preparatory grades. These are title/topic-level findings, not a completed content audit: lesson sequences, grammar, vocabulary, passages, exercises, answer keys, and assessment alignment still require page-level comparison.
+
+### Data architecture note
+Preparatory lesson content exists in at least two separate layers: `prepStageData.ts` and the generated catalog in `preparatoryCurriculumData.ts`, plus the Units 4–6 definitions in `preparatoryUnits4To6.ts`. Future corrections must trace which layer is consumed by each screen and exam flow before changing data, to avoid correcting a dormant/legacy file while leaving the live curriculum untouched.
