@@ -469,3 +469,49 @@ The app record in `src/data/primary5And6Curriculum.ts` calls P5 U4 **“Visiting
 | Unit 4 | “My Community”; community places and Egyptian village life in opening lessons | “Visiting Elephantine Island”; Aswan/Nubian tourism and past continuous | Confirmed title and opening-scope mismatch |
 
 Exact page references for Unit 4 should be visually checked before final publication; the text extraction identifies the Unit 4 opening around printed pages 61–65. No app data was modified and no APK was built.
+
+
+## Primary 5 — Units 5 and 6 page/index-level comparison (4 November 2026)
+
+The supplied Primary 5 Term 1 PDF metadata identifies the edition year as **2026–2027** (the extracted imprint shows 2026–2027, 116 pages, and a 2026 deposit number). This strengthens the edition identification for this particular Primary 5 file; it does not independently authenticate the other eight grade PDFs.
+
+### Unit 5 — “Our World, Our Resources”
+The student-book unit framework lists the following scope:
+- Vocabulary: sunlight, water, soil, fossil fuel, minerals, wind, natural resources, cotton, electricity, fertile, cargo, digger, give up, cheerfully, path, thick, load.
+- Language in use: formation and usage of comparative adjectives.
+- Reading: informational texts about Egypt's natural resources and their uses.
+- Writing: object-perspective narratives.
+- Listening: stories and factual texts about the environment and resource use.
+- Speaking: talk about resource use and conservation; express comparisons using comparative adjectives.
+- Prefixes are also an explicit skills target.
+The inspected lesson pages include “The Gifts of Nature”, “Treasures of Egypt” (Nile water, oil/natural gas, cotton/wheat/fruit, fertile Delta land, gold/iron), and “Metals and Minerals in Our World” (“Hidden Treasures”, gold/diamond/copper/iron, mining, non-renewable resources and responsible use).
+
+The app's P5 Unit 5 record in `src/data/primary5And6Curriculum.ts` is **“Jobs We Do”** and focuses on Ancient Egyptian craftsmen, scribes, traders, papyrus and clay pots; its phonics/word study target is the negative prefix **un-**, and its grammar target is past/present ability with **could/couldn't/can**. The P5 U5 exam suite in `src/data/questionBanks/primary5And6Exams.ts` repeats “Jobs We Do” and the same Ancient Egyptian occupations.
+
+**Finding:** confirmed title, topic, vocabulary, and grammar-scope mismatch. There is some broad historical/cultural proximity (Egyptian context), but the supplied book's Unit 5 is about natural resources, conservation, comparative adjectives, prefixes and object-perspective writing—not an occupations unit about scribes and craftsmen. The app's un- prefix target also differs from the framework's listed prefix skill; the exact prefix taught in all book lessons still needs full page-level review.
+
+### Unit 6 — “The Talking Earth”
+The student-book framework identifies Unit 6 as a literary narrative about nature and environmental identity. Its stated scope includes:
+- expressive sentence structures and tense reflection (present vs. past);
+- narrative listening for details and thematic understanding;
+- speaking about emotions, personal reflections, and connection with nature;
+- writing creative reflections on personal and environmental themes.
+The Unit 6 learning-outcomes page specifically asks students to answer questions about the story, analyze story elements, answer critical-thinking questions, and rewrite the story from the heroine's perspective. The story vocabulary includes canoe, Earth, Everglades, alligator, owl, National Park, shell, scientist, swamp and splash. The story follows Billie Wind, a young girl who doubts that the Earth can teach people; after entering the Everglades, she learns survival skills by observing animals and recognizes that nature communicates through its sounds and patterns. The inspected story pages include comprehension, event sequencing, true/false and story-response activities.
+
+The app's P5 Unit 6 record in `src/data/primary5And6Curriculum.ts` is **“What's the Weather Like?”**, centered on tornado, sandstorm, heatwave, breeze and thermometer, with future predictions using **will/won't** and question tags. The matching P5 U6 exam suite in `src/data/questionBanks/primary5And6Exams.ts` repeats that weather title and scope.
+
+**Finding:** confirmed title, genre, topic, vocabulary and grammar-scope mismatch. Both units touch broad environmental themes, but the official Unit 6 is a literary story and reflective narrative task, not a weather-forecast unit. Future predictions with will/won't are not the stated central grammar outcome in the supplied Unit 6 framework.
+
+### Primary 5 — consolidated six-unit status
+| Unit | Supplied student-book title | Current app title | Current finding |
+|---|---|---|---|
+| 1 | Food, Nature, and Culture | We Plant Our Food | Title/topic and sequence mismatch; book sample includes Nile life, desert animals, adverbs of frequency, The Giving Tree, consonant clusters and koshari recipe writing |
+| 2 | My Healthy Body | I Want to Be Healthy | Partial thematic overlap; sampled official outcomes include countable/uncountable nouns and a/an/some/any, while app emphasizes good at/bad at + -ing and diphthongs; full unit still pending |
+| 3 | When Nature Changes | How Do I Look? | Confirmed topic/scope mismatch |
+| 4 | My Community | Visiting Elephantine Island | Confirmed title and opening-scope mismatch |
+| 5 | Our World, Our Resources | Jobs We Do | Confirmed title/topic/grammar-scope mismatch |
+| 6 | The Talking Earth | What's the Weather Like? | Confirmed title/topic/genre/grammar-scope mismatch |
+
+**Grade-level conclusion:** Primary 5 now has a student-book title/scope comparison for all six units, with sampled detailed lesson evidence for Units 1, 2, 3, 4, 5 and 6. This is not yet a complete verification of every page, exercise, answer key, or assessment item. Unit 2 remains a partial-overlap finding; Units 3–6 have confirmed central-scope discrepancies. The matching Primary 5 Assessment Book has not been located in the available files, so assessment alignment remains unverified.
+
+No app curriculum records or question banks were changed. No APK was built.
