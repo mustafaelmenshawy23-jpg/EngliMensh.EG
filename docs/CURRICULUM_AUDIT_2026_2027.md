@@ -1002,3 +1002,27 @@ The source re-check also reconfirmed two separate structural risks:
 The previous conversation's uploaded Student Book references for Primary 1–6 and Preparatory 1–3 are not currently resolvable through the active Files index, and a Library search/list did not rediscover the PDFs. The official Ministry-hosted 2026 Term 1 Student Book URLs were rediscovered through the Port Said English Inspectorate's link compilation, but the PDF files were too large for the browser extraction endpoint and direct container download was blocked by network DNS resolution in this session. Therefore this pass did not pretend to complete a new page-by-page transcription. The prior recorded contents-page and sampled-page findings remain provisional until the actual PDF pages can be read again.
 
 No application source files or curriculum content were changed. Only this audit report was corrected and extended. No APK was built.
+
+
+## Primary 1–6 full unit-title inventory from live app source (4 November 2026)
+
+The six-unit arrays were fetched from the current audit branch and their `unitTitleEn` fields enumerated. This is a source inventory, not a claim that these titles or lessons match the Student Books.
+
+| Grade | Current app Unit 1–6 titles |
+|---|---|
+| Primary 1 | Hello!; This is me!; My School Bag; It; With My Family; Let |
+| Primary 2 | Meet My Family; My Body; Off to School; Time to Play Sports!; My Day; Healthy Habits |
+| Primary 3 | I Feel Happy!; What; On the Weekend; I Love My Home; At the Zoo; Let |
+| Primary 4 | I Feel Good; Desert Animals; Why Are Plants Green?; Where Do You Live?; Where Do You Work?; What Do You Do? |
+| Primary 5 | We Plant Our Food; I Want to Be Healthy; How Do I Look?; Visiting Elephantine Island; Jobs We Do; What |
+| Primary 6 | Green Cities; We Are All Different; Vacation Plans; Celebrate Good Times!; Amazing Journeys; Taking Care |
+
+Several values are truncated or incomplete (`It`, `Let`, `What`) in source fields, which is an additional content-quality issue. The earlier official Student Book contents inventory recorded in this report gives different unit sequences for all six grades. The current app titles therefore cannot be treated as a faithful 2026/2027 replacement. A full content rebuild is required rather than renaming these records.
+
+## User authorization and implementation boundary (4 November 2026)
+
+The user explicitly authorized a complete replacement of Primary 1–6 curriculum content, including creating a fresh application if necessary. The immediate agreed scope is Primary 1–6; Preparatory 1–3 Student Books were also previously supplied and remain in the wider audit scope, but are not part of this Primary replacement authorization. The user requested that previously uploaded Student Books be recovered from prior conversations rather than asking for duplicate uploads.
+
+The conversation history confirms the six Primary Student Book filenames and prior contents-page extraction. However, the old attachment refs are not currently resolvable in the active Files context and the PDFs are not present in the current Library listing. Until the actual PDFs can be reopened or their bytes recovered, it is unsafe to write the complete book-derived lessons, vocabulary, grammar, passages, questions, distractors, and answer keys from memory or from unit-title summaries. Do not replace the production app with invented or templated content. The official Ministry link compilation currently discoverable points to `/2026/` files; at least one parsed book explicitly identifies academic year 2025/2026, so those links must not be silently substituted for the 2026/2027 books.
+
+Next implementation sequence once the source PDFs are accessible: (1) add source PDFs or stable source references to a dedicated `curriculum-sources/primary/` area on the rebuild branch; (2) transcribe and page-map every unit in all six grades; (3) build a canonical Primary curriculum data layer from that transcription; (4) replace legacy content and remove generated/unsupported `verified` labels and unrelated fallbacks; (5) add automated tests comparing unit titles, lesson content, exercise keys, and exact grade/unit routing; (6) run validation only. No APK until the user explicitly authorizes it after the complete audit.
