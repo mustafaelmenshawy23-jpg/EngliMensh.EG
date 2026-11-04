@@ -515,3 +515,30 @@ The app's P5 Unit 6 record in `src/data/primary5And6Curriculum.ts` is **“What'
 **Grade-level conclusion:** Primary 5 now has a student-book title/scope comparison for all six units, with sampled detailed lesson evidence for Units 1, 2, 3, 4, 5 and 6. This is not yet a complete verification of every page, exercise, answer key, or assessment item. Unit 2 remains a partial-overlap finding; Units 3–6 have confirmed central-scope discrepancies. The matching Primary 5 Assessment Book has not been located in the available files, so assessment alignment remains unverified.
 
 No app curriculum records or question banks were changed. No APK was built.
+
+
+## Primary 5 — source edition and Unit 5/6 reconciliation notes (4 November 2026)
+
+A further retrieval of the Primary 5 PDF confirms its imprint metadata: the file states **2026–2027**, 116 pages, and carries a 2026 deposit number. This is direct edition metadata for the supplied Primary 5 Student Book (not proof about the other grade files).
+
+### Student-book framework detail clarified
+The Unit 5 learning-outcomes page explicitly names:
+- speaking about natural resources in Egypt and their importance;
+- identifying stressed syllables in words with prefixes;
+- listening to a dialogue and answering comprehension questions;
+- reading comprehension about natural resources;
+- writing sentences with comparative adjectives and a descriptive paragraph about natural resources and conservation.
+
+This supplements the earlier Unit 5 comparison: the official learning-outcomes page does **not** describe an Ancient Egyptian occupations unit.
+
+The Unit 6 learning-outcomes page explicitly identifies “The Talking Earth” (by Jean Craighead George) as a story unit. Its learning outcomes are story comprehension, analysis of story elements, critical-thinking questions, discussion, and rewriting the story from the heroine's perspective. The story's central character is Billie Wind, who learns to understand nature while surviving in the Everglades. The framework also lists reflective narrative skills and present-versus-past tense reflection.
+
+### Unit 5/6 application assessment linkage
+The app exam-bank file confirms the mismatch is carried into the assessment layer:
+- `p5_u5_exams` is titled “Jobs We Do” and tests scribes/craftsmen, matching the app's non-book-aligned Unit 5 record rather than the book's natural-resources Unit 5.
+- `p5_u6_exams` is titled “What's the Weather Like?” and tests weather vocabulary/future predictions, matching the app's weather unit rather than the book's literary story “The Talking Earth”.
+
+This is a confirmed curriculum-to-exam-bank propagation issue for Primary 5 Units 5 and 6. It does not prove that every question is invalid, but the suites are mapped to the wrong official unit scope and cannot be marked as aligned to the supplied book.
+
+### Evidence and boundaries
+The student-book index and learning-outcomes pages, plus the Unit 5 lesson extracts and Unit 6 story/outcome extracts, support the scope findings. The full Unit 5/6 pages and every generated question have not yet been individually transcribed and checked. The Primary 5 Assessment Book remains absent from the retrieved source set. No content changes were made to the app.
