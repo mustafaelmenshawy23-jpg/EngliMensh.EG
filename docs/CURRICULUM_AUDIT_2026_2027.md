@@ -906,3 +906,32 @@ No runtime source code was modified in this audit pass. No APK was built.
 
 ### Assessment Book inventory follow-up (4 November 2026)
 A metadata listing of the user's Library returned 84 items with no pagination cursor. Filtering the complete returned filenames for assessment/evaluation terms and English/Connect/New Hello/Prep/Primary terms found only `englimensh-android-prep.zip`; no Primary or Preparatory English Assessment Book PDF/file was listed. This is stronger than the earlier zero-result semantic search, but still only describes the currently visible Library inventory. The previously attached Student Books remain available through their conversation file references; no Assessment Book reference has been identified in the available Library listing or prior file inventory. Therefore, Assessment Book-based verification remains blocked by missing source material, and the audit must not claim those assessments were checked.
+
+## Primary/Prep lesson viewer source trace — direct user-facing defects (4 November 2026)
+
+### 1. Primary lesson viewer is fed by the incomplete legacy database
+src/components/CurriculumExplorer.tsx directly imports getPrimaryLesson from primaryStageData.ts. Both the highlighted “Connect 3-Tab Studio & 5-Level Adaptive Exam” action and the regular Explore Lessons action call getPrimaryLesson(`primary_${unit.grade}`, unit.unitNumber, 'connect', unit.semester). When a record exists, the app opens PrimaryLessonViewer with that record; otherwise it falls back to LessonViewerModal using the master catalog UnitCurriculum. Since the imported primaryCurriculumDatabase is the same 18-record P1–P3 database already identified, P4–P6 cannot open the dedicated primary studio from this path and instead open a different data pipeline. This creates grade-dependent behavior for the same visible lesson actions.
+
+### 2. The fallback in getPrimaryLesson can return an unrelated lesson
+primaryStageData.ts first tries exact grade/unit/track/term, then any record with the same grade and unit number, then the first record for the grade. The final two fallbacks ignore requested track/term and, in the final case, unit number. The caller does not receive a missing-record error; it may open a different lesson while the student believes they selected the requested unit. This is a confirmed code-level defect; no user-facing reproduction has been run in this audit.
+
+### 3. Primary lesson video labels and URLs are not tied to the canonical book record
+PrimaryLessonViewer.tsx contains a hard-coded primaryDialogueVideoEmbeds map whose unit labels reproduce the legacy unit titles already shown to mismatch official Term 1 contents. It reuses a small set of YouTube embed IDs across many different grade/unit keys. If a unitId has no map entry, targetVideoUrl silently defaults to the same generic embed URL. The component comments describe the entries as “Official & Curated Connect Educational Dialogue Video Embeds”, but the map itself has no source/page/audio evidence linking any video to the corresponding official lesson. Until each video is checked, these should not be represented as official book media; missing mappings should not silently play a generic unrelated video.
+
+### 4. The Prep stage screen's first units are demonstrably off-syllabus
+prepStageData.ts is a directly imported source for the Prep unit cards and five-level suite in ExamsHub. The first entries inspected are:
+- Prep 1 Unit 1 “My Family and Me” (voluntary work, orphans, musical instruments, chess, Heidi) vs the Student Book's “Life in a Digital World” (technology/digital-life blog, search/website/screen vocabulary, parts of speech and daily technology routine).
+- Prep 2 Unit 1 “Coming Home” (daily routine, chores, railway line, The Railway Children) vs the official contents title “Gen Alpha”.
+- Prep 3 Unit 1 “Around Town” (Ismailia directions, transport and monuments) vs the official contents title “Personal Identity”.
+- Prep 1 Unit 2 “It's My Favourite Subject” (school timetable and subjects) is another legacy title; the official contents title for Prep 1 Unit 2 is “Learning to Learn”.
+
+These are direct mismatches in the user-facing Prep card/lesson/exam data source. The same Prep grade can therefore expose one title/content in ExamsHub and a different title/content from the master catalog in other screens.
+
+### Required next actions
+1. Remove the grade/unit/term-ignoring fallbacks in getPrimaryLesson; return a typed missing-data result and show the correct unavailable state instead of a different lesson.
+2. Make all Primary screens resolve from one canonical, book-backed record; do not route P4–P6 to a different source merely because the legacy database is empty.
+3. Replace Prep cards, lesson content and five-level suites from prepStageData.ts only after transcribing the corresponding official Student Book and Assessment Book pages.
+4. Audit every embedded video against the exact lesson, source, transcript and rights/availability; remove generic fallback playback and unsupported “official” claims.
+5. Add tests for exact title consistency across the unit card, lesson viewer, adaptive exam and MOE mock for all 9 grades and all 6 units.
+
+No source implementation was changed in this pass because a safe content replacement requires the full official unit transcription and page mapping. No APK was built.
