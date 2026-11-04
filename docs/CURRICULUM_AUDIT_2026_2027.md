@@ -959,3 +959,20 @@ This confirms systematic reuse: each of the seven IDs is assigned to multiple di
 - Keep the video source, checked date, lesson/unit key, and verification note alongside every approved mapping.
 
 No video mapping or application source was changed in this pass. This is a quantified audit finding only; no APK was built.
+
+
+## Preparatory Unit 1 sample — independent English-language QA (4 November 2026)
+
+A close read of the current `prepStageData.ts` Prep 1 Unit 1 record (the app's legacy “My Family and Me” unit, not the official Student Book's “Life in a Digital World”) exposed language-quality issues even before syllabus alignment is considered:
+
+| Current app wording | Recommended correction | Issue |
+|---|---|---|
+| “the children hospital” | “the children's hospital” | Missing possessive form |
+| “they have the same age” | “they are the same age” | Incorrect collocation |
+| “I like playing drums” | “I like playing the drums” | Missing article for a musical instrument |
+| “At the children hospital.” | “At the children's hospital.” | Repeats the possessive-form error |
+| “prepares healthy breakfast for me” | “prepares a healthy breakfast for me” | Missing article before singular countable noun |
+
+These are app-authored sample strings and general English usage corrections; they are **not** claims about errors in the Ministry textbook. Because the containing Prep 1 Unit 1 is already demonstrably off-syllabus, do not patch isolated strings and leave the legacy unit active as if that repaired its curriculum alignment. When the official unit is rebuilt, re-check every example, dialogue answer, reading, model answer, and distractor for grammar, naturalness, punctuation, age appropriateness, and source alignment.
+
+No application content was edited in this sample pass. No APK was built.
