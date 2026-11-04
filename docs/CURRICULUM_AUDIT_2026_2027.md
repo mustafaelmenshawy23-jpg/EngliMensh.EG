@@ -696,3 +696,32 @@ A page-render/OCR pass on the original PDF corroborated the earlier Unit 3–6 n
 - Around pages 85–95, Unit 6 contains the “Water Savers” school story about a dripping tap and broken pipe, followed by water-conservation activities and review.
 
 These rendered-page samples support the scope findings but do not replace complete transcription of all pages or a matching Assessment Book. Exact page-number references above are PDF page positions, not asserted printed page numbers.
+
+
+## Primary 4 — Unit 2 detailed student-book comparison (4 November 2026)
+
+The supplied Primary 4 Term 1 Student Book's Unit 2 learning-outcomes page and lesson pages were rendered and read.
+
+### Official Unit 2 scope
+The inspected learning outcomes require learners to:
+- discuss ways to help their community and share stories about community history/traditions;
+- identify solutions to community problems and distinguish /f/ and /v/ sounds;
+- answer questions about how people help their community;
+- suggest solutions to community problems;
+- describe traditions and festivals of the Delta region and Upper Egypt;
+- write sentences about helping the community, a diary entry about community history, and a poster about a community problem and solution.
+
+Sampled lessons include:
+- “Helping Hands”: clean streets, plant trees, feed animals, volunteer in the community park, collect clothes for people in need;
+- “Problems and Solutions”: reducing traffic by walking/cycling or using school buses, and addressing litter with bins;
+- present simple negative and question forms (don't/doesn't; do/does);
+- “My Culture”: Delta and Upper Egypt traditions, Spring Festival, sugar-cane harvest, crafts, pottery, carpets, Nubian house designs and clothing;
+- prefixes dis-, il-, ir- for opposites;
+- a diary entry about how a neighborhood changed over 50 years and a poster proposing community solutions.
+
+### Application comparison
+The live Primary 4 curriculum record in `src/data/primary3And4Curriculum.ts` labels Unit 2 **“Desert Animals”**. The official Unit 2 sample is community service, local problems/solutions, Egyptian regional culture and community history. This is a confirmed title and central-topic mismatch. The book's grammar and skills include present-simple question/negative forms, prefixes and /f/–/v/ pronunciation; the app's Unit 2 must be checked at lesson/question level before any finer grammar claim is made.
+
+No Assessment Book comparison was possible because the corresponding Primary 4 Assessment Book has not been located in the available source set. This is a sampled Unit 2 comparison, not a claim that every page or assessment item has been checked.
+
+No app content was modified and no APK was built.
