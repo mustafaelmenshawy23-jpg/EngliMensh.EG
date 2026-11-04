@@ -19,7 +19,7 @@ function render(){
   app.innerHTML = `
     <header class="topbar"><div class="brand"><div class="mark">E</div><div><strong>إنجليمنش</strong><small>EngliMensh · English, step by step</small></div></div><span class="tag">المناهج المصرية</span></header>
     <main>
-      <section class="hero"><div><p class="eyebrow">LEARN · PRACTICE · ACHIEVE</p><h1>الإنجليزي… خطوة بخطوة</h1><p>من أولى ابتدائي إلى ثالثة إعدادي، في مكان واحد.</p></div><div class="hero-art" aria-hidden="true">Aa</div></section>
+      <section class="hero"><div><p class="eyebrow">LEARN · PRACTICE · ACHIEVE</p><h1>الإنجليزي… خطوة بخطوة</h1><p>من أولى ابتدائي إلى ثالثة ثانوي، بنظامي الثانوية العامة والبكالوريا المصرية.</p></div><div class="hero-art" aria-hidden="true">Aa</div></section>
       <section class="selector card">
         <label>اختار الصف<select id="grade">${curriculum.grades.map(x=>`<option value="${x.id}" ${x.id===selectedGrade?'selected':''}>${esc(x.label)}</option>`).join('')}</select></label>
         <label>اختار الترم<select id="term">${g.terms.map(x=>`<option value="${x.id}" ${x.id===selectedTerm?'selected':''}>${esc(x.label)}</option>`).join('')}</select></label>
