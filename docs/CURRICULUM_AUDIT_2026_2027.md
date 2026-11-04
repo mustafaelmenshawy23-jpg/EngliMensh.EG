@@ -580,3 +580,25 @@ The Unit 1 mismatch is already supported by sampled book pages: “Amazing Place
 The PDF's index also exposes the intended Unit 2–6 language areas in summary form (including present continuous in Unit 2, modal verbs in Units 3–4, past simple in Unit 5, and a water-related Unit 6 vocabulary set); these summary cues are not a substitute for the full unit pages. The assessment book for Primary 6 has not yet been located in the current source set.
 
 No application curriculum or question-bank content was changed. No APK was built.
+
+
+## Primary 6 — Unit 2 and Unit 3 opening-page follow-up (4 November 2026)
+
+The original Primary 6 PDF was rendered page-by-page to inspect the first two units beyond the contents page.
+
+### Unit 2 — “Our Home”
+The sampled Unit 2 opening pages include:
+- “Caring for Plants”: vocabulary and tasks on natural fertilizer, weeds, hibiscus, basil, pulling out weeds, watering and caring for plants; a dialogue between Laila and her grandfather about the garden; comprehension and vocabulary-in-context exercises.
+- A weather-in-Egypt text comparing Alexandria (windy/rainy), Cairo (warm/sunny) and Aswan (hot), with comprehension questions about weather and safety.
+- A full “Present Continuous” lesson covering actions happening now, negative forms and question forms, with sentence transformation and gap-fill exercises.
+The official unit learning-outcomes page also lists plant care, weather in different places, listening for main ideas/details, pronunciation of /e/ and /ɪ/, reading about plants/weather/animal habitats in Egypt, present-continuous writing and a short story task.
+
+The app's P6 U2 record is **“We Are All Different”**, with personality adjectives and relative pronouns. This is a confirmed topic and grammar-scope mismatch against the supplied book's plant-care/weather/habitat and present-continuous content.
+
+### Unit 3 — “Community Builders”
+The Unit 3 learning-outcomes page identifies jobs that help the community, listening to conversations about helping people, describing jobs, talking about ability and permission, reading key vocabulary and biography/famous-person texts, and writing a biography. The opening lesson “Jobs that Help the Community” teaches paramedic, architect, water-resources engineer, mechanic, tailor, delivery person, street cleaner and traffic officer. Sample dialogue and comprehension tasks ask why these jobs matter and what different workers do.
+
+The app's P6 U3 record is **“Vacation Plans”**, centered on holiday/travel activities. This is a confirmed title/topic mismatch against the supplied book's community occupations and biography-writing unit.
+
+### Evidence boundary
+These are direct student-book page observations from the supplied Primary 6 Term 1 PDF, supported by the OCR of the rendered pages. The OCR can distort some individual words, so the report records the clear lesson titles, vocabulary sets and grammar labels rather than relying on uncertain OCR spellings. Units 4–6 still have contents-page evidence only in this pass; their full lesson pages and the Primary 6 Assessment Book remain to be checked.
