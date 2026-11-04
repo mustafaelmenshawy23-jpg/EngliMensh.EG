@@ -801,3 +801,44 @@ Preparatory path:
 
 ### Immediate audit consequence
 The first preparatory priority is the actual catalog factory `preparatoryCurriculumData.ts`, while separately tracing lesson viewer and exam consumers. The first primary priority is to reconcile the live catalog/database/injector path with the `primaryStageData.ts` lesson viewer path and the separate grade curriculum files. No source code was edited in this trace; no APK was built.
+
+
+## Critical live-content findings — catalog/data transformation audit (4 November 2026)
+
+A deeper read of the exact live source files found structural defects that affect what students can be shown, independent of the earlier title comparisons.
+
+### 1. Primary live catalog currently contains only Primary 1–3
+`src/data/primaryCurriculumData.ts` constructs all six grade catalog entries by filtering `primaryCurriculumDatabase` for `primary_1` through `primary_6`. But the actual live `src/data/primaryCurriculumDatabase.ts` contains only **18 unit records**, IDs `p1_t1_c_u1` through `p3_t1_c_u6`:
+- Primary 1: 6 units
+- Primary 2: 6 units
+- Primary 3: 6 units
+- Primary 4: 0 records in this database
+- Primary 5: 0 records in this database
+- Primary 6: 0 records in this database
+
+Consequently, the master catalog's Primary 4–6 entries are created with empty Term 1 unit arrays by this path, even though separate files `primary3And4Curriculum.ts` and `primary5And6Curriculum.ts` contain content. Those separate files are not imported by the direct primary catalog builder `primaryCurriculumData.ts` or by `primaryCurriculumInjector.ts` in the inspected chain. They may have other consumers, but they do not populate this primary master catalog path as currently written. This is a major integration defect requiring correction after a complete content mapping.
+
+### 2. Primary adapter fabricates reading/listening modules from unrelated fields
+In `primaryCurriculumInjector.ts`, `convertPrimaryLessonToUnitCurriculum()` currently:
+- marks every converted unit `verificationStatus: 'verified'` and creates a generic MOE source reference without page evidence;
+- creates a “Story & Reading” passage by concatenating vocabulary example sentences, rather than using a supplied book reading passage;
+- creates a “Phonics & Pronunciation Track” listening transcript by concatenating vocabulary conversation terms, rather than using a supplied audio transcript;
+- maps contextual question-bank items into listening questions and duplicates them as listening exercises;
+- maps the four exam-suite levels into a single unit exam, assigning alternating Vocabulary/Grammar skill labels regardless of the original question's actual skill.
+
+These are data-transformation facts from the live adapter. They do not prove every generated sentence or question is wrong, but the resulting modules must not be represented as official reading/listening material or verified Ministry content without source-page/audio evidence.
+
+### 3. Primary term revision exam truncates coverage
+`createPrimaryRevisionExam()` takes up to the first three questions from each unit, then applies `slice(0, 16)`. With six units, this means the 16-question revision exam can draw from the first five units only and may omit Unit 6 entirely; it is not a balanced six-unit sampling strategy as the code comment suggests. This requires a corrected blueprint and explicit unit coverage tests.
+
+### 4. Preparatory unit construction path
+`preparatoryCurriculumData.ts` directly creates Prep 1–3 Units 1–3 with the generic `createPrepUnit()` factory and appends imported Units 4–6 from `preparatoryUnits4To6.ts`. Thus the earlier confirmed app-vs-book Unit 1 title mismatches are on the actual master-catalog path, not only in an orphan file. The same generic factory injects a templated dialogue, generic reading MCQs and model answers into each created unit; some of these are marked `verificationStatus: 'verified'` and the reading title uses “Official Comprehension Text” without page-level provenance in this audit.
+
+### Required repair sequence
+1. Rebuild the primary master catalog integration so all six grades have the correct book-derived unit records; do not simply import mismatched legacy records as a shortcut.
+2. Replace the primary adapter's synthetic reading/listening generation with explicit book-backed fields and source evidence; otherwise mark those modules as supplementary practice and never as official book passages/transcripts.
+3. Rebuild revision exam selection to cover all units according to a documented assessment blueprint.
+4. Rebuild preparatory Units 1–3 from the corresponding Student Book and Units 4–6 from both Student Book and Assessment Book, then audit every generated question and expected answer.
+5. Add automated tests asserting expected unit counts per grade, no empty grade catalog, valid question mappings, source-evidence status, and complete revision coverage.
+
+No curriculum source was modified in this audit pass: the exact replacement content and answer keys must first be transcribed and checked against all relevant book pages. No APK was built.
