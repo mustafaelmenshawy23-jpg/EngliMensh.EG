@@ -32,6 +32,9 @@ jobs:
 
       - name: Setup Android SDK (API 36)
         uses: android-actions/setup-android@v3
+        with:
+          # Install only current SDK packages; the legacy "tools" package no longer exists.
+          packages: 'platform-tools platforms;android-36 build-tools;36.0.0'
 
       - name: Install Node dependencies (Reproducible via package-lock.json)
         run: |
