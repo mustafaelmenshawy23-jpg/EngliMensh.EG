@@ -357,3 +357,18 @@ The official student-book contents list for Prep 1–3 must be used to confirm t
 | Preparatory 3 | Unit 1 mismatch; detailed Units 2–6 and assessments pending |
 
 No app curriculum content was changed in this audit pass. No APK was built. The next evidence pass must continue unit-by-unit through the remaining official student-book pages, then compare the assessment books (not yet supplied for the nine grades in the current source set), then trace the live application import/selection path before modifying data. Until that is done, none of the nine grades is fully verified.
+
+
+## Live catalog/import-path risk — traced (4 November 2026)
+
+A further source trace found that the detailed primary files already inspected are not necessarily the records used by the grade catalog:
+
+- primaryCurriculumData.ts imports primaryCurriculumDatabase.ts and converts that database through primaryCurriculumInjector.ts.
+- primaryCurriculumInjector.ts explicitly sets injectedPrimaryCurriculumDatabase to primaryCurriculumDatabase and its header comment calls the database “all 36 verified units”.
+- The primary1And2Curriculum.ts, primary3And4Curriculum.ts, and primary5And6Curriculum.ts files contain detailed alternative curriculum arrays, but they are not imported by the two primary catalog files just inspected. Do not edit those alternative files alone and assume the running app has changed.
+- primaryCurriculumInjector.ts maps questions into curriculum questions with verificationStatus: 'verified' and constructs sourceReference values from a generic “Egyptian MOE Connect Series” string. This is not page-level evidence. Those generated verification flags/source references must be audited and corrected at the actual live data source.
+- preparatoryCurriculumData.ts imports the generated Units 4–6 from preparatoryUnits4To6.ts. prepStageData.ts separately exports prepCurriculumDatabase with the Unit 1 records. There are therefore at least two preparatory content paths to trace through the grade catalog and UI before any edits.
+
+This means the next implementation step is not simply to replace the mismatched title strings. First identify every live consumer of primaryCurriculumData, prepCurriculumDatabase, and preparatoryCurriculumData; then choose one canonical source per grade and remove or explicitly mark duplicate/legacy catalogs. A build-only pass cannot prove which curriculum source is rendered.
+
+No curriculum implementation was changed in this pass. No APK was built.
