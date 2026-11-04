@@ -643,3 +643,45 @@ The app's P6 Unit 6 is “Taking Care”, with vocabulary around mint/herbs and 
 | 6 | Water Savers | Taking Care | Sampled water-conservation story; mismatch confirmed |
 
 The sample-page evidence now extends across all six Primary 6 units, but it is not a full audit of every lesson, exercise, answer key, generated question, or Assessment Book. The matching Primary 6 Assessment Book has not yet been located. No app records or question banks were changed; no APK was built.
+
+
+## Primary 6 — Units 4–6 lesson-page comparison (4 November 2026)
+
+The Primary 6 PDF was rendered and OCR-read at the relevant unit pages. These are student-book observations, not Assessment Book verification.
+
+### Unit 4 — “Resources Around Us”
+The inspected Unit 4 lessons include:
+- saving energy at home, school and in streets; electricity, gas and solar power; clean energy from sun and wind; turning off lights/devices, efficient cooking, walking or cycling;
+- modal verbs **must / mustn't / should / shouldn't** for rules, prohibition and advice;
+- Egypt's underground natural resources: oil, natural gas, gold, iron, minerals and soil; their locations, uses and importance;
+- man-made resources and materials: plastic, glass, bricks and paper, with recycling/reuse advice;
+- the High Dam: its construction (1960–1970), flood/drought management, irrigation and electricity generation.
+The application Unit 4 record is **“Celebrate Good Times!”**, centered on celebrations/birthday events and related vocabulary. This is a confirmed central-topic mismatch; there is no evident match between the sampled official resources/energy/materials/High Dam sequence and the app's celebration scope.
+
+### Unit 5 — “Made in Egypt”
+The official Unit 5 learning-outcomes page identifies:
+- speaking about important places and projects in Egypt and expressing opinions about modern cities and clean energy;
+- listening for specific information about Egyptian places/projects and recognizing main ideas in descriptions of cities;
+- recognizing modern and historical Egyptian projects;
+- distinguishing facts from opinions in factual/opinion-based texts;
+- using regular past-simple affirmative and negative forms, including final sounds /d/, /t/ and /ɪd/;
+- writing an opinion paragraph with reasons/examples and creating a display board about an object in the Grand Egyptian Museum.
+The inspected lessons include a trip-through-time/museum and travel vocabulary (passport, luggage, souvenir, brochure, exhibition, information desk, guided tour), a text about Al Galala City, a listening/reading segment on the Grand Egyptian Museum, and opinion writing around Benban Solar Park and clean energy. The app Unit 5 record is **“Amazing Journeys”**, centered on Marco Polo/Ibn Battuta and past continuous. The topic, genre and grammar focus differ from the official Egyptian projects/museums/opinion-writing/past-simple unit.
+
+### Unit 6 — “Water Savers”
+The inspected Unit 6 pages introduce water-saving vocabulary including **drip, overflow, puddle, leak, hallway, hose, tap, pipe, drop, precious, resources, leaky** and a story about Noor, Ahmed and Farida noticing leaking taps and overflowing water at school. They investigate waste, document problems, create posters (“Turn off the tap while brushing!” / “Every drop counts. Fix leaks fast!”), and persuade their school community to conserve water. Tasks assess story characters/setting/events, sequencing, comprehension and a student response/poster about saving water.
+The app Unit 6 record is **“Taking Care”**, centered on mint/herbal and health/nature-care vocabulary with a conditional **if** grammar target. The official sampled unit is specifically a water-conservation school project and narrative; the app's herbal-care/conditional scope does not match this central content.
+
+### Primary 6 tracker — updated
+| Unit | Official student-book title | App title | Current evidence |
+|---|---|---|---|
+| 1 | Amazing Places in Egypt | Green Cities | Sampled lesson-page mismatch |
+| 2 | Our Home | We Are All Different | Contents-page title mismatch; prior sampled pages show home/weather and present continuous |
+| 3 | Community Builders | Vacation Plans | Sampled job/community scope mismatch |
+| 4 | Resources Around Us | Celebrate Good Times! | Sampled energy/resources/materials/High Dam vs celebrations; mismatch confirmed |
+| 5 | Made in Egypt | Amazing Journeys | Official outcomes and sampled museum/city/solar-project pages vs historical journeys/past continuous; mismatch confirmed |
+| 6 | Water Savers | Taking Care | Sampled water-conservation story/project vs herbal-care/conditional scope; mismatch confirmed |
+
+**Boundary:** the page-level sample now supports meaningful scope comparisons for Units 1–6, but it is not a line-by-line audit of every lesson, exercise, answer key or test item. Primary 6 Assessment Book remains unlocated. The PDF imprint and complete edition/year identification should be recorded separately from the Primary 5 book's 2026–2027 imprint; no claim is made here that all grade files have the same confirmed edition metadata.
+
+No app curriculum or question-bank content was changed. No APK was built.
