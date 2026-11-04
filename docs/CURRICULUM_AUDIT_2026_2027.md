@@ -808,7 +808,7 @@ The first preparatory priority is the actual catalog factory `preparatoryCurricu
 A deeper read of the exact live source files found structural defects that affect what students can be shown, independent of the earlier title comparisons.
 
 ### 1. Primary live catalog currently contains only Primary 1–3
-`src/data/primaryCurriculumData.ts` constructs all six grade catalog entries by filtering `primaryCurriculumDatabase` for `primary_1` through `primary_6`. But the actual live `src/data/primaryCurriculumDatabase.ts` contains only **18 unit records**, IDs `p1_t1_c_u1` through `p3_t1_c_u6`:
+`src/data/primaryCurriculumData.ts` constructs all six grade catalog entries by filtering `primaryCurriculumDatabase` for `primary_1` through `primary_6`. But the actual live `src/data/primaryCurriculumDatabase.ts` directly declares Primary 1–3 arrays and imports the Primary 4 and Primary 5–6 arrays from separate files. The effective raw database combines all five arrays. A fresh source count on 4 November 2026 found six unit records for each grade, 36 total; the earlier 18-record conclusion was based on inspecting only the local declarations and is withdrawn:
 - Primary 1: 6 units
 - Primary 2: 6 units
 - Primary 3: 6 units
@@ -891,7 +891,7 @@ src/components/ExamsHub.tsx imports prepCurriculumDatabase from src/data/prepSta
 Therefore, the visible Prep unit card and its five-level suite are sourced from prepStageData.ts, while the MOE mock and lesson viewer are sourced from the master catalog built by preparatoryCurriculumData.ts. These are separate data pipelines. The inspected Prep 1 Unit 1 in prepStageData.ts is titled “My Family and Me”, whereas the Student Book evidence already recorded for Prep 1 Unit 1 is “Life in a Digital World”. The mismatch is thus present in a direct screen data source, not just an unused data file. A student can encounter different content depending on which button is selected for the same displayed unit.
 
 ### 2. Primary lesson lookup can silently return the wrong unit
-src/data/primaryStageData.ts implements getPrimaryLesson(grade, unitNumber, track, term) with a sequence of fallbacks: exact grade/unit/track/term; then any lesson matching grade and unit number; then the first lesson for the grade. If a requested unit/track/term is missing, the function can silently return a different lesson (including the first lesson in that grade) instead of returning undefined or an explicit missing-data state. This is especially risky alongside the confirmed missing Primary 4–6 records in the live primaryCurriculumDatabase.
+src/data/primaryStageData.ts implements getPrimaryLesson(grade, unitNumber, track, term) with a sequence of fallbacks: exact grade/unit/track/term; then any lesson matching grade and unit number; then the first lesson for the grade. If a requested unit/track/term is missing, the function can silently return a different lesson (including the first lesson in that grade) instead of returning undefined or an explicit missing-data state. This is especially risky because it may conceal missing track/term/unit combinations by returning another record; the previously stated absence of all Primary 4–6 records is withdrawn after re-checking the imported arrays.
 
 ### 3. Primary catalog metadata still describes legacy topics
 src/data/primaryCurriculumData.ts includes grade-level descriptions for Primary 4–6 describing digestive/respiratory systems, desert ecosystems, plant cycles, clothing, Elephantine Island, jobs, weather, green cities, personality traits, vacations, festivals, journeys, and animal care. Those summaries reflect the same legacy content themes already found in the mismatching primary exam banks, not the official Term 1 unit titles/content recorded from the current Student Books. The catalog file's comments also claim “all 36 verified units” even though its imported live database contains only 18 records. These descriptions and comments are not reliable evidence of actual coverage.
@@ -910,7 +910,7 @@ A metadata listing of the user's Library returned 84 items with no pagination cu
 ## Primary/Prep lesson viewer source trace — direct user-facing defects (4 November 2026)
 
 ### 1. Primary lesson viewer is fed by the incomplete legacy database
-src/components/CurriculumExplorer.tsx directly imports getPrimaryLesson from primaryStageData.ts. Both the highlighted “Connect 3-Tab Studio & 5-Level Adaptive Exam” action and the regular Explore Lessons action call getPrimaryLesson(`primary_${unit.grade}`, unit.unitNumber, 'connect', unit.semester). When a record exists, the app opens PrimaryLessonViewer with that record; otherwise it falls back to LessonViewerModal using the master catalog UnitCurriculum. Since the imported primaryCurriculumDatabase is the same 18-record P1–P3 database already identified, P4–P6 cannot open the dedicated primary studio from this path and instead open a different data pipeline. This creates grade-dependent behavior for the same visible lesson actions.
+src/components/CurriculumExplorer.tsx directly imports getPrimaryLesson from primaryStageData.ts. Both the highlighted “Connect 3-Tab Studio & 5-Level Adaptive Exam” action and the regular Explore Lessons action call getPrimaryLesson(`primary_${unit.grade}`, unit.unitNumber, 'connect', unit.semester). When a record exists, the app opens PrimaryLessonViewer with that record; otherwise it falls back to LessonViewerModal using the master catalog UnitCurriculum. The current branch's primaryCurriculumDatabase.ts combines the P1–P3 arrays with imported Primary 4, Primary 5 and Primary 6 records from primary3And4Curriculum.ts and primary5And6Curriculum.ts. A fresh source check on 4 November 2026 found six unit records per grade (36 total), so the earlier claim that the live database contained only 18 P1–P3 records was incorrect and is superseded below. The fallback behavior described in section 2 remains a separate confirmed risk. This creates grade-dependent behavior for the same visible lesson actions.
 
 ### 2. The fallback in getPrimaryLesson can return an unrelated lesson
 primaryStageData.ts first tries exact grade/unit/track/term, then any record with the same grade and unit number, then the first record for the grade. The final two fallbacks ignore requested track/term and, in the final case, unit number. The caller does not receive a missing-record error; it may open a different lesson while the student believes they selected the requested unit. This is a confirmed code-level defect; no user-facing reproduction has been run in this audit.
@@ -976,3 +976,29 @@ A close read of the current `prepStageData.ts` Prep 1 Unit 1 record (the app's l
 These are app-authored sample strings and general English usage corrections; they are **not** claims about errors in the Ministry textbook. Because the containing Prep 1 Unit 1 is already demonstrably off-syllabus, do not patch isolated strings and leave the legacy unit active as if that repaired its curriculum alignment. When the official unit is rebuilt, re-check every example, dialogue answer, reading, model answer, and distractor for grammar, naturalness, punctuation, age appropriateness, and source alignment.
 
 No application content was edited in this sample pass. No APK was built.
+
+
+## Corrective source re-check — Primary database composition (4 November 2026)
+
+A fresh fetch of the current audit branch disproved an earlier statement in this report that the live Primary database contained only 18 records and lacked Primary 4–6. That conclusion was incorrect because the database is assembled from several files rather than one local array.
+
+The current `src/data/primaryCurriculumDatabase.ts` defines Primary 1, Primary 2 and Primary 3 arrays, imports `primary4Curriculum` from `primary3And4Curriculum.ts`, imports `primary5And6Curriculum` from `primary5And6Curriculum.ts`, and combines them in `rawPrimaryCurriculumDatabase`. Direct source inspection found:
+
+- Primary 1: 6 records
+- Primary 2: 6 records
+- Primary 3: 6 records
+- Primary 4: 6 records (in `primary3And4Curriculum.ts`)
+- Primary 5: 6 records (in `primary5And6Curriculum.ts`)
+- Primary 6: 6 records (in `primary5And6Curriculum.ts`)
+
+Total: 36 records across Primary 1–6. This corrects the earlier missing-record claim; it does **not** certify the 36 records as textbook-accurate. The legacy title/content mismatches already documented still require page-by-page comparison.
+
+The source re-check also reconfirmed two separate structural risks:
+1. `getPrimaryLesson()` can fall back from exact grade/unit/track/term to a same-grade/unit record and then to the first record for that grade, potentially hiding a missing or mismatched selection.
+2. `primaryCurriculumInjector.ts` marks converted content and questions `verified` and supplies generic source labels without page-level references; generated reading/listening structures are not proof that those passages exist in the Student Book.
+
+## Current material-access limitation (4 November 2026)
+
+The previous conversation's uploaded Student Book references for Primary 1–6 and Preparatory 1–3 are not currently resolvable through the active Files index, and a Library search/list did not rediscover the PDFs. The official Ministry-hosted 2026 Term 1 Student Book URLs were rediscovered through the Port Said English Inspectorate's link compilation, but the PDF files were too large for the browser extraction endpoint and direct container download was blocked by network DNS resolution in this session. Therefore this pass did not pretend to complete a new page-by-page transcription. The prior recorded contents-page and sampled-page findings remain provisional until the actual PDF pages can be read again.
+
+No application source files or curriculum content were changed. Only this audit report was corrected and extended. No APK was built.
