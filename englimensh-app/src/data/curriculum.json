@@ -586,13 +586,81 @@
             "file": "English_prim6_t1_Assmt (1).pdf",
             "pdfPages": [
               4,
-              5,
-              6,
-              7
+              14
             ],
-            "note": "Unit 1 title and lesson references verified from the assessment book; full unit index remains under review."
+            "note": "Unit 1 title and lesson content confirmed from pages 4–14."
           },
-          "contentStatus": "index_verified_content_not_yet_entered"
+          "contentStatus": "assessment_source_index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-2",
+          "number": 2,
+          "title": "Our Nature",
+          "indexSource": {
+            "type": "assessment-book",
+            "file": "English_prim6_t1_Assmt (1).pdf",
+            "pdfPages": [
+              16,
+              23
+            ]
+          },
+          "contentStatus": "assessment_source_index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-3",
+          "number": 3,
+          "title": "Community Builders",
+          "indexSource": {
+            "type": "assessment-book",
+            "file": "English_prim6_t1_Assmt (1).pdf",
+            "pdfPages": [
+              24,
+              43
+            ]
+          },
+          "contentStatus": "assessment_source_index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-4",
+          "number": 4,
+          "title": "Resources Around Us",
+          "indexSource": {
+            "type": "assessment-book",
+            "file": "English_prim6_t1_Assmt (1).pdf",
+            "pdfPages": [
+              44,
+              53
+            ]
+          },
+          "contentStatus": "assessment_source_index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-5",
+          "number": 5,
+          "title": "Made in Egypt",
+          "indexSource": {
+            "type": "assessment-book",
+            "file": "English_prim6_t1_Assmt (1).pdf",
+            "pdfPages": [
+              54,
+              63
+            ]
+          },
+          "contentStatus": "assessment_source_index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-6",
+          "number": 6,
+          "title": "The Water Savers",
+          "indexSource": {
+            "type": "assessment-book",
+            "file": "English_prim6_t1_Assmt (1).pdf",
+            "pdfPages": [
+              64,
+              73
+            ]
+          },
+          "contentStatus": "assessment_source_index_verified_content_not_yet_entered"
         }
       ],
       "sourceAvailability": {
@@ -600,7 +668,8 @@
         "assessmentBook": true,
         "studentBookFile": null,
         "assessmentBookFile": "English_prim6_t1_Assmt (1).pdf",
-        "mode": "assessment_only"
+        "mode": "assessment_only",
+        "note": "The supplied source is the First Term Performance Tasks and Assessments book. No Primary 6 student book was included."
       }
     },
     {
@@ -820,6 +889,6 @@
     "reviewedOn": "2026-11-05",
     "scope": "Egyptian national curriculum, Primary 1-6, Term 1",
     "extractionPolicy": "Only unit titles and source references verified in the supplied PDFs are indexed. No vocabulary, grammar, reading, listening scripts, questions, or answers are generated to fill gaps.",
-    "nextStage": "Extract and verify unit-level content and question provenance from the supplied books and assessment books before publishing learning content."
+    "nextStage": "Complete page-level extraction of each unit's vocabulary, grammar, reading/listening passages, and assessment questions. Grade 6 is indexed from its assessment book only; no student-book content is inferred."
   }
 }
