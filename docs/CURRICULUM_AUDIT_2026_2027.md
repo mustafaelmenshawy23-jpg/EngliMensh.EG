@@ -685,3 +685,14 @@ The app Unit 6 record is **“Taking Care”**, centered on mint/herbal and heal
 **Boundary:** the page-level sample now supports meaningful scope comparisons for Units 1–6, but it is not a line-by-line audit of every lesson, exercise, answer key or test item. Primary 6 Assessment Book remains unlocated. The PDF imprint and complete edition/year identification should be recorded separately from the Primary 5 book's 2026–2027 imprint; no claim is made here that all grade files have the same confirmed edition metadata.
 
 No app curriculum or question-bank content was changed. No APK was built.
+
+
+## Primary 6 — page-sample evidence cross-check (4 November 2026)
+
+A page-render/OCR pass on the original PDF corroborated the earlier Unit 3–6 notes with concrete lesson material:
+- Around PDF page 40, Unit 3 tasks address traffic near school, posters for improving a park, and working together; around pages 48–50, the “Food Waste in Egypt” community-problem project and community occupations appear.
+- Around pages 58–68, Unit 4 explicitly addresses man-made resources, energy in Egypt, solar/wind power, saving electricity, underground minerals (oil, natural gas, gold, iron), and the modal verbs must/mustn't/should/shouldn't.
+- Around pages 70–82, Unit 5 includes “A Trip Through Time”, museum/travel vocabulary, past-simple review, Benban Solar Park, solar energy, and fact-versus-opinion writing.
+- Around pages 85–95, Unit 6 contains the “Water Savers” school story about a dripping tap and broken pipe, followed by water-conservation activities and review.
+
+These rendered-page samples support the scope findings but do not replace complete transcription of all pages or a matching Assessment Book. Exact page-number references above are PDF page positions, not asserted printed page numbers.
