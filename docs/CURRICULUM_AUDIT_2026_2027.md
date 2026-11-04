@@ -380,3 +380,15 @@ A further page-level check of the user-provided Primary 5 book (PDF pages 25–2
 
 The app's P5 Unit 2 record in primary5And6Curriculum.ts is titled “I Want to Be Healthy” and contains sports vocabulary (squash, kung fu, goggles, football pitch, tennis court), but its stated grammar is “Good at / Bad at / Great at + Verb-ing / Noun” and its phonics target is diphthongs /aɪ/, /eɪ/, /ɔɪ/. This is not a safe one-to-one mapping to the official Unit 2 outcomes just established: there is thematic overlap around health/sport, but the grammar/phonics scope differs from the book's stated Unit 2 outcomes. Mark P5 U2 as partial thematic overlap with content-scope mismatch pending inspection of every lesson page and the Assessment Book; do not simply rename the unit.
 
+
+
+### Further verified source-level findings
+
+- The live primary database (primaryCurriculumDatabase.ts), which is imported by primaryCurriculumData.ts, independently repeats the P1–P3 Unit 1–6 title map found in the alternate detailed files. Therefore the already documented mismatches are not merely stale titles in an unused alternative source: they are present in the primary catalog's actual database source.
+- The live P5 Unit 2 application record (primary5And6Curriculum.ts) is “I Want to Be Healthy”. Its app lesson material emphasizes sports equipment and sports venues (squash, kung fu, goggles, football pitch, tennis court), “good at / bad at / great at + -ing”, and diphthongs /aɪ/, /eɪ/, /ɔɪ/. The official P5 Unit 2 book pages 25–28 identify “My Healthy Body”, opening with “Sports for Better Health” and “My Habits: Then and Now”; the printed unit outcomes explicitly include countable/uncountable nouns and determiners. This is a concrete partial thematic overlap with a grammar/phonics scope discrepancy, not a full unit match.
+- The official P5 Unit 2 book text describes football/swimming benefits, muscles, lungs, energy, stress and exercise; the current app's five vocabulary entries do not cover this full lesson scope. More pages are needed before a complete vocabulary coverage percentage can be reported.
+- Attempted further page reads for P3/P4/P6 and Prep 2/3 beyond the previously readable sample pages returned no readable page content from the indexed file service in this pass. No claims about those unseen pages are made; they remain pending image/OCR inspection.
+
+### Action gate
+
+Do not patch only the unit titles. P5 U2 shows that matching a broad theme can conceal a grammar/phonics and lesson-sequence mismatch. The implementation correction must be based on a full unit matrix (book lesson → app lesson → vocabulary → grammar → skills → exercises/answer key), and the source-of-truth import path must be respected. No curriculum content edits or APK build were made in this pass.
