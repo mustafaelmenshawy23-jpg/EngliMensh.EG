@@ -372,3 +372,11 @@ A further source trace found that the detailed primary files already inspected a
 This means the next implementation step is not simply to replace the mismatched title strings. First identify every live consumer of primaryCurriculumData, prepCurriculumDatabase, and preparatoryCurriculumData; then choose one canonical source per grade and remove or explicitly mark duplicate/legacy catalogs. A build-only pass cannot prove which curriculum source is rendered.
 
 No curriculum implementation was changed in this pass. No APK was built.
+
+
+### Primary 5 — Unit 2 lesson-level cross-check
+
+A further page-level check of the user-provided Primary 5 book (PDF pages 25–28) confirms Unit 2 is titled “My Healthy Body”. Its opening lesson is “Sports for Better Health” and the next lesson is “My Habits: Then and Now”; the Unit 2 learning outcomes include healthy-habit speaking/listening/reading and countable/uncountable nouns with determiners in writing.
+
+The app's P5 Unit 2 record in primary5And6Curriculum.ts is titled “I Want to Be Healthy” and contains sports vocabulary (squash, kung fu, goggles, football pitch, tennis court), but its stated grammar is “Good at / Bad at / Great at + Verb-ing / Noun” and its phonics target is diphthongs /aɪ/, /eɪ/, /ɔɪ/. This is not a safe one-to-one mapping to the official Unit 2 outcomes just established: there is thematic overlap around health/sport, but the grammar/phonics scope differs from the book's stated Unit 2 outcomes. Mark P5 U2 as partial thematic overlap with content-scope mismatch pending inspection of every lesson page and the Assessment Book; do not simply rename the unit.
+
