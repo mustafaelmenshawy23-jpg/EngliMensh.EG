@@ -42,6 +42,50 @@ The Ministry's electronic library is the primary source:
 | Baccalaureate 2 | Official release confirmed; app content not yet page-matched | Both English first-foreign-language student-book parts, story, and assessment book |
 | Baccalaureate 3 | Official 2026/2027 English source not yet located | Verify Ministry release before authoring/claiming official content |
 
+## Preparatory Stage — Term 1 source intake (4 November 2026)
+
+Three user-provided Ministry-branded PDF student books were received and checked:
+- Preparatory 1: `English_Prep1_T1 (1).pdf`, 112 pages.
+- Preparatory 2: `English_language_prep2_t1 (1).pdf`, 113 pages.
+- Preparatory 3: `English_language_prep3_t1 (1).pdf`, 113 pages.
+
+The printed contents pages (PDF page 4 in each file) show these exact unit sequences:
+
+### Preparatory 1
+1. Life in a Digital World
+2. Learning to Learn
+3. Role Models
+4. Smart Choices
+5. Future Dreams
+6. Global Citizens
+Review 1 follows Unit 3; Review 2 follows Unit 6.
+
+### Preparatory 2
+1. Gen Alpha
+2. My Digital Footprint
+3. Facing Challenges
+4. Art and Expression
+5. Around the World
+6. Young Innovators
+Review 1 follows Unit 3; Review 2 follows Unit 6.
+
+### Preparatory 3
+1. Personal Identity
+2. Communication with Family and Friends
+3. Artificial Intelligence
+4. Screen Time
+5. Design Thinking
+6. Why Do We Like Stories?
+Review 1 follows Unit 3; Review 2 follows Unit 6.
+
+Source limitation: these are contents-page findings only. The first five pages were visually sampled; detailed lesson vocabulary, grammar, reading/listening passages, question sets, and assessment-book alignment have not yet been audited. The PDFs are student books; no matching assessment-book PDFs were included in this upload. Therefore none of these three grades is marked fully verified yet.
+
+| Grade | Updated status | Evidence / next action |
+|---|---|---|
+| Preparatory 1 | Student-book unit index confirmed; detailed audit pending | User PDF, contents page 4; compare app data lesson-by-lesson; obtain assessment book |
+| Preparatory 2 | Student-book unit index confirmed; detailed audit pending | User PDF, contents page 4; compare app data lesson-by-lesson; obtain assessment book |
+| Preparatory 3 | Student-book unit index confirmed; detailed audit pending | User PDF, contents page 4; compare app data lesson-by-lesson; obtain assessment book |
+
 ## Quality checks required before a grade can be marked verified
 
 1. Every app unit maps to the same official unit number/title and term.
