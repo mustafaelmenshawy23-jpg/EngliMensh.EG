@@ -777,3 +777,27 @@ A first source-code scan was completed across the three preparatory content laye
 
 ### Scope boundary
 This scan does not establish the total number of generated questions or the exact runtime reachability of each suspicious block. It does not certify any preparatory unit. No app source was changed in this pass because the consumer graph and exact textbook-page mappings must be established first; no APK was built.
+
+
+## Runtime curriculum consumer trace — confirmed catalog path (4 November 2026)
+
+The source import graph now confirms the following path for the main curriculum catalog:
+
+`src/data/masterCurriculumDatabase.ts` imports `src/data/allStagesCurriculumCatalog.ts`.
+`src/data/allStagesCurriculumCatalog.ts` directly imports and re-exports:
+- `primaryCurriculumCatalog` from `src/data/primaryCurriculumData.ts`;
+- `preparatoryCurriculumCatalog` from `src/data/preparatoryCurriculumData.ts`.
+
+It combines both into `allStagesCurriculumCatalog`. Therefore, **`primaryCurriculumData.ts` and `preparatoryCurriculumData.ts` are confirmed live inputs to the master catalog**, not merely unused files.
+
+Further primary path:
+- `primaryCurriculumData.ts` imports `primaryCurriculumDatabase` and `convertPrimaryLessonToUnitCurriculum` from `primaryCurriculumInjector.ts`.
+- The primary catalog therefore consumes the database and injector transformation. The separate `primary1And2Curriculum.ts`, `primary3And4Curriculum.ts`, and `primary5And6Curriculum.ts` were not shown in this direct catalog import chain; do not assume they are the live master-catalog source without tracing their consumers elsewhere.
+- `src/components/CurriculumExplorer.tsx` imports `masterCurriculumDatabase.ts`, `primaryStageData.ts`, and `primaryCurriculumInjector.ts`; the primary lesson viewer imports `primaryStageData.ts`. This establishes an additional primary lesson-content path that must be audited alongside the catalog path.
+
+Preparatory path:
+- `preparatoryCurriculumData.ts` is directly consumed by the master catalog.
+- `preparatoryUnits4To6.ts` and `prepStageData.ts` are present in the repository, but their direct runtime consumption was not established in this trace. They remain candidates for further import-graph tracing; no conclusion that they are active or inactive is made yet.
+
+### Immediate audit consequence
+The first preparatory priority is the actual catalog factory `preparatoryCurriculumData.ts`, while separately tracing lesson viewer and exam consumers. The first primary priority is to reconcile the live catalog/database/injector path with the `primaryStageData.ts` lesson viewer path and the separate grade curriculum files. No source code was edited in this trace; no APK was built.
