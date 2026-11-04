@@ -903,3 +903,6 @@ src/data/primaryCurriculumData.ts includes grade-level descriptions for Primary 
 4. Add integration tests that assert the same grade/unit/term resolves to the same canonical title and source record across every screen and exam launch path.
 
 No runtime source code was modified in this audit pass. No APK was built.
+
+### Assessment Book inventory follow-up (4 November 2026)
+A metadata listing of the user's Library returned 84 items with no pagination cursor. Filtering the complete returned filenames for assessment/evaluation terms and English/Connect/New Hello/Prep/Primary terms found only `englimensh-android-prep.zip`; no Primary or Preparatory English Assessment Book PDF/file was listed. This is stronger than the earlier zero-result semantic search, but still only describes the currently visible Library inventory. The previously attached Student Books remain available through their conversation file references; no Assessment Book reference has been identified in the available Library listing or prior file inventory. Therefore, Assessment Book-based verification remains blocked by missing source material, and the audit must not claim those assessments were checked.
