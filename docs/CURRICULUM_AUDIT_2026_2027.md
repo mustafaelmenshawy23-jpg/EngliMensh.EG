@@ -725,3 +725,36 @@ The live Primary 4 curriculum record in `src/data/primary3And4Curriculum.ts` lab
 No Assessment Book comparison was possible because the corresponding Primary 4 Assessment Book has not been located in the available source set. This is a sampled Unit 2 comparison, not a claim that every page or assessment item has been checked.
 
 No app content was modified and no APK was built.
+
+
+## Mandatory rebuild-from-the-books audit standard (user instruction, 4 November 2026)
+
+The user clarified that the intended outcome is not a light correction or a title-alignment exercise. Treat this as rebuilding the educational content layer from the official books as the primary source. **No existing unit, lesson, sentence, word, question, answer, distractor, explanation, or assessment item is grandfathered in merely because it already exists in the app.**
+
+### Source-of-truth hierarchy
+1. The exact Ministry Student Book supplied for the grade/term is the primary authority for taught content, unit/lesson sequence, wording, vocabulary, grammar, reading passages, tasks and learning outcomes.
+2. The matching Ministry Assessment Book is the authority for assessment coverage, question formats and assessment practice where available.
+3. App content is only a comparison target, never evidence that a word, sentence, lesson or answer is curriculum-correct.
+4. External references may be used only to verify a point or resolve a documented source gap; clearly label such material and never silently replace the book's content with general knowledge.
+
+### Required audit granularity — every item, not samples alone
+For every grade, term, unit and lesson, inspect and compare:
+- every heading, instruction, sentence and vocabulary item, including spelling, meaning, usage and level;
+- every grammar point, example, form, exception and exercise;
+- every reading/listening/dialogue text, its questions, answer choices, correct answer and evidence in the source;
+- every writing/speaking task, model answer and rubric/expected response;
+- every question-bank item, answer key, distractor, explanation, difficulty/skill tag and unit/lesson mapping;
+- every review, test and assessment item against the matching Assessment Book;
+- sequence, duplication, omissions, unsupported additions, age/grade appropriateness and consistency between lesson screens and exams.
+
+### Item-level evidence and decisions
+Maintain an auditable mapping for each item with: grade, term, unit, lesson, app file/key/ID, exact book page (PDF page and printed page when distinguishable), source wording/topic, app wording, finding, decision (keep / edit / replace / remove / missing-add), and verification status. Do not label generated or inferred material “official”, “verified” or “MOE-verified” without direct source evidence. Where OCR or a scan is uncertain, inspect the page image; mark unresolved rather than guessing.
+
+### Rebuild and release gates
+- A unit is not complete until every relevant page and every app item mapped to it has been checked; sampled pages support only a provisional finding.
+- A grade/term is not complete until all its units, reviews, question banks and available Assessment Book content have passed the item-level audit.
+- Replace incorrect content, add missing book-backed content, remove unsupported content, and correct answer keys only when the source supports the correction. Preserve a change log and evidence trail.
+- After content changes, run automated consistency checks (IDs, references, duplicates, missing answers, broken mappings, rendering/encoding) and manual lesson/question review.
+- Do not build or publish an APK until the relevant scope passes these gates. Report missing source books/pages explicitly; never fill them by assumption.
+
+**Current status:** this stricter standard supersedes any earlier implication that title-level or sampled page comparisons amount to a complete curriculum audit. Previous findings remain provisional evidence only. No app content has yet been approved as correct solely by virtue of being present in the current app.
