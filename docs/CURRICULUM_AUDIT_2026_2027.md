@@ -209,3 +209,30 @@ The repository tree was successfully inspected through GitHub's Contents API. Th
 
 ### Status after this cross-check
 No Primary or Preparatory grade is fully verified. The most urgent primary reconciliation targets are Primary 1's Unit 1, and the mismatched Primary 4–6 app grade descriptions. The most urgent preparatory data-quality target is removing unsupported “verified” labels from template-generated items or proving each item against its official source before it is shown as official.
+
+
+## Additional implementation-to-book cross-check (4 November 2026)
+
+The detailed TypeScript curriculum files were inspected directly, beyond the grade-level summary descriptions. This exposes concrete Unit 1 title mismatches between the current app records and the user-provided Term 1 student books:
+
+| Grade | Current app Unit 1 title | Supplied book Unit 1 title | Finding |
+|---|---|---|---|
+| Primary 3 | I Feel Happy! | Let's Learn Together! | Direct title/topic mismatch |
+| Primary 4 | I Feel Good | The Five Senses | Direct title/topic mismatch |
+| Primary 5 | We Plant Our Food | Food, Nature, and Culture | Direct title/topic mismatch |
+| Primary 6 | Green Cities | Amazing Places in Egypt | Direct title/topic mismatch |
+
+Evidence locations:
+- App source: `src/data/primary3And4Curriculum.ts` (P3/P4 Unit 1 records).
+- App source: `src/data/primary5And6Curriculum.ts` (P5/P6 Unit 1 records).
+- Student-book evidence: the previously visually sampled Term 1 pages for Primary 3 (PDF pp. 7–16), Primary 4 (pp. 7–16), Primary 5 (pp. 7–24), and Primary 6 (pp. 7–16), as summarized above.
+
+This is stronger than a grade-description discrepancy: the actual Unit 1 records in the app use different titles from the supplied books. It does not yet prove every lesson or question in those units is wrong, and it does not authorize blind replacement of all records. The next step is a lesson-by-lesson mapping of each app unit against the six-unit sequence and the corresponding book pages.
+
+### Preparatory implementation structure — further inspection
+- `src/data/preparatoryUnits4To6.ts` exports a helper named `createPrepUnitWithBlueprint`; it sets the whole returned unit to `verificationStatus: 'verified'` and also sets that status on rotated MCQs. The helper's own comment calls the units “MOE-verified”, but the audit currently has no page-level evidence for that assertion. These labels are unsupported by the evidence gathered so far.
+- `src/data/preparatoryCurriculumData.ts` uses a separate `createPrepUnit()` factory to generate reusable dialogue, comprehension, vocabulary/grammar, and writing scaffolds. The generated comprehension text is labeled “Official Comprehension Text” and the generated listening title “Official Curriculum Dialogue Track”. These official-source labels must not be treated as proven until matched to the New Hello student books and assessment books.
+- The question-bank directory contains three primary exam files: `primary1And2Exams.ts`, `primary3And4Exams.ts`, and `primary5And6Exams.ts`. These are now identified as separate audit targets; their question-level comparison has not yet been completed.
+
+### Current action boundary
+No curriculum content or exam questions have been changed in this pass. The work remains an evidence-led audit on the dedicated branch; no APK/build is being claimed. Keep every grade marked partial/pending until the lesson, grammar, vocabulary, reading, question, answer-key, and assessment-book checks are complete.
