@@ -542,3 +542,41 @@ This is a confirmed curriculum-to-exam-bank propagation issue for Primary 5 Unit
 
 ### Evidence and boundaries
 The student-book index and learning-outcomes pages, plus the Unit 5 lesson extracts and Unit 6 story/outcome extracts, support the scope findings. The full Unit 5/6 pages and every generated question have not yet been individually transcribed and checked. The Primary 5 Assessment Book remains absent from the retrieved source set. No content changes were made to the app.
+
+
+## Primary 6 — six-unit contents-page comparison (4 November 2026)
+
+The previously supplied `English_Primary6_T1 (1).pdf` was located in the conversation files and processed from its original PDF bytes. Its contents/index page was rendered and OCR-read. The visible official Unit 1–6 sequence is:
+1. Amazing Places in Egypt
+2. Our Home
+3. Community Builders
+4. Resources Around Us
+5. Made in Egypt
+6. Water Savers
+
+The live Primary 6 records in `src/data/primary5And6Curriculum.ts` currently use:
+1. Green Cities
+2. We Are All Different
+3. Vacation Plans
+4. Celebrate Good Times!
+5. Amazing Journeys
+6. Taking Care
+
+### Findings
+All six app Unit 1–6 headings differ from the supplied Primary 6 Student Book contents page. This confirms a **six-unit title/sequence-level mismatch** for Primary 6. The mismatch is particularly consequential because the app topics imply unrelated scopes (personality, vacation plans, celebrations, historical journeys and herbal/natural care) rather than the book's sequence on Egyptian places, home, community workers, resources, Egyptian products/projects and water conservation.
+
+The Unit 1 mismatch is already supported by sampled book pages: “Amazing Places in Egypt” includes a day in Egypt, Ras Mohamed, Egyptian places and school-day writing, whereas the app says “Green Cities”. For Units 2–6, this pass establishes the official titles from the contents page and the app-side titles from the actual live curriculum records only. It does **not** claim that every lesson or grammar target in those five units has been read or compared yet.
+
+### Primary 6 tracker
+| Unit | Official student-book title | Current app title | Evidence status |
+|---|---|---|---|
+| 1 | Amazing Places in Egypt | Green Cities | Contents + sampled lesson pages; topic mismatch confirmed |
+| 2 | Our Home | We Are All Different | Contents-page title mismatch; lesson pages pending |
+| 3 | Community Builders | Vacation Plans | Contents-page title mismatch; lesson pages pending |
+| 4 | Resources Around Us | Celebrate Good Times! | Contents-page title mismatch; lesson pages pending |
+| 5 | Made in Egypt | Amazing Journeys | Contents-page title mismatch; lesson pages pending |
+| 6 | Water Savers | Taking Care | Contents-page title mismatch; lesson pages pending |
+
+The PDF's index also exposes the intended Unit 2–6 language areas in summary form (including present continuous in Unit 2, modal verbs in Units 3–4, past simple in Unit 5, and a water-related Unit 6 vocabulary set); these summary cues are not a substitute for the full unit pages. The assessment book for Primary 6 has not yet been located in the current source set.
+
+No application curriculum or question-bank content was changed. No APK was built.
