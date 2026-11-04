@@ -392,3 +392,50 @@ The app's P5 Unit 2 record in primary5And6Curriculum.ts is titled “I Want to B
 ### Action gate
 
 Do not patch only the unit titles. P5 U2 shows that matching a broad theme can conceal a grammar/phonics and lesson-sequence mismatch. The implementation correction must be based on a full unit matrix (book lesson → app lesson → vocabulary → grammar → skills → exercises/answer key), and the source-of-truth import path must be respected. No curriculum content edits or APK build were made in this pass.
+
+
+## Primary 5 — Unit 3 page-level comparison (4 November 2026)
+
+The Primary 5 Term 1 student-book PDF was processed locally with layout-preserving text extraction to continue beyond the previously inspected opening pages. The Unit 3 section is legible in the extracted source (printed book pages approximately 41–55; page numbers should be confirmed against page images before quoting exact page references).
+
+### Student-book evidence: Unit 3 — “When Nature Changes”
+The unit learning outcomes explicitly cover:
+- describing weather conditions;
+- talking about past events with the past simple;
+- recognizing/repeating vowel digraphs;
+- listening to conversations about environmental changes and weather vocabulary;
+- reading comprehension about extreme weather;
+- identifying characters and moral in a fictional story;
+- completing past-simple sentences and writing a fiction story.
+
+The inspected lesson sequence includes:
+1. **Weather Wonders and Warnings!** — thunderstorm, sandstorm, wildfire, drought, heat wave and flood; a dialogue about a flood, drought and wildfire; comprehension questions and weather vocabulary practice.
+2. **Extreme Weather in Ancient Egypt** — informational reading on Nile floods, droughts, Khamsin sandstorms, canals/basins, irrigation systems and mud-brick homes; comprehension questions.
+3. **Past Simple** — form/use of past simple for finished past events, affirmative/negative/question practice and contextual exercises.
+4. **Story / reading work** — a fictional story about frogs responding to a dry pond, with true/false, summary and inference tasks.
+5. **Pronunciation** — vowel digraphs, including “ea”, “oo” and “oa”; examples include leap, flood and boat.
+6. **Writing** — a model fiction story “Lily’s flowers get sunshine!”, explicit fiction/plot structure (beginning, problem, middle, climax, ending), then a guided story-writing task about Ziad.
+7. **Think and Create** — a weather-themed collage and peer-feedback questions.
+8. **Quick Review / Self-Assessment** — weather vocabulary, past-tense completion and a short reading response.
+
+### Application comparison: Primary 5 Unit 3
+The live curriculum record in `src/data/primary5And6Curriculum.ts` identifies P5 U3 as **“How Do I Look?”** and builds its content around:
+- clothing/traditional clothing vocabulary such as Galabeya, linen, suitcase, sneakers and sombrero;
+- compound-word stress;
+- adjective order (opinion/size/age/color/material) plus a past-simple component;
+- travel/clothing dialogues and related generated exam prompts.
+
+### Finding
+This is a **confirmed Unit 3 topic and vocabulary mismatch** between the supplied student book and the current app record. The app's past-simple component overlaps with one official grammar target, but that isolated overlap does not make the unit aligned: the book's central scope is extreme weather, Ancient Egyptian responses to weather, vowel digraphs and fiction writing, while the app record is primarily clothing, appearance and adjective order. The app's Unit 3 content must not be relabeled as official Unit 3 without rebuilding and checking the full lesson and assessment mapping.
+
+The student-book evidence above is based on the user-provided Primary 5 Term 1 PDF. This is a student-book comparison only; the matching Primary 5 Assessment Book has not yet been located in the available source set. OCR/text extraction may contain character-recognition artifacts, so exact quotations and page numbers should be checked against rendered page images before final publication.
+
+### Primary 5 tracker adjustment
+| Grade | Unit | Status | Remaining evidence |
+|---|---|---|---|
+| Primary 5 | Unit 1 | Detailed sample read | Complete page-level item/question and assessment-book mapping |
+| Primary 5 | Unit 2 | Partial detailed sample read | Finish remaining student-book pages; compare full app unit and assessment book |
+| Primary 5 | Unit 3 | Student-book scope read; app mismatch confirmed | Verify exact printed/PDF page references visually; compare assessment-book items |
+| Primary 5 | Units 4–6 | Pending | Read each complete unit and compare app records / exam bank |
+
+No application curriculum or question-bank content was modified. No APK/build was started.
