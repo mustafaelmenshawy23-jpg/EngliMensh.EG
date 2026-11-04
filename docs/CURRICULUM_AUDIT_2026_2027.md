@@ -439,3 +439,33 @@ The student-book evidence above is based on the user-provided Primary 5 Term 1 P
 | Primary 5 | Units 4–6 | Pending | Read each complete unit and compare app records / exam bank |
 
 No application curriculum or question-bank content was modified. No APK/build was started.
+
+
+## Primary 5 — Unit 4 index and opening lessons (4 November 2026)
+
+The same student-book extraction was continued into Unit 4. The supplied book's Unit 4 heading is **“My Community”**, not “Visiting Elephantine Island”.
+
+The printed learning outcomes for Unit 4 include:
+- identifying places in the community and asking/answering about favorite places;
+- identifying trigraph sounds;
+- listening to descriptive passages to identify specific places and related vocabulary;
+- reading about village life and new city developments;
+- solving word problems;
+- writing a first-person narrative about a place or experience using structure, personal voice and descriptive language;
+- using prepositions of time in context.
+
+The opening lessons confirm this scope:
+- Lesson 1 “Places in Our Community” teaches restaurant, bakery, club, theme park, supermarket and coffee shop, followed by a dialogue about neighborhood places and comprehension questions.
+- Lesson 2 “Egyptian Villages” introduces field, cottage, community center, barn and main square; the reading “Life in My Village” describes village life, farmers, animals, the market and community center.
+
+The app record in `src/data/primary5And6Curriculum.ts` calls P5 U4 **“Visiting Elephantine Island”** and focuses on Elephantine Island, felucca, Nilometer, Nubian village and sunset, with past continuous / while / when grammar. The exam-bank title was previously found to differ again (“Looking After Our World”).
+
+**Finding:** P5 Unit 4 has a confirmed title and central-scope mismatch. The book's opening lessons concern community places and Egyptian village life; the app's unit concerns a visit to Elephantine Island and Aswan/Nubian tourism. No inference is made about the rest of the official unit beyond the learning outcomes and opening lessons inspected. The matching Assessment Book remains unavailable in the current source set.
+
+### Primary 5 tracker adjustment
+| Unit | Student-book evidence | App comparison | Status |
+|---|---|---|---|
+| Unit 3 | “When Nature Changes”; extreme weather, Ancient Egypt, past simple, vowel digraphs, fiction writing | “How Do I Look?”; clothing, adjective order, partial past-simple overlap | Confirmed topic/scope mismatch |
+| Unit 4 | “My Community”; community places and Egyptian village life in opening lessons | “Visiting Elephantine Island”; Aswan/Nubian tourism and past continuous | Confirmed title and opening-scope mismatch |
+
+Exact page references for Unit 4 should be visually checked before final publication; the text extraction identifies the Unit 4 opening around printed pages 61–65. No app data was modified and no APK was built.
