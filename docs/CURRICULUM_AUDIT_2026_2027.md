@@ -293,3 +293,67 @@ The sampled pages show the Unit 1 classroom theme and sequence: classroom vocabu
 The app's Primary 2 Unit 1 is **“Meet My Family”**. This is a clear title/theme discrepancy against the supplied book's Unit 1 classroom / getting-started content. The pages inspected support this mismatch; full Primary 2 Unit 1 coverage still requires checking the remaining pages and the book's complete lesson map.
 
 Evidence is the user-supplied PDF page content inspected in this pass (Primary 1 PDF pages 7–24; Primary 2 PDF pages 7–16). This page-level inspection strengthens the earlier index-only finding and narrows the Primary 1 discrepancy accurately.
+
+
+## Nine-grade audit — expanded application-source comparison (4 November 2026)
+
+This pass expands the nine-grade scope (Primary 1–6 and Preparatory 1–3) by enumerating the actual application unit records and checking their unit titles against the user-supplied Term 1 student-book contents and sampled lesson pages. These are source-code findings plus student-book evidence; they are not a claim that all lessons or assessments have been fully verified.
+
+### Primary 1–6: complete app unit-title inventory checked
+
+| Grade | Application Unit 1 | Student-book Unit 1 | Finding |
+|---|---|---|---|
+| Primary 1 | Hello! | Welcome to My School | Partial overlap only: greetings are present, but the app's unit structure does not reflect the book's Tt/Ii phonics sequence, classroom vocabulary and lesson progression. |
+| Primary 2 | Meet My Family | Let's Get Started! | Unit-title/theme mismatch. Sampled book pages focus on classroom readiness, objects/actions and short-a/short-e/short-i phonics, not a family-led Unit 1. |
+| Primary 3 | I Feel Happy! | Let's Learn Together! | Unit-title mismatch; app Unit 1 centers on feelings, long-E phonics and a feelings dialogue, while the book's sampled Unit 1 includes meeting a new friend, classroom rules, wh digraph and describing people. |
+| Primary 4 | I Feel Good | The Five Senses | Unit-title and scope mismatch; sampled book Unit 1 includes five senses, healthy habits and the Goha story. |
+| Primary 5 | We Plant Our Food | Food, Nature, and Culture | Unit-title and scope mismatch; sampled book Unit 1 includes Life Along the Nile, Food in the Hot Desert, adverbs of frequency, The Giving Tree, consonant clusters and writing a koshari recipe. |
+| Primary 6 | Green Cities | Amazing Places in Egypt | Unit-title and scope mismatch; sampled book Unit 1 includes A Day in Egypt, The Beauty of Ras Mohamed, Around Egypt and school-day writing. |
+
+The app's primary source files contain all six Term 1 unit records for each grade (P1–P6), but the title inventory above must not be mistaken for six-unit content verification. In particular, P5/P6 application unit titles 2–6 and P3/P4 unit titles 2–6 still need page-level comparison against the corresponding book units, even where a title looks plausible.
+
+### Primary assessment-bank structure and integrity findings
+
+- The primary1And2Exams.ts file declares 12 units in its header, but the explicit unit IDs in the file are P1 U2–U6 and P2 U1–U6; no p1_u1 exam-bank ID is present in that file. Trace whether P1 U1 assessment content is supplied elsewhere before treating the omission as a confirmed user-facing gap.
+- The primary3And4Exams.ts and primary5And6Exams.ts files reproduce the app's unit-title map, including the mismatched Unit 1 titles above. This establishes that the exam-bank mapping inherits the same curriculum alignment risk.
+- The primary exam-bank files call a shared buildVerifiedP1P2Suite builder. Their comments advertise multi-level/“MOE Mock” assessment suites, but those labels do not establish that prompts, answer keys, distractors, reading passages, or listening items appear in the Ministry assessment books. Every item remains pending evidence-based checking.
+- The primary5And6Exams.ts file has a title difference from the primary curriculum source at P5 U4: the curriculum file says “Visiting Elephantine Island”, while the exam bank says “Looking After Our World”. This internal mismatch should be reconciled after the official Unit 4 title and scope are checked.
+
+### Preparatory 1–3: app Unit 1 and legacy data mapping
+
+The user-provided student-book contents pages identify:
+- Preparatory 1 Unit 1: Life in a Digital World.
+- Preparatory 2 Unit 1: Gen Alpha.
+- Preparatory 3 Unit 1: Personal Identity.
+
+The prepStageData.ts file contains:
+- Preparatory 1 Unit 1: My Family and Me.
+- Preparatory 2 Unit 1: Coming Home.
+- Preparatory 3 Unit 1: Around Town.
+
+These are direct Unit 1 title/theme mismatches. The file also contains Preparatory 1 Unit 2 “It's My Favourite Subject”, Preparatory 2 Unit 2 “How Are You Feeling?”, Preparatory 3 Unit 2 “Let's Go Shopping”, and Preparatory 3 Unit 3 “My Community”; these must be compared against the exact official unit titles and lessons, not assumed aligned.
+
+The preparatoryCurriculumData.ts file imports Preparatory Units 4–6 from preparatoryUnits4To6.ts. The latter currently labels generated units/questions as verified through rotatePrepQuestion / its unit factory, while the file content includes authored generic reading passages and dialogues. That status is not backed by page-level Ministry citations in this audit. Remove or downgrade such verification claims unless each item can be traced to the official student/assessment book; clearly label original enrichment as supplementary.
+
+The preparatory Unit 4–6 application headings currently include:
+- Prep 1: “We're using technology!”, “Holidays”, “Let's eat!”
+- Prep 2: “Into the past”, “Helping you, helping me”, “Different environments”
+- Prep 3: “Have you ever traveled by plane?”, “Young role models”, “What's the matter?”
+
+The official student-book contents list for Prep 1–3 must be used to confirm these titles and their sequence. The current source-book contents evidence in this audit already shows the official Units 1–6 listed earlier; title similarity alone is not proof of matching lesson scope.
+
+### Nine-grade status after this pass
+
+| Grade | Status after expanded comparison |
+|---|---|
+| Primary 1 | Unit 1 partial overlap; unit structure/scope mismatch; remaining five units and assessments pending |
+| Primary 2 | Unit 1 mismatch; remaining five units and assessments pending |
+| Primary 3 | Unit 1 mismatch; remaining five units and assessments pending |
+| Primary 4 | Unit 1 mismatch; remaining five units and assessments pending |
+| Primary 5 | Unit 1 mismatch; remaining five units and assessments pending |
+| Primary 6 | Unit 1 mismatch; remaining five units and assessments pending |
+| Preparatory 1 | Unit 1 mismatch; detailed Units 2–6 and assessments pending |
+| Preparatory 2 | Unit 1 mismatch; detailed Units 2–6 and assessments pending |
+| Preparatory 3 | Unit 1 mismatch; detailed Units 2–6 and assessments pending |
+
+No app curriculum content was changed in this audit pass. No APK was built. The next evidence pass must continue unit-by-unit through the remaining official student-book pages, then compare the assessment books (not yet supplied for the nine grades in the current source set), then trace the live application import/selection path before modifying data. Until that is done, none of the nine grades is fully verified.
