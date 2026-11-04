@@ -1,0 +1,228 @@
+{
+  "appName": "إنجليمنش",
+  "language": "en",
+  "country": "EG",
+  "status": "content_pending_source_verification",
+  "grades": [
+    {
+      "id": "primary-1",
+      "label": "الصف الأول الابتدائي",
+      "stage": "primary",
+      "grade": 1,
+      "terms": [
+        {
+          "id": "term-1",
+          "label": "الترم الأول",
+          "units": []
+        },
+        {
+          "id": "term-2",
+          "label": "الترم الثاني",
+          "units": []
+        }
+      ]
+    },
+    {
+      "id": "primary-2",
+      "label": "الصف الثاني الابتدائي",
+      "stage": "primary",
+      "grade": 2,
+      "terms": [
+        {
+          "id": "term-1",
+          "label": "الترم الأول",
+          "units": []
+        },
+        {
+          "id": "term-2",
+          "label": "الترم الثاني",
+          "units": []
+        }
+      ]
+    },
+    {
+      "id": "primary-3",
+      "label": "الصف الثالث الابتدائي",
+      "stage": "primary",
+      "grade": 3,
+      "terms": [
+        {
+          "id": "term-1",
+          "label": "الترم الأول",
+          "units": []
+        },
+        {
+          "id": "term-2",
+          "label": "الترم الثاني",
+          "units": []
+        }
+      ]
+    },
+    {
+      "id": "primary-4",
+      "label": "الصف الرابع الابتدائي",
+      "stage": "primary",
+      "grade": 4,
+      "terms": [
+        {
+          "id": "term-1",
+          "label": "الترم الأول",
+          "units": []
+        },
+        {
+          "id": "term-2",
+          "label": "الترم الثاني",
+          "units": []
+        }
+      ]
+    },
+    {
+      "id": "primary-5",
+      "label": "الصف الخامس الابتدائي",
+      "stage": "primary",
+      "grade": 5,
+      "terms": [
+        {
+          "id": "term-1",
+          "label": "الترم الأول",
+          "units": []
+        },
+        {
+          "id": "term-2",
+          "label": "الترم الثاني",
+          "units": []
+        }
+      ]
+    },
+    {
+      "id": "primary-6",
+      "label": "الصف السادس الابتدائي",
+      "stage": "primary",
+      "grade": 6,
+      "terms": [
+        {
+          "id": "term-1",
+          "label": "الترم الأول",
+          "units": []
+        },
+        {
+          "id": "term-2",
+          "label": "الترم الثاني",
+          "units": []
+        }
+      ]
+    },
+    {
+      "id": "prep-1",
+      "label": "الصف الأول الإعدادي",
+      "stage": "preparatory",
+      "grade": 1,
+      "terms": [
+        {
+          "id": "term-1",
+          "label": "الترم الأول",
+          "units": []
+        },
+        {
+          "id": "term-2",
+          "label": "الترم الثاني",
+          "units": []
+        }
+      ]
+    },
+    {
+      "id": "prep-2",
+      "label": "الصف الثاني الإعدادي",
+      "stage": "preparatory",
+      "grade": 2,
+      "terms": [
+        {
+          "id": "term-1",
+          "label": "الترم الأول",
+          "units": []
+        },
+        {
+          "id": "term-2",
+          "label": "الترم الثاني",
+          "units": []
+        }
+      ]
+    },
+    {
+      "id": "prep-3",
+      "label": "الصف الثالث الإعدادي",
+      "stage": "preparatory",
+      "grade": 3,
+      "terms": [
+        {
+          "id": "term-1",
+          "label": "الترم الأول",
+          "units": []
+        },
+        {
+          "id": "term-2",
+          "label": "الترم الثاني",
+          "units": []
+        }
+      ]
+    }
+  ],
+  "unitSchema": {
+    "id": "unit-id",
+    "title": "Textbook unit title",
+    "source": {
+      "bookFile": "",
+      "pages": []
+    },
+    "vocabulary": {
+      "minimumItems": 30,
+      "items": [
+        {
+          "word": "",
+          "arabicMeaning": "",
+          "simpleEnglishExplanation": "",
+          "example": ""
+        }
+      ]
+    },
+    "grammar": [
+      {
+        "title": "",
+        "level": "introductory|developing|advanced",
+        "explanation": "",
+        "examples": [],
+        "questions": []
+      }
+    ],
+    "reading": {
+      "title": "",
+      "passage": "",
+      "sourcePages": [],
+      "questions": []
+    },
+    "listening": {
+      "title": "",
+      "script": "",
+      "sourcePages": [],
+      "questions": []
+    },
+    "practice": {
+      "vocabularyQuestions": [],
+      "grammarQuestions": []
+    },
+    "completionStatus": "draft"
+  },
+  "questionSchema": {
+    "type": "mcq",
+    "prompt": "",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "correctOption": 0,
+    "explanation": "",
+    "sourcePage": null
+  }
+}
