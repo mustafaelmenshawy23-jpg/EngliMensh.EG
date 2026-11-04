@@ -110,3 +110,73 @@ Source limitation: these are contents-page findings only. The first five pages w
 - Baccalaureate Grade 11 English book parts and unit index: https://elbakalorya.com/eng-l1-eb-part1/
 
 **Important:** This document is an initial audit log, not a declaration that all 15 grades have been verified. No curriculum unit should be changed from a guess or a search snippet alone.
+
+
+## Primary Stage — Term 1 source intake and OCR review (4 November 2026)
+
+The user had already supplied the Primary 1–6 Term 1 student-book PDFs. All six files were confirmed present in the working session and their page counts checked:
+- Primary 1: `English_language_prim1_t1.pdf`, 128 pages.
+- Primary 2: `English_language_prim2_t1 (1).pdf`, 104 pages.
+- Primary 3: `English_language_prim3_t1 (1).pdf`, 120 pages.
+- Primary 4: `English_language_prim4_t1 (1).pdf`, 121 pages.
+- Primary 5: `English_language_prim5_t1 (1).pdf`, 113 pages.
+- Primary 6: `English_Primary6_T1 (1).pdf`, 113 pages.
+
+Several PDFs are image/scanned documents and their embedded text extraction returned no content. Their contents/scope pages were therefore rendered and read with OCR. OCR can misread letters and words; uncertain strings must be checked against the page image before being used as authoritative text.
+
+### Primary 1 — index evidence
+The OCR scope-and-sequence page confirms later units/topics including:
+- Unit 4: My Body and My Senses
+- Unit 5: On the Farm
+- Unit 6: Animals Around Me
+The previously discovered 2026/2027 first-term sequence also includes Welcome to My School, The Garden of Colors and Shapes, and I Love My Family. Full page-by-page comparison remains pending.
+
+### Primary 2 — contents evidence
+The OCR contents/scope page identifies:
+1. Let's Get Started!
+2. Colors, Shapes, and Numbers
+3. Classroom Actions & Routines
+4. Everyday Life
+5. My Home
+6. Rooms at Home
+
+The same page exposes language targets (introductions, classroom objects/actions, family/home vocabulary, prepositions, and phonics) and life-skill/value labels. Full lesson audit remains pending.
+
+### Primary 3 — scope-and-sequence evidence
+The OCR scope-and-sequence page identifies:
+1. Let's Learn Together!
+2. My Family and I
+3. New Adventures
+4. Let's Tell Stories!
+5. Together Is Better
+6. Dare to Dream
+
+It also exposes grammar/phonics targets such as present simple, possessive pronouns, prepositions of place, regular past simple, narrative past forms, present continuous, and consonant clusters. These are index-level findings only; lesson examples and exercise accuracy still need inspection.
+
+### Primary 4 — partial index evidence
+The OCR page confirms at least:
+- Unit 3: Animals in Our World
+- Unit 4: Egypt — My Homeland
+Other unit titles were not reliably recoverable from this OCR pass. Do not infer the missing titles; inspect the original contents page image during the detailed audit.
+
+### Primary 5 — first detailed lesson sample
+The readable pages 7–24 establish that Unit 1 is **Food, Nature, and Culture**. The sampled lessons include:
+- Life Along the Nile: vocabulary and a short informational text/dialogue about water weeds, insects, fish, birds, and crocodiles, followed by comprehension and true/false items.
+- Food in the Hot Desert: a reading passage about desert animals and four multiple-choice questions.
+- Adverbs of Frequency: frequency scale and placement before main verbs / after forms of “to be”, with sentence-ordering and completion practice.
+- Story Time — The Giving Tree: vocabulary (crown, care for, shade, trunk, branch, selfish), a narrative, moral/comprehension questions, summary completion, and problem/solution/result sequencing.
+- Pronunciation: consonant clusters, including examples and completion practice.
+- Writing: a model recipe for Egyptian koshari using sequencing words, followed by a flyer task and a short paragraph task.
+The sample also reveals possible OCR/layout artifacts and a likely printed/OCR spelling issue (“Naitonal Park” in a Unit 6 overview); these must be checked visually before recording as book errors. This is a sample of Unit 1, not a complete Primary 5 audit.
+
+### Primary tracker update
+| Grade | Updated status | Evidence / next action |
+|---|---|---|
+| Primary 1 | Partial student-book index confirmed | OCR scope page plus previously discovered unit list; inspect all units and assessment book |
+| Primary 2 | Student-book index confirmed | OCR contents/scope page; inspect lesson pages and obtain assessment book |
+| Primary 3 | Student-book index confirmed | OCR scope-and-sequence page; inspect lesson pages and obtain assessment book |
+| Primary 4 | Partial index confirmed | Units 3–4 readable; re-check full contents page and all lessons |
+| Primary 5 | Unit 1 sample read; detailed audit in progress | Pages 7–24; continue remaining units and obtain assessment book |
+| Primary 6 | Partial unit/scope index confirmed | OCR scope page shows six-unit sequence; inspect lesson pages and obtain assessment book |
+
+**Source limitation:** these are user-provided Term 1 student books. Their presence and Ministry-style branding do not alone establish that each file is the final 2026/2027 edition. No matching Primary assessment-book PDFs were part of this intake. None of Primary 1–6 is marked fully verified.
