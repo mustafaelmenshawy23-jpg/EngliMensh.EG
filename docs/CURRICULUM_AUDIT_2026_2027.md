@@ -275,3 +275,21 @@ This extends the Unit 1 title discrepancy to all six primary grades and all thre
 
 ### Data architecture note
 Preparatory lesson content exists in at least two separate layers: `prepStageData.ts` and the generated catalog in `preparatoryCurriculumData.ts`, plus the Units 4–6 definitions in `preparatoryUnits4To6.ts`. Future corrections must trace which layer is consumed by each screen and exam flow before changing data, to avoid correcting a dormant/legacy file while leaving the live curriculum untouched.
+
+
+## Page-level follow-up: Primary 1 and Primary 2 Unit 1 (4 November 2026)
+
+### Primary 1 — supplied 2026/2027 book, printed pages 6–18 (PDF pages 7–19)
+The supplied book identifies Unit 1 as **“Welcome to My School”**. Its stated outcomes include greetings, classroom instructions, initial-letter recognition for **Tt** and **Ii**, and introducing oneself in complete sentences. The sampled lesson sequence is:
+1. Lesson 1 “Greetings”: Hello, Goodbye, shake hands, play; a Maya/Hana greeting and introduction dialogue; picture matching and tracing.
+2. Lesson 2 “Phonics”: Tt words include table, tomato, tiger, teacher, tree; tracing and initial-letter recognition.
+3. Lesson 3 “Around My Classroom”: teacher, book, bag, pencil, chair, desk, board; classroom actions including sit down / stand up.
+4. Lesson 4 “Phonics”: Ii words include in, ill, insect, ink, with tracing and initial-letter activities.
+
+The app's Primary 1 Unit 1 is titled **“Hello!”** and its source begins with greeting words (Hello, Goodbye) but also includes Bag, Book, “Busy Bee”, and Blue. The overlap in greetings is real, so this is not a claim that the whole app unit is unrelated. However, the app unit title and recorded content sequence do not faithfully represent the supplied book's four-lesson structure and explicit Tt/Ii phonics plus classroom vocabulary/actions. The current evidence supports a **partial overlap / incomplete mapping** finding, not a wholesale assertion that every app item is wrong.
+
+### Primary 2 — supplied book, PDF pages 7–16
+The sampled pages show the Unit 1 classroom theme and sequence: classroom vocabulary and sentence completion; Lesson 2 “Around the Classroom” with short-a phonics (cat, hat, fan, man, map, cap); Lesson 3 “Our Classroom Objects” (board, pencil case, window, eraser, door, bag, ruler), simple “This is a …” sentences and “Where is the …?” / “It’s over there”; then short-e and short-i phonics (pen, ten, hen, zip, fig, bin) and Lesson 4 “Let’s Write Together!”.
+The app's Primary 2 Unit 1 is **“Meet My Family”**. This is a clear title/theme discrepancy against the supplied book's Unit 1 classroom / getting-started content. The pages inspected support this mismatch; full Primary 2 Unit 1 coverage still requires checking the remaining pages and the book's complete lesson map.
+
+Evidence is the user-supplied PDF page content inspected in this pass (Primary 1 PDF pages 7–24; Primary 2 PDF pages 7–16). This page-level inspection strengthens the earlier index-only finding and narrows the Primary 1 discrepancy accurately.
