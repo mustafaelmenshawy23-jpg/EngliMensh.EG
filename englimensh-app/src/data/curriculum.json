@@ -165,6 +165,72 @@
           "units": []
         }
       ]
+    },
+    {
+      "id": "secondary-1",
+      "label": "الصف الأول الثانوي",
+      "stage": "secondary",
+      "grade": 1,
+      "terms": [
+        {
+          "id": "term-1",
+          "label": "الترم الأول",
+          "units": []
+        },
+        {
+          "id": "term-2",
+          "label": "الترم الثاني",
+          "units": []
+        }
+      ],
+      "pathways": [
+        "general-secondary",
+        "egyptian-baccalaureate"
+      ]
+    },
+    {
+      "id": "secondary-2",
+      "label": "الصف الثاني الثانوي",
+      "stage": "secondary",
+      "grade": 2,
+      "terms": [
+        {
+          "id": "term-1",
+          "label": "الترم الأول",
+          "units": []
+        },
+        {
+          "id": "term-2",
+          "label": "الترم الثاني",
+          "units": []
+        }
+      ],
+      "pathways": [
+        "general-secondary",
+        "egyptian-baccalaureate"
+      ]
+    },
+    {
+      "id": "secondary-3",
+      "label": "الصف الثالث الثانوي",
+      "stage": "secondary",
+      "grade": 3,
+      "terms": [
+        {
+          "id": "term-1",
+          "label": "الترم الأول",
+          "units": []
+        },
+        {
+          "id": "term-2",
+          "label": "الترم الثاني",
+          "units": []
+        }
+      ],
+      "pathways": [
+        "general-secondary",
+        "egyptian-baccalaureate"
+      ]
     }
   ],
   "unitSchema": {
@@ -224,5 +290,39 @@
     "correctOption": 0,
     "explanation": "",
     "sourcePage": null
+  },
+  "pathways": [
+    {
+      "id": "general-secondary",
+      "label": "الثانوية العامة"
+    },
+    {
+      "id": "egyptian-baccalaureate",
+      "label": "البكالوريا المصرية"
+    }
+  ],
+  "scope": {
+    "country": "Egypt",
+    "curriculum": "national",
+    "from": "primary-1",
+    "to": "secondary-3",
+    "includes": [
+      "primary-1",
+      "primary-2",
+      "primary-3",
+      "primary-4",
+      "primary-5",
+      "primary-6",
+      "prep-1",
+      "prep-2",
+      "prep-3",
+      "secondary-1",
+      "secondary-2",
+      "secondary-3"
+    ],
+    "secondaryPathways": [
+      "general-secondary",
+      "egyptian-baccalaureate"
+    ]
   }
 }
