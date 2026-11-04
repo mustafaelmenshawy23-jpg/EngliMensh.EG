@@ -20,7 +20,100 @@
           "label": "الترم الثاني",
           "units": []
         }
-      ]
+      ],
+      "unitIndex": [
+        {
+          "id": "unit-1",
+          "number": 1,
+          "title": "Welcome to My School",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim1_t1.pdf",
+            "pdfPages": [
+              3,
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-2",
+          "number": 2,
+          "title": "The Garden of Colors and Shapes",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim1_t1.pdf",
+            "pdfPages": [
+              3,
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-3",
+          "number": 3,
+          "title": "I Love My Family",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim1_t1.pdf",
+            "pdfPages": [
+              3,
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-4",
+          "number": 4,
+          "title": "My Body and My Senses",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim1_t1.pdf",
+            "pdfPages": [
+              3,
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-5",
+          "number": 5,
+          "title": "On the Farm",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim1_t1.pdf",
+            "pdfPages": [
+              3,
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-6",
+          "number": 6,
+          "title": "Animals Around Me",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim1_t1.pdf",
+            "pdfPages": [
+              3,
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        }
+      ],
+      "sourceAvailability": {
+        "studentBook": true,
+        "assessmentBook": true,
+        "studentBookFile": "English_language_prim1_t1.pdf",
+        "assessmentBookFile": "English_prim1_t1_Assmt (1).pdf",
+        "mode": "student_book_and_assessments"
+      }
     },
     {
       "id": "primary-2",
@@ -38,7 +131,94 @@
           "label": "الترم الثاني",
           "units": []
         }
-      ]
+      ],
+      "unitIndex": [
+        {
+          "id": "unit-1",
+          "number": 1,
+          "title": "Let’s Get Started!",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim2_t1 (1).pdf",
+            "pdfPages": [
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-2",
+          "number": 2,
+          "title": "Colors, Shapes, and Numbers",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim2_t1 (1).pdf",
+            "pdfPages": [
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-3",
+          "number": 3,
+          "title": "Classroom Actions & Routines",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim2_t1 (1).pdf",
+            "pdfPages": [
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-4",
+          "number": 4,
+          "title": "Everyday Life",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim2_t1 (1).pdf",
+            "pdfPages": [
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-5",
+          "number": 5,
+          "title": "My Home",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim2_t1 (1).pdf",
+            "pdfPages": [
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-6",
+          "number": 6,
+          "title": "Rooms at Home",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim2_t1 (1).pdf",
+            "pdfPages": [
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        }
+      ],
+      "sourceAvailability": {
+        "studentBook": true,
+        "assessmentBook": true,
+        "studentBookFile": "English_language_prim2_t1 (1).pdf",
+        "assessmentBookFile": "English_prim2_t1_Assmt (1).pdf",
+        "mode": "student_book_and_assessments"
+      }
     },
     {
       "id": "primary-3",
@@ -56,7 +236,94 @@
           "label": "الترم الثاني",
           "units": []
         }
-      ]
+      ],
+      "unitIndex": [
+        {
+          "id": "unit-1",
+          "number": 1,
+          "title": "Let’s Learn Together!",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim3_t1 (1).pdf",
+            "pdfPages": [
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-2",
+          "number": 2,
+          "title": "My Family and I",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim3_t1 (1).pdf",
+            "pdfPages": [
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-3",
+          "number": 3,
+          "title": "New Adventures",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim3_t1 (1).pdf",
+            "pdfPages": [
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-4",
+          "number": 4,
+          "title": "Let’s Tell Stories!",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim3_t1 (1).pdf",
+            "pdfPages": [
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-5",
+          "number": 5,
+          "title": "Together Is Better",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim3_t1 (1).pdf",
+            "pdfPages": [
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-6",
+          "number": 6,
+          "title": "Dare to Dream",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim3_t1 (1).pdf",
+            "pdfPages": [
+              4
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        }
+      ],
+      "sourceAvailability": {
+        "studentBook": true,
+        "assessmentBook": true,
+        "studentBookFile": "English_language_prim3_t1 (1).pdf",
+        "assessmentBookFile": "كتاب تقييمات الصف الثالث 2026 (1).pdf",
+        "mode": "student_book_and_assessments"
+      }
     },
     {
       "id": "primary-4",
@@ -74,7 +341,106 @@
           "label": "الترم الثاني",
           "units": []
         }
-      ]
+      ],
+      "unitIndex": [
+        {
+          "id": "unit-1",
+          "number": 1,
+          "title": "The Five Senses",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim4_t1 (1).pdf",
+            "pdfPages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-2",
+          "number": 2,
+          "title": "My Community",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim4_t1 (1).pdf",
+            "pdfPages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-3",
+          "number": 3,
+          "title": "Animals In Our World",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim4_t1 (1).pdf",
+            "pdfPages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-4",
+          "number": 4,
+          "title": "Egypt – My Homeland",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim4_t1 (1).pdf",
+            "pdfPages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-5",
+          "number": 5,
+          "title": "A Day At Work",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim4_t1 (1).pdf",
+            "pdfPages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-6",
+          "number": 6,
+          "title": "The Hundred Dresses",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim4_t1 (1).pdf",
+            "pdfPages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        }
+      ],
+      "sourceAvailability": {
+        "studentBook": true,
+        "assessmentBook": true,
+        "studentBookFile": "English_language_prim4_t1 (1).pdf",
+        "assessmentBookFile": "English_prim4_t1_Assmt (1).pdf",
+        "mode": "student_book_and_assessments"
+      }
     },
     {
       "id": "primary-5",
@@ -92,7 +458,106 @@
           "label": "الترم الثاني",
           "units": []
         }
-      ]
+      ],
+      "unitIndex": [
+        {
+          "id": "unit-1",
+          "number": 1,
+          "title": "Food, Nature, and Culture",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim5_t1 (1).pdf",
+            "pdfPages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-2",
+          "number": 2,
+          "title": "My Healthy Body",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim5_t1 (1).pdf",
+            "pdfPages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-3",
+          "number": 3,
+          "title": "When Nature Changes",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim5_t1 (1).pdf",
+            "pdfPages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-4",
+          "number": 4,
+          "title": "My Community",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim5_t1 (1).pdf",
+            "pdfPages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-5",
+          "number": 5,
+          "title": "Our World, Our Resources",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim5_t1 (1).pdf",
+            "pdfPages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        },
+        {
+          "id": "unit-6",
+          "number": 6,
+          "title": "The Talking Earth",
+          "indexSource": {
+            "type": "student-book-scope-and-sequence",
+            "file": "English_language_prim5_t1 (1).pdf",
+            "pdfPages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        }
+      ],
+      "sourceAvailability": {
+        "studentBook": true,
+        "assessmentBook": true,
+        "studentBookFile": "English_language_prim5_t1 (1).pdf",
+        "assessmentBookFile": "English_prim5_t1_Assmt (1).pdf",
+        "mode": "student_book_and_assessments"
+      }
     },
     {
       "id": "primary-6",
@@ -110,7 +575,33 @@
           "label": "الترم الثاني",
           "units": []
         }
-      ]
+      ],
+      "unitIndex": [
+        {
+          "id": "unit-1",
+          "number": 1,
+          "title": "Amazing Places in Egypt",
+          "indexSource": {
+            "type": "assessment-book",
+            "file": "English_prim6_t1_Assmt (1).pdf",
+            "pdfPages": [
+              4,
+              5,
+              6,
+              7
+            ],
+            "note": "Unit 1 title and lesson references verified from the assessment book; full unit index remains under review."
+          },
+          "contentStatus": "index_verified_content_not_yet_entered"
+        }
+      ],
+      "sourceAvailability": {
+        "studentBook": false,
+        "assessmentBook": true,
+        "studentBookFile": null,
+        "assessmentBookFile": "English_prim6_t1_Assmt (1).pdf",
+        "mode": "assessment_only"
+      }
     },
     {
       "id": "prep-1",
@@ -324,5 +815,11 @@
       "general-secondary",
       "egyptian-baccalaureate"
     ]
+  },
+  "sourceAudit": {
+    "reviewedOn": "2026-11-05",
+    "scope": "Egyptian national curriculum, Primary 1-6, Term 1",
+    "extractionPolicy": "Only unit titles and source references verified in the supplied PDFs are indexed. No vocabulary, grammar, reading, listening scripts, questions, or answers are generated to fill gaps.",
+    "nextStage": "Extract and verify unit-level content and question provenance from the supplied books and assessment books before publishing learning content."
   }
 }
