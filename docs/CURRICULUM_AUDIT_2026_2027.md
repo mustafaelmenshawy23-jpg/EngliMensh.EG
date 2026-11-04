@@ -236,3 +236,19 @@ This is stronger than a grade-description discrepancy: the actual Unit 1 records
 
 ### Current action boundary
 No curriculum content or exam questions have been changed in this pass. The work remains an evidence-led audit on the dedicated branch; no APK/build is being claimed. Keep every grade marked partial/pending until the lesson, grammar, vocabulary, reading, question, answer-key, and assessment-book checks are complete.
+
+
+## Primary exam-bank linkage cross-check (4 November 2026)
+
+The three primary question-bank files were inspected. Their unit titles largely mirror the same app-side curriculum records, so they do not independently resolve the student-book mismatches:
+
+- `primary3And4Exams.ts` contains P3 U1–U6 and P4 U1–U6 using the same titles as the curriculum file, including P3 U1 “I Feel Happy!” and P4 U1 “I Feel Good”.
+- `primary5And6Exams.ts` contains P5 U1–U6 and P6 U1–U6 using the same app-side sequence, including P5 U1 “We Plant Our Food” and P6 U1 “Green Cities”.
+- `primary1And2Exams.ts` declares 12 units in its header, but the extracted unit IDs currently include only 11: P1 U2–U6 and P2 U1–U6. No `p1_u1` exam-suite ID was found in that file. This is an implementation completeness issue to investigate; do not assume the missing suite is generated elsewhere without tracing its consumers.
+
+Further Unit 1 mismatches established from the supplied book index/sample evidence:
+- Primary 1 app U1 “Hello!” versus book U1 “Welcome to My School”.
+- Primary 2 app U1 “Meet My Family” versus book U1 “Let’s Get Started!”.
+- Primary 3–6 mismatches are recorded in the preceding section.
+
+Important scope note: question-bank title alignment with the app curriculum is not evidence of alignment with the Ministry books. The banks use a shared builder (`buildVerifiedP1P2Suite`) and contain extensive generated practice; all prompts, answer keys, distractors, grammar scope, and unit mapping still need direct source comparison. No exam content was modified in this pass.
