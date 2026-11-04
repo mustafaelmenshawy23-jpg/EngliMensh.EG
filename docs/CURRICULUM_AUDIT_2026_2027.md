@@ -758,3 +758,22 @@ Maintain an auditable mapping for each item with: grade, term, unit, lesson, app
 - Do not build or publish an APK until the relevant scope passes these gates. Report missing source books/pages explicitly; never fill them by assumption.
 
 **Current status:** this stricter standard supersedes any earlier implication that title-level or sampled page comparisons amount to a complete curriculum audit. Previous findings remain provisional evidence only. No app content has yet been approved as correct solely by virtue of being present in the current app.
+
+
+## Preparatory-stage source-integrity scan — implementation audit (4 November 2026)
+
+A first source-code scan was completed across the three preparatory content layers. This is an implementation-integrity finding, not yet a complete textbook comparison.
+
+### Files and observed risks
+- `src/data/preparatoryCurriculumData.ts` (99,584 characters): contains 10 literal `verificationStatus: 'verified'` assignments, generic fallback vocabulary defaults (including `community` and `volunteer`), and generated dialogue turns using Hazem/Omar with templated prompts such as “What are you learning about in Unit [number]?” It also labels generated content “Official Comprehension Text” and “Official Curriculum Dialogue Track”.
+- `src/data/preparatoryUnits4To6.ts` (159,209 characters): contains 4 literal `verificationStatus: 'verified'` assignments and at least one generated dialogue/question pattern around food and healthy eating. It labels at least one dialogue track “Official Curriculum Dialogue Track”.
+- `src/data/prepStageData.ts` (63,965 characters): a separate legacy content layer with dialogue and paragraph material (e.g. generic Omar/Hazem conversations and model writing about voluntary work). It contains no literal `verificationStatus: 'verified'` assignment in this scan.
+
+### Required disposition
+1. The “verified” status and “Official …” labels in generated/template layers are **not supported by page-level evidence in the current audit record**. They must not be treated as proof of Ministry provenance. Trace their consumers and replace these labels/statuses with honest provisional/generated markers unless an exact book page confirms the content.
+2. Generic fallback words, dialogue templates, model paragraphs and question patterns must be compared item-by-item with the corresponding grade/unit/lesson in the Student Book and Assessment Book. Remove or rewrite only after that mapping is established; do not assume every generic example is wrong, but do not present it as book-derived.
+3. Determine which of these three layers is actually imported/rendered for each preparatory grade before editing. Duplicate/legacy content must not be silently left active or accidentally deleted.
+4. Audit Prep 1, Prep 2 and Prep 3 independently. A finding in one grade or a shared factory does not prove the same content is present in every grade.
+
+### Scope boundary
+This scan does not establish the total number of generated questions or the exact runtime reachability of each suspicious block. It does not certify any preparatory unit. No app source was changed in this pass because the consumer graph and exact textbook-page mappings must be established first; no APK was built.
