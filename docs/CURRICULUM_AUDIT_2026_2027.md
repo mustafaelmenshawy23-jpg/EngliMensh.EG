@@ -883,3 +883,23 @@ A Library semantic search for Primary and Preparatory English Assessment Books r
 5. Locate and audit the Assessment Books before finalizing exam coverage, answer keys, model answers, and distractors.
 
 No exam-bank source file was modified in this audit pass: the full source transcription and comparison needed to replace the content safely are not complete. No APK was built.
+## Additional runtime-consumer findings — split lesson sources and silent fallback (4 November 2026)
+
+### 1. Preparatory exam screen reads a second, independent lesson database
+src/components/ExamsHub.tsx imports prepCurriculumDatabase from src/data/prepStageData.ts and uses it to render the Prep 1–3 unit cards, titles, themes, vocabulary/grammar highlights, and the five-level exam suite. The same screen separately queries getGradeCatalog('Preparatory', ...) from masterCurriculumDatabase.ts when launching the MOE mock and opening the three-tab lesson.
+
+Therefore, the visible Prep unit card and its five-level suite are sourced from prepStageData.ts, while the MOE mock and lesson viewer are sourced from the master catalog built by preparatoryCurriculumData.ts. These are separate data pipelines. The inspected Prep 1 Unit 1 in prepStageData.ts is titled “My Family and Me”, whereas the Student Book evidence already recorded for Prep 1 Unit 1 is “Life in a Digital World”. The mismatch is thus present in a direct screen data source, not just an unused data file. A student can encounter different content depending on which button is selected for the same displayed unit.
+
+### 2. Primary lesson lookup can silently return the wrong unit
+src/data/primaryStageData.ts implements getPrimaryLesson(grade, unitNumber, track, term) with a sequence of fallbacks: exact grade/unit/track/term; then any lesson matching grade and unit number; then the first lesson for the grade. If a requested unit/track/term is missing, the function can silently return a different lesson (including the first lesson in that grade) instead of returning undefined or an explicit missing-data state. This is especially risky alongside the confirmed missing Primary 4–6 records in the live primaryCurriculumDatabase.
+
+### 3. Primary catalog metadata still describes legacy topics
+src/data/primaryCurriculumData.ts includes grade-level descriptions for Primary 4–6 describing digestive/respiratory systems, desert ecosystems, plant cycles, clothing, Elephantine Island, jobs, weather, green cities, personality traits, vacations, festivals, journeys, and animal care. Those summaries reflect the same legacy content themes already found in the mismatching primary exam banks, not the official Term 1 unit titles/content recorded from the current Student Books. The catalog file's comments also claim “all 36 verified units” even though its imported live database contains only 18 records. These descriptions and comments are not reliable evidence of actual coverage.
+
+### Required next actions
+1. Consolidate Prep lesson cards, five-level suites, three-tab lessons, and MOE mock exams onto one book-backed source of truth per grade/unit/term.
+2. Change primary lesson lookup to fail explicitly on a missing exact record; never silently substitute another unit.
+3. Replace grade-level descriptions and coverage claims only after all official unit records are transcribed and mapped.
+4. Add integration tests that assert the same grade/unit/term resolves to the same canonical title and source record across every screen and exam launch path.
+
+No runtime source code was modified in this audit pass. No APK was built.
