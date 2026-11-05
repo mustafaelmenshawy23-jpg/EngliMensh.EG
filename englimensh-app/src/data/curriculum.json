@@ -688,7 +688,14 @@
           "label": "الترم الثاني",
           "units": []
         }
-      ]
+      ],
+      "sourceAvailability": {
+        "studentBook": true,
+        "assessmentBook": true,
+        "studentBookFile": "English_Prep1_T1 (1).pdf",
+        "assessmentBookFile": "English 1prep-1تقييمات اولى عYasser Salah .pdf",
+        "mode": "student_book_and_assessments"
+      }
     },
     {
       "id": "prep-2",
@@ -706,7 +713,14 @@
           "label": "الترم الثاني",
           "units": []
         }
-      ]
+      ],
+      "sourceAvailability": {
+        "studentBook": true,
+        "assessmentBook": true,
+        "studentBookFile": "English_language_prep2_t1 (1).pdf",
+        "assessmentBookFile": "Performance Tasks Prep 2-OnlineMaterials.PDF",
+        "mode": "student_book_and_assessments"
+      }
     },
     {
       "id": "prep-3",
@@ -724,7 +738,14 @@
           "label": "الترم الثاني",
           "units": []
         }
-      ]
+      ],
+      "sourceAvailability": {
+        "studentBook": true,
+        "assessmentBook": true,
+        "studentBookFile": "English_language_prep3_t1 (1).pdf",
+        "assessmentBookFile": "كتاب_تقيمات_الصف_الثالث_الاعدادي_2026.pdf",
+        "mode": "student_book_and_assessments"
+      }
     },
     {
       "id": "secondary-1",
@@ -746,7 +767,14 @@
       "pathways": [
         "general-secondary",
         "egyptian-baccalaureate"
-      ]
+      ],
+      "sourceAvailability": {
+        "studentBook": true,
+        "assessmentBook": false,
+        "studentBookFile": "English_1sec_t1 (1).pdf",
+        "assessmentBookFile": null,
+        "mode": "student_book_only"
+      }
     },
     {
       "id": "secondary-2",
@@ -768,7 +796,14 @@
       "pathways": [
         "general-secondary",
         "egyptian-baccalaureate"
-      ]
+      ],
+      "sourceAvailability": {
+        "studentBook": true,
+        "assessmentBook": false,
+        "studentBookFile": "English_language_2sec_t1 (1).pdf",
+        "assessmentBookFile": null,
+        "mode": "student_book_only"
+      }
     },
     {
       "id": "secondary-3",
@@ -790,7 +825,14 @@
       "pathways": [
         "general-secondary",
         "egyptian-baccalaureate"
-      ]
+      ],
+      "sourceAvailability": {
+        "studentBook": true,
+        "assessmentBook": false,
+        "studentBookFile": "English_language_Sec3_tr1 (1).pdf",
+        "assessmentBookFile": null,
+        "mode": "student_book_only"
+      }
     }
   ],
   "unitSchema": {
