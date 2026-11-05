@@ -50,62 +50,116 @@ export const primary1Curriculum: PrimaryLessonContent[] = [
           id: 'p1_u1_w1',
           word: 'Hello',
           phonetics: '/həˈləʊ/',
-          arabicMeaning: 'أهلاً / مرحباً',
+          arabicMeaning: 'مرحباً',
           partOfSpeech: 'phrase',
-          exampleSentence: 'Hello! I am Miss Mona.',
-          visualCue: 'hand_wave'
+          exampleSentence: 'Hello, Maya!',
+          visualCue: 'school_object'
         },
         {
           id: 'p1_u1_w2',
           word: 'Goodbye',
           phonetics: '/ˌɡʊdˈbaɪ/',
-          arabicMeaning: 'مع السلامة / وداعاً',
+          arabicMeaning: 'مع السلامة',
           partOfSpeech: 'phrase',
-          exampleSentence: 'Goodbye, see you tomorrow!',
-          visualCue: 'goodbye_door'
+          exampleSentence: 'Goodbye, Hana!',
+          visualCue: 'school_object'
         },
         {
           id: 'p1_u1_w3',
-          word: 'Bag',
-          phonetics: '/bæɡ/',
-          arabicMeaning: 'حقيبة مدرسية',
-          partOfSpeech: 'noun',
-          exampleSentence: 'Open your bag, please.',
-          visualCue: 'school_bag'
+          word: 'play',
+          phonetics: '/pleɪ/',
+          arabicMeaning: 'يلعب',
+          partOfSpeech: 'verb',
+          exampleSentence: 'We play together.',
+          visualCue: 'school_object'
         },
         {
           id: 'p1_u1_w4',
-          word: 'Book',
-          phonetics: '/bʊk/',
-          arabicMeaning: 'كتاب القراءة',
+          word: 'friends',
+          phonetics: '/frendz/',
+          arabicMeaning: 'أصدقاء',
           partOfSpeech: 'noun',
-          exampleSentence: 'This is my English book.',
-          visualCue: 'open_book'
+          exampleSentence: 'We are friends.',
+          visualCue: 'school_object'
         },
         {
           id: 'p1_u1_w5',
-          word: 'Busy Bee',
-          phonetics: '/ˈbɪz.i biː/',
-          arabicMeaning: 'النحلة النشيطة',
+          word: 'bag',
+          phonetics: '/bæɡ/',
+          arabicMeaning: 'حقيبة',
           partOfSpeech: 'noun',
-          exampleSentence: 'Hello, Busy Bee!',
-          visualCue: 'cartoon_bee'
+          exampleSentence: 'This is my bag.',
+          visualCue: 'school_object'
         },
         {
           id: 'p1_u1_w6',
-          word: 'Blue',
-          phonetics: '/bluː/',
-          arabicMeaning: 'اللون الأزرق',
-          partOfSpeech: 'adjective',
-          exampleSentence: 'I have a blue pen.',
-          visualCue: 'blue_color'
+          word: 'chair',
+          phonetics: '/tʃeə(r)/',
+          arabicMeaning: 'كرسي',
+          partOfSpeech: 'noun',
+          exampleSentence: 'This is a chair.',
+          visualCue: 'school_object'
+        },
+        {
+          id: 'p1_u1_w7',
+          word: 'ruler',
+          phonetics: '/ˈruːlə(r)/',
+          arabicMeaning: 'مسطرة',
+          partOfSpeech: 'noun',
+          exampleSentence: 'This is my ruler.',
+          visualCue: 'school_object'
+        },
+        {
+          id: 'p1_u1_w8',
+          word: 'teacher',
+          phonetics: '/ˈtiːtʃə(r)/',
+          arabicMeaning: 'معلّم',
+          partOfSpeech: 'noun',
+          exampleSentence: 'My teacher is kind.',
+          visualCue: 'school_object'
+        },
+        {
+          id: 'p1_u1_w9',
+          word: 'board',
+          phonetics: '/bɔːd/',
+          arabicMeaning: 'سبورة',
+          partOfSpeech: 'noun',
+          exampleSentence: 'Look at the board.',
+          visualCue: 'school_object'
+        },
+        {
+          id: 'p1_u1_w10',
+          word: 'desk',
+          phonetics: '/desk/',
+          arabicMeaning: 'مكتب',
+          partOfSpeech: 'noun',
+          exampleSentence: 'This is my desk.',
+          visualCue: 'school_object'
+        },
+        {
+          id: 'p1_u1_w11',
+          word: 'book',
+          phonetics: '/bʊk/',
+          arabicMeaning: 'كتاب',
+          partOfSpeech: 'noun',
+          exampleSentence: 'Open your book.',
+          visualCue: 'school_object'
+        },
+        {
+          id: 'p1_u1_w12',
+          word: 'pencil',
+          phonetics: '/ˈpensəl/',
+          arabicMeaning: 'قلم رصاص',
+          partOfSpeech: 'noun',
+          exampleSentence: 'I have a pencil.',
+          visualCue: 'school_object'
         }
       ],
       phonics: [
         {
-          letterSound: 'Initial /b/ sound (Letter B)',
-          sampleWords: ['Bag', 'Book', 'Blue', 'Bee', 'Bus'],
-          rhymingPair: ['Bee', 'See']
+          letterSound: 'Letters T/t, L/l and D/d — source Scope and Sequence',
+          sampleWords: ['table', 'tiger', 'tomato', 'teacher', 'tree'],
+          rhymingPair: ['tree', 'three']
         }
       ],
       conversationTerms: [
