@@ -1,0 +1,383 @@
+{
+  "schemaVersion": 1,
+  "auditStatus": "partial_source_extraction",
+  "term": "First Term",
+  "sourcePolicy": {
+    "onlyVerifiedSourceContent": true,
+    "noInventedListeningScripts": true,
+    "noSupplementaryVocabularyPresentedAsBookVocabulary": true,
+    "pageNumbersArePdfPageNumbers": true
+  },
+  "grade6": {
+    "source": "English_prim6_t1_Assmt (1).pdf",
+    "sourceType": "assessment_book_only",
+    "studentBookProvided": false,
+    "units": [
+      {
+        "unit": 1,
+        "title": "Amazing places in Egypt",
+        "status": "partially_extracted",
+        "sourcePages": [4, 5, 6, 7],
+        "lessons": [
+          {
+            "title": "A day in Egypt",
+            "sourcePage": 4,
+            "reading": {
+              "title": "A day in Egypt",
+              "text": "People can enjoy many activities in one day in Egypt. In the morning, tourists visit ancient sites like the pyramids. Then, they walk to a small museum to learn more about history. After that, they go to Khan El Khalili to buy souvenirs such as handmade gifts. Some people like to take photos in beautiful places. At night, people can relax and listen to music. Egypt is a great place to visit and have fun.",
+              "questions": [
+                {
+                  "type": "mcq",
+                  "question": "Tourists go to Khan El Khalili to ...",
+                  "options": ["visit ancient sites", "buy souvenirs", "play music", "make furniture"],
+                  "correctAnswer": "buy souvenirs",
+                  "sourcePage": 4
+                },
+                {
+                  "type": "mcq",
+                  "question": "Tourists visit ancient sites in the ...",
+                  "options": ["morning", "evening", "night", "afternoon"],
+                  "correctAnswer": "morning",
+                  "sourcePage": 4
+                },
+                {
+                  "type": "short_answer",
+                  "question": "What can tourists do in the morning in Egypt?",
+                  "verifiedAnswer": "They can visit ancient sites like the pyramids and walk to a small museum to learn more about history.",
+                  "sourcePage": 4
+                },
+                {
+                  "type": "short_answer",
+                  "question": "Why do people go to Khan El Khalili?",
+                  "verifiedAnswer": "To buy souvenirs such as handmade gifts.",
+                  "sourcePage": 4
+                },
+                {
+                  "type": "short_answer",
+                  "question": "What can people do at night in Egypt?",
+                  "verifiedAnswer": "They can relax and listen to music.",
+                  "sourcePage": 5
+                }
+              ]
+            },
+            "additionalMcq": [
+              {
+                "question": "We ... souvenirs from Khan El Khalili.",
+                "options": ["do", "sell", "buy", "eat"],
+                "correctAnswer": "buy",
+                "sourcePage": 5
+              },
+              {
+                "question": "Tourists come to Egypt to ... the ancient sites.",
+                "options": ["play", "visit", "have", "read"],
+                "correctAnswer": "visit",
+                "sourcePage": 5
+              },
+              {
+                "question": "Carpenters ... furniture in Damietta.",
+                "options": ["run", "watch", "write", "make"],
+                "correctAnswer": "make",
+                "sourcePage": 5
+              },
+              {
+                "question": "They spend a great day ... Aswan.",
+                "options": ["of", "in", "off", "from"],
+                "correctAnswer": "in",
+                "sourcePage": 5
+              },
+              {
+                "question": "His family learns many new things about the Egyptian ...",
+                "options": ["Stadium", "Science", "Museum", "Math"],
+                "correctAnswer": "Museum",
+                "sourcePage": 5
+              }
+            ],
+            "writingTask": {
+              "prompt": "Write a paragraph of sixty words about A day in Egypt.",
+              "guidingElements": ["places", "buy souvenirs", "visit ancient sites"],
+              "sourcePage": 5
+            }
+          },
+          {
+            "title": "Ras Mohamed National Park",
+            "sourcePage": 6,
+            "grammarPractice": {
+              "focus": "Correct form of the word(s) in brackets",
+              "items": [
+                { "question": "Ibrahim (travel) to a different country every year.", "sourcePage": 6 },
+                { "question": "(Does) Remas and Aseel go to work by bus?", "sourcePage": 6 },
+                { "question": "Lama (don’t) study in the afternoon.", "sourcePage": 6 },
+                { "question": "How (do) Yossif get ready for the exam?", "sourcePage": 6 },
+                { "question": "She (usually) eats meat. She hates it very much.", "sourcePage": 6 }
+              ],
+              "answerKeyStatus": "not_added_pending_independent_answer_key_verification"
+            },
+            "sourceVocabularyBox": [
+              "landscape",
+              "coral reefs",
+              "culture",
+              "protected",
+              "clean and safe"
+            ],
+            "vocabularyExercise": [
+              {
+                "prompt": "Ras Mohamed is a ... area, so people must care for it.",
+                "answer": "protected"
+              },
+              {
+                "prompt": "It's important to keep the park ...",
+                "answer": "clean and safe"
+              },
+              {
+                "prompt": "People enjoy the quiet and beautiful ... in Ras Mohamed National Park.",
+                "answer": "landscape"
+              },
+              {
+                "prompt": "Ras Mohamed is full of animals, plants, and colorful ... under its sea.",
+                "answer": "coral reefs"
+              },
+              {
+                "prompt": "Visitors can learn about the ... of the local people.",
+                "answer": "culture"
+              }
+            ],
+            "sourcePage": 6,
+            "writingTask": {
+              "prompt": "Write a paragraph of 60 words about Ras Mohamed National Park.",
+              "sourcePage": 7
+            }
+          }
+        ],
+        "listening": {
+          "status": "not_found_in_pages_reviewed",
+          "note": "No printed listening script or listening MCQ was present on the reviewed pages 4–7. Do not generate a book-sourced listening activity from these pages."
+        },
+        "vocabulary30Status": "not_yet_supported_by_reviewed_pages",
+        "notes": [
+          "The reviewed assessment pages support the exact reading passage and exercises above, but do not provide 30 distinct unit vocabulary items.",
+          "The student book for grade 6 was not supplied."
+        ]
+      },
+      {
+        "unit": 2,
+        "title": "Our Nature",
+        "status": "partially_extracted",
+        "sourcePages": [16, 17, 18, 19, 20],
+        "lessons": [
+          {
+            "title": "Lesson 2 How's The Weather in Your City?",
+            "sourcePage": 17,
+            "grammarPractice": {
+              "focus": "Present continuous",
+              "items": [
+                "Mohamed (play) tennis in the club now.",
+                "(eat) your lunch at the moment?",
+                "I (not wear) my jacket. It's hot.",
+                "My friend and I (visit) London now.",
+                "Ahmed (clean) his room right now."
+              ]
+            },
+            "sourceVocabularyBox": ["oil", "grow", "herbs", "water"],
+            "vocabularyExerciseAnswers": [
+              { "prompt": "Since ancient times, people used olives to make ...", "answer": "oil" },
+              { "prompt": "My brother and I have a plant. We ... it every day.", "answer": "water" },
+              { "prompt": "In Egypt, people use ... like basil in cooking.", "answer": "herbs" },
+              { "prompt": "Farmers ... fruits like guavas and figs.", "answer": "grow" }
+            ],
+            "writingTask": {
+              "prompt": "Write a paragraph of 60 words about the importance of plants in our life.",
+              "sourcePage": 17
+            }
+          },
+          {
+            "title": "Lesson 3 The Wonderful Nile River",
+            "sourcePage": 18,
+            "reading": {
+              "text": "I'm Omar. Last week, I went to the museum with my family. There were lots of things to see at it. We visited a room with lots of jewelry. There were bracelets, necklaces and rings from Ancient Egypt. After the jewelry, we saw tools and artifacts. The museum was amazing. I like history. We went back home at twelve o’clock.",
+              "questions": [
+                {
+                  "type": "mcq",
+                  "question": "We visited a room with lots of ...",
+                  "options": ["jewelry", "books", "chairs", "pens"],
+                  "correctAnswer": "jewelry"
+                },
+                {
+                  "type": "mcq",
+                  "question": "There were bracelets and ... from Ancient Egypt.",
+                  "options": ["dresses", "earrings", "necklaces", "shoes"],
+                  "correctAnswer": "necklaces"
+                },
+                {
+                  "type": "short_answer",
+                  "question": "Where did Omar go last week?",
+                  "verifiedAnswer": "He went to the museum with his family."
+                },
+                {
+                  "type": "short_answer",
+                  "question": "Were there lots of things to see at the museum?",
+                  "verifiedAnswer": "Yes, there were."
+                },
+                {
+                  "type": "short_answer",
+                  "question": "Why did Omar enjoy his visit to the museum?",
+                  "verifiedAnswer": "Because he likes history."
+                }
+              ]
+            },
+            "note": "The printed lesson heading is The Wonderful Nile River, but the reading passage on the same page is about Omar's museum visit. The source wording is preserved and the mismatch is flagged rather than silently rewritten."
+          },
+          {
+            "title": "Lesson 4&5 Unforgettable Trip to Wadi El Rayan",
+            "sourcePage": 20,
+            "reading": {
+              "text": "We all live in a community and we should all help the people who live in it. When you help as a volunteer, it’s a great way to help your community. You can learn new skills, make new friends, and make your neighborhood a better place. We spoke to people in our neighborhood about different ways people can make our community stronger. We can pick up garbage with cousins. Garbage is really annoying. We can use gloves, bags and special sticks to pick up the garbage. The park is a good place to play, so we should keep it clean.",
+              "questions": [
+                {
+                  "type": "mcq",
+                  "question": "The underlined word “pick up” means ...",
+                  "options": ["boil", "give", "lase", "collect"],
+                  "correctAnswer": "collect"
+                },
+                {
+                  "type": "mcq",
+                  "question": "We should keep the park ...",
+                  "options": ["untidy", "clean", "dirty", "polluted"],
+                  "correctAnswer": "clean"
+                },
+                {
+                  "type": "short_answer",
+                  "question": "How is helping your community very useful for you?",
+                  "verifiedAnswer": "You can learn new skills, make new friends, and make your neighborhood a better place."
+                },
+                {
+                  "type": "short_answer",
+                  "question": "What can people do to keep the park clean?",
+                  "verifiedAnswer": "They can pick up garbage using gloves, bags and special sticks."
+                }
+              ]
+            },
+            "note": "The printed heading names Wadi El Rayan, while the passage is about volunteering and keeping a park clean. Preserved as printed and flagged."
+          }
+        ],
+        "additionalVocabularyAndGrammar": {
+          "sourcePage": 16,
+          "multipleChoiceItems": [
+            {
+              "prompt": "I (...) out the weeds from the garden every morning.",
+              "options": ["pull", "check", "do", "eat"]
+            },
+            {
+              "prompt": "We help my grandpa (...) for the plants in his garden.",
+              "options": ["care", "grow", "take", "have"]
+            },
+            {
+              "prompt": "Every morning, I (...) for insects on the plants.",
+              "options": ["make", "take", "look", "pay"]
+            },
+            {
+              "prompt": "Grandpa (...) care of his plants every day.",
+              "options": ["does", "has", "takes", "sells"],
+              "correctAnswer": "takes"
+            },
+            {
+              "prompt": "What is hibiscus used (...) in the family?",
+              "options": ["from", "for", "off", "of"]
+            }
+          ]
+        },
+        "weeklyAssessment": {
+          "sourcePage": 19,
+          "types": ["reorder_words_to_form_sentences"],
+          "topics": [
+            "watering plants",
+            "pulling weeds",
+            "farmers growing fruits",
+            "herbs in cooking",
+            "checking insects on plants",
+            "weather in Alexandria and Cairo",
+            "the Nile River",
+            "animals near the Nile",
+            "farmers and fertile soil",
+            "Ancient Egyptians building temples near the river"
+          ]
+        },
+        "listening": {
+          "status": "not_found_in_pages_reviewed",
+          "note": "No printed listening script or listening MCQ was present on the reviewed pages 16–20."
+        },
+        "vocabulary30Status": "not_yet_supported_by_reviewed_pages",
+        "notes": [
+          "The source pages contain several useful plant, weather, and study-related items, but they do not establish a complete 30-word unit list.",
+          "The printed lesson titles and reading passages have inconsistencies; these are retained and flagged."
+        ]
+      }
+    ]
+  },
+  "grade5": {
+    "source": "English_language_prim5_t1 (1).pdf",
+    "sourceType": "student_book_scope_and_sequence",
+    "reviewedPdfPages": [3, 4, 5],
+    "status": "scope_and_sequence_transcribed_not_full_unit_extraction",
+    "units": [
+      {
+        "unit": 1,
+        "title": "Food, Nature, and Culture",
+        "sourceVocabulary": ["crocodile", "hunt", "water weeds", "insects", "trunk", "crown", "care for", "selfish", "shade", "branch", "recipe", "flyer"],
+        "languageInUse": ["Adverbs of frequency"],
+        "readingTopics": ["Nile River life", "Egyptian food", "desert animals"],
+        "listeningDescription": "Dialogs and stories about river life and food culture",
+        "sourcePage": 3
+      },
+      {
+        "unit": 2,
+        "title": "My Healthy Body",
+        "sourceVocabulary": ["fit", "mental health", "stressed", "lungs", "muscles", "organ", "blood", "vessels", "fist", "oxygen", "nutrients"],
+        "languageInUse": ["Indefinite articles (a, an)", "Quantifiers (some, any)"],
+        "readingTopics": ["the body", "healthy habits", "the heart and blood system"],
+        "listeningDescription": "Dialogs and texts about health routines and medical professionals",
+        "sourcePage": 3
+      },
+      {
+        "unit": 3,
+        "title": "When Nature Changes",
+        "sourceVocabulary": ["storm", "flood", "drought", "wildfire", "heatwave", "safely", "peaceful", "leaped", "pond", "well", "flies"],
+        "languageInUse": ["Past simple affirmative, negative and interrogative forms, including Wh-questions"],
+        "readingTopics": ["extreme weather events and their effects"],
+        "listeningDescription": "Conversations and stories about natural disasters and global warming",
+        "sourcePage": 4
+      },
+      {
+        "unit": 4,
+        "title": "My Community",
+        "sourceVocabulary": ["restaurant", "coffee shop", "bakery", "supermarket", "club", "theme park", "field", "cottage", "community center", "barn", "main square"],
+        "languageInUse": ["Prepositions of time: in, on, at"],
+        "readingTopics": ["community places", "old and new cities", "Egyptian neighborhoods"],
+        "listeningDescription": "Texts about various community locations and city life",
+        "sourcePage": 4
+      },
+      {
+        "unit": 5,
+        "title": "Our World, Our Resources",
+        "sourceVocabulary": ["sunlight", "water", "soil", "fossil fuel", "minerals", "wind", "natural resources", "cotton", "electricity", "fertile", "cargo", "digger", "give up", "cheerfully", "path", "thick", "load"],
+        "languageInUse": ["Formation and usage of comparative adjectives"],
+        "readingTopics": ["Egypt's natural resources and their uses"],
+        "listeningDescription": "Stories and factual texts about the environment and resource use",
+        "sourcePage": 5
+      },
+      {
+        "unit": 6,
+        "title": "The Talking Earth",
+        "sourceVocabulary": ["canoe", "Earth", "Everglades", "swamp", "National Park", "alligator", "owl", "shell", "scientist", "splash"],
+        "languageInUse": ["Expressive sentence structures", "Tense reflection: present vs. past"],
+        "readingTopics": ["literary narrative exploring nature and environmental identity"],
+        "listeningDescription": "Narrative listening for details and thematic understanding",
+        "sourcePage": 5
+      }
+    ],
+    "notes": [
+      "This is a faithful transcription of the Scope and Sequence vocabulary and skill summaries, not a complete extraction of all unit pages.",
+      "The book lists fewer than 30 vocabulary entries in several units. Do not silently add words and label them as student-book vocabulary.",
+      "The Scope and Sequence mentions listening genres but does not provide the actual audio scripts in the reviewed pages."
+    ]
+  }
+}
