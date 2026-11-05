@@ -1,4 +1,5 @@
 import curriculum from './data/curriculum.json';
+import { getGradeOneUnit, getUnitVocabulary, getUnitPatterns, getUnitReading, getUnitListening } from './data/grade1-content.js';
 import { gameCatalog, createRound, getGameQuestion } from './games.js';
 import './style.css';
 
@@ -127,10 +128,33 @@ function sectionContent(section,g,t,u){
   const sourceName = source?.file || 'لم يحدد مصدر بعد';
   const sourceType = source?.type === 'assessment-book' ? 'كتاب التقييمات' : source?.type === 'student-book-scope-and-sequence' ? 'كتاب الطالب – Scope and Sequence' : 'لا يوجد مرجع وحدة موثق';
   const pending = '<div class="notice"><b>لم يُنشر محتوى هذا القسم بعد.</b><p>سيُضاف فقط بعد استخراجه من الكتاب أو التقييمات والتحقق من النص والإجابة ورقم الصفحة. لن نستخدم أسئلة أو نصوصًا مؤلفة لسد النقص.</p></div>';
+  const extracted = g.id === 'primary-1' ? getGradeOneUnit(u?.id) : null;
+  const gradeOneContent = (kind) => {
+    if (!extracted) return pending;
+    if (kind === 'vocabulary') {
+      const words = getUnitVocabulary(extracted);
+      return words.length ? `<p class="muted">الكلمات المستخرجة من فهرس الوحدة والصفحات التي تمت مراجعتها. لا نضيف ترجمة عربية غير موجودة في المصدر.</p><div class="word-list">${words.map(item => `<div class="word-item"><b>${esc(item.word)}</b><small>${item.sourcePage ? 'PDF p. ' + item.sourcePage : 'Unit vocabulary index'}</small></div>`).join('')}</div><p class="muted">عدد الكلمات الموثقة في فهرس هذه الوحدة: ${words.length}</p>` : pending;
+    }
+    if (kind === 'grammar') {
+      const patterns = getUnitPatterns(extracted);
+      return `<div class="notice"><b>${esc(extracted.grammar?.status || 'لم يتم توثيق درس قواعد مستقل')}</b><p>${esc(extracted.grammar?.note || 'لن نحول أنماط اللغة إلى قواعد غير موجودة في الكتاب.')}</p></div>${patterns.length ? `<h3>Language patterns printed in the book</h3><div class="source-list">${patterns.map(item => `<div class="source-item"><b>${esc(item.text)}</b><small>${esc(item.lesson)} · ${item.sourcePage ? 'PDF p. ' + item.sourcePage : 'Source page under review'}</small></div>`).join('')}</div>` : ''}`;
+    }
+    if (kind === 'reading') {
+      const readings = getUnitReading(extracted);
+      return `<div class="notice"><b>${esc(extracted.reading?.status || 'No standalone reading passage identified')}</b><p>${esc(extracted.reading?.note || 'نعرض فقط نصوص القراءة المطبوعة التي تم استخراجها.')}</p></div>${readings.length ? `<div class="source-list">${readings.map(item => `<div class="source-item"><b>${esc(item.text)}</b><small>${esc(item.lesson)} · PDF p. ${item.sourcePage}</small></div>`).join('')}</div>` : '<p class="muted">لم يُعثر على قطعة قراءة مستقلة في صفحات الوحدة التي تمت مراجعتها؛ لن نؤلف قطعة بديلة.</p>'}`;
+    }
+    if (kind === 'listening') {
+      const listening = getUnitListening(extracted);
+      const dialogues = listening.dialogues.map(dialogue => `<article class="dialogue-block"><h3>${esc(dialogue.title)} <small>PDF p. ${dialogue.sourcePage}</small></h3>${dialogue.lines.map(line => `<p><b>${esc(line.speaker)}:</b> ${esc(line.text)}</p>`).join('')}</article>`).join('');
+      const repeats = listening.repeatLists.map(list => `<div class="source-item"><b>${esc(list.lesson)} · PDF p. ${list.sourcePage}</b><p>${list.words.map(esc).join(' · ')}</p></div>`).join('');
+      return `<div class="notice"><b>حدود مصدر الاستماع</b><p>${esc(listening.note || 'نعرض الحوارات وقوائم التكرار التي وردت في الكتاب فقط. لا ندعي وجود تسجيل صوتي أصلي عندما لا يكون مرفقًا.')}</p></div>${dialogues}${repeats ? `<h3>Listen-and-repeat word lists</h3><div class="source-list">${repeats}</div>` : ''}${dialogues || repeats ? '' : '<p class="muted">لا يوجد نص استماع قابل للاستخراج لهذه الوحدة في الصفحات التي تمت مراجعتها.</p>'}`;
+    }
+    return pending;
+  };
   const overview = `<div class="notice"><b>الصف:</b> ${esc(g.label)} · ${esc(t.label)}<br><b>الوحدة:</b> ${u ? `Unit ${u.number}: ${esc(u.title)}` : 'لا توجد وحدة موثقة لهذا الترم'}<br><b>حالة المحتوى:</b> ${u ? 'فهرس الوحدة موثق؛ المحتوى التفصيلي قيد المراجعة.' : 'لم يُعتمد فهرس وحدات لهذا الترم بعد.'}</div>
     <div class="grid"><article><span>01</span><b>استخراج المصدر</b><small>تثبيت نص الكتاب ورقم الصفحة قبل الإدخال</small></article><article><span>02</span><b>مراجعة المحتوى</b><small>مطابقة المفردات والقواعد والإجابات مع المصدر</small></article><article><span>03</span><b>اختبار التطبيق</b><small>عدم نشر أي عنصر قبل اجتياز المراجعة</small></article></div>
     <div class="notice"><b>مرجع فهرس الوحدة:</b> ${esc(sourceType)}<br><b>الملف:</b> ${esc(sourceName)}<br><b>صفحات PDF:</b> ${esc(sourcePages)}</div>${pending}`
-  const body = section === 'overview' ? overview : `<p>هذا القسم مخصص لـ ${titles[section]} في ${u ? esc(u.title) : 'الوحدة المحددة'}.</p>${pending}`;
+  const body = section === 'overview' ? overview : ['vocabulary','grammar','reading','listening'].includes(section) ? `<p>هذا القسم مخصص لـ ${titles[section]} في ${u ? esc(u.title) : 'الوحدة المحددة'}.</p>${gradeOneContent(section)}` : `<p>هذا القسم مخصص لـ ${titles[section]} في ${u ? esc(u.title) : 'الوحدة المحددة'}.</p>${pending}`;
   return `<p class="eyebrow">ENG LISH · ${esc(g.stage.toUpperCase())}</p><h2>${titles[section]}</h2>${body}`;
 }
 render();
