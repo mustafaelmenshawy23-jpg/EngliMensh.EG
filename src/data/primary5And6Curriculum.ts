@@ -17,7 +17,7 @@ export const primary5And6Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 1,
-    unitTitleEn: 'We Plant Our Food',
+    unitTitleEn: "Food, Nature, and Culture",
     unitTitleAr: 'نحن نزرع طعامنا وسلسلة الغذاء',
     tab1_Vocabulary: {
       words: [
@@ -188,7 +188,7 @@ export const primary5And6Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 2,
-    unitTitleEn: 'I Want to Be Healthy',
+    unitTitleEn: "My Healthy Body",
     unitTitleAr: 'أريد أن أكون بصحة جيدة والرياضة والبيئة',
     tab1_Vocabulary: {
       words: [
@@ -359,7 +359,7 @@ export const primary5And6Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 3,
-    unitTitleEn: 'How Do I Look?',
+    unitTitleEn: "When Nature Changes",
     unitTitleAr: 'كيف أبدو؟ والملابس التقليدية وترتيب الصفات',
     tab1_Vocabulary: {
       words: [
@@ -530,7 +530,7 @@ export const primary5And6Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 4,
-    unitTitleEn: 'Visiting Elephantine Island',
+    unitTitleEn: "My Community",
     unitTitleAr: 'زيارة جزيرة إلفنتين بأسوان والماضي المستمر',
     tab1_Vocabulary: {
       words: [
@@ -701,7 +701,7 @@ export const primary5And6Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 5,
-    unitTitleEn: 'Jobs We Do',
+    unitTitleEn: "Our World, Our Resources",
     unitTitleAr: 'وظائف نقوم بها والحرفيون في مصر القديمة',
     tab1_Vocabulary: {
       words: [
@@ -872,7 +872,7 @@ export const primary5And6Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 6,
-    unitTitleEn: "What's the Weather Like?",
+    unitTitleEn: "The Talking Earth",
     unitTitleAr: 'كيف يبدو الطقس؟ والظواهر المناخية والمستقبل',
     tab1_Vocabulary: {
       words: [
