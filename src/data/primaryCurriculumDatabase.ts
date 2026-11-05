@@ -332,205 +332,221 @@ export const primary1Curriculum: PrimaryLessonContent[] = [
     term: 1,
     unitNumber: 2,
     unitTitleEn: 'The Garden of Colors and Shapes',
-    unitTitleAr: 'هذا أنا وأجزاء الجسم والحواس',
+    unitTitleAr: 'حديقة الألوان والأشكال',
     tab1_Vocabulary: {
       words: [
         {
           id: 'p1_u2_w1',
-          word: 'Eye',
-          phonetics: '/aɪ/',
-          arabicMeaning: 'عين',
+          word: 'grass',
+          phonetics: '',
+          arabicMeaning: 'عشب',
           partOfSpeech: 'noun',
-          exampleSentence: 'I see with my eye.',
-          visualCue: 'human_eye'
+          exampleSentence: 'The grass is green.',
+          visualCue: 'unit2_garden_shapes'
         },
         {
           id: 'p1_u2_w2',
-          word: 'Nose',
-          phonetics: '/nəʊz/',
-          arabicMeaning: 'أنف',
+          word: 'flower',
+          phonetics: '',
+          arabicMeaning: 'زهرة',
           partOfSpeech: 'noun',
-          exampleSentence: 'Touch your nose, please.',
-          visualCue: 'human_nose'
+          exampleSentence: 'The flower is red.',
+          visualCue: 'unit2_garden_shapes'
         },
         {
           id: 'p1_u2_w3',
-          word: 'Mouth',
-          phonetics: '/maʊθ/',
-          arabicMeaning: 'فم',
+          word: 'tree',
+          phonetics: '',
+          arabicMeaning: 'شجرة',
           partOfSpeech: 'noun',
-          exampleSentence: 'I speak and smile with my mouth.',
-          visualCue: 'mouth_smile'
+          exampleSentence: 'I can see a tree.',
+          visualCue: 'unit2_garden_shapes'
         },
         {
           id: 'p1_u2_w4',
-          word: 'Ear',
-          phonetics: '/ɪər/',
-          arabicMeaning: 'أذن',
+          word: 'sky',
+          phonetics: '',
+          arabicMeaning: 'سماء',
           partOfSpeech: 'noun',
-          exampleSentence: 'I hear music with my ear.',
-          visualCue: 'human_ear'
+          exampleSentence: 'The sky is blue.',
+          visualCue: 'unit2_garden_shapes'
         },
         {
           id: 'p1_u2_w5',
-          word: 'Hand',
-          phonetics: '/hænd/',
-          arabicMeaning: 'يد',
+          word: 'bird',
+          phonetics: '',
+          arabicMeaning: 'طائر',
           partOfSpeech: 'noun',
-          exampleSentence: 'Wash your hands before eating.',
-          visualCue: 'hand_clean'
+          exampleSentence: 'I can see a bird.',
+          visualCue: 'unit2_garden_shapes'
+        },
+        {
+          id: 'p1_u2_w6',
+          word: 'butterfly',
+          phonetics: '',
+          arabicMeaning: 'فراشة',
+          partOfSpeech: 'noun',
+          exampleSentence: 'The butterfly is flying.',
+          visualCue: 'unit2_garden_shapes'
+        },
+        {
+          id: 'p1_u2_w7',
+          word: 'circle',
+          phonetics: '',
+          arabicMeaning: 'دائرة',
+          partOfSpeech: 'noun',
+          exampleSentence: 'This is a circle.',
+          visualCue: 'unit2_garden_shapes'
+        },
+        {
+          id: 'p1_u2_w8',
+          word: 'square',
+          phonetics: '',
+          arabicMeaning: 'مربع',
+          partOfSpeech: 'noun',
+          exampleSentence: 'This is a square.',
+          visualCue: 'unit2_garden_shapes'
+        },
+        {
+          id: 'p1_u2_w9',
+          word: 'triangle',
+          phonetics: '',
+          arabicMeaning: 'مثلث',
+          partOfSpeech: 'noun',
+          exampleSentence: 'This is a triangle.',
+          visualCue: 'unit2_garden_shapes'
+        },
+        {
+          id: 'p1_u2_w10',
+          word: 'rectangle',
+          phonetics: '',
+          arabicMeaning: 'مستطيل',
+          partOfSpeech: 'noun',
+          exampleSentence: 'This is a rectangle.',
+          visualCue: 'unit2_garden_shapes'
+        },
+        {
+          id: 'p1_u2_w11',
+          word: 'green',
+          phonetics: '',
+          arabicMeaning: 'أخضر',
+          partOfSpeech: 'adjective',
+          exampleSentence: 'The grass is green.',
+          visualCue: 'unit2_garden_shapes'
+        },
+        {
+          id: 'p1_u2_w12',
+          word: 'blue',
+          phonetics: '',
+          arabicMeaning: 'أزرق',
+          partOfSpeech: 'adjective',
+          exampleSentence: 'The sky is blue.',
+          visualCue: 'unit2_garden_shapes'
+        },
+        {
+          id: 'p1_u2_w13',
+          word: 'red',
+          phonetics: '',
+          arabicMeaning: 'أحمر',
+          partOfSpeech: 'adjective',
+          exampleSentence: 'The flower is red.',
+          visualCue: 'unit2_garden_shapes'
+        },
+        {
+          id: 'p1_u2_w14',
+          word: 'yellow',
+          phonetics: '',
+          arabicMeaning: 'أصفر',
+          partOfSpeech: 'adjective',
+          exampleSentence: 'The sun is yellow.',
+          visualCue: 'unit2_garden_shapes'
         }
       ],
       phonics: [
         {
-          letterSound: 'Sound /h/ (Letter H) and /n/ (Letter N)',
-          sampleWords: ['Hand', 'Hair', 'Hat', 'Nose', 'Nut', 'Neck'],
-          rhymingPair: ['Hat', 'Cat']
+          letterSound: 'Letters S/s and A/a — source Scope and Sequence',
+          sampleWords: ['sky', 'square', 'sun', 'apple'],
+          rhymingPair: ['sky', 'my']
         }
       ],
       conversationTerms: [
-        { en: "Touch your nose! Well done, Hany!", ar: "المس أنفك! أحسنت يا هاني!" },
-        { en: "Wash your face with clean water.", ar: "اغسل وجهك بالماء النظيف." }
+        { en: "What's this?", ar: "ما هذا؟" },
+        { en: "This is a circle.", ar: "هذه دائرة." },
+        { en: "I can see a flower.", ar: "أستطيع أن أرى زهرة." },
+        { en: "The grass is green.", ar: "العشب أخضر." },
+        { en: "The sky is blue.", ar: "السماء زرقاء." },
+        { en: "The sun is yellow.", ar: "الشمس صفراء." },
+        { en: "The flower is red.", ar: "الزهرة حمراء." },
+        { en: "The butterfly is flying.", ar: "الفراشة تطير." }
       ]
     },
     tab2_Grammar: {
       rules: [
         {
-          title: "Identifying Body Parts (This is my...)",
-          ruleExplanationAr: "للإشارة إلى جزء من أجزاء الجسم المفردة القريبة نقول: This is my + [الجسم].",
-          structureFormula: "This is my + [eye / nose / mouth / ear / hand]",
+          title: "Naming Things and Describing Colors",
+          ruleExplanationAr: "نستخدم What's this? للسؤال عن الشيء، وThis is a ... لتسميته. ونستخدم The ... is + color لوصف اللون.",
+          structureFormula: "What's this? — This is a + [shape/object]. / The + [object] + is + [color].",
           examples: [
-            { en: "This is my nose.", ar: "هذا أنفي." },
-            { en: "This is my hand.", ar: "هذه يدي." }
+            { en: "What's this? This is a circle.", ar: "ما هذا؟ هذه دائرة." },
+            { en: "The grass is green.", ar: "العشب أخضر." },
+            { en: "The sky is blue.", ar: "السماء زرقاء." }
           ],
-          visualPatternBlocks: ["This is my", "[body part]"]
+          visualPatternBlocks: ["What's this?", "This is a", "[shape/object]", "The [object] is [color]"]
         }
       ],
       sentenceBuilderDrills: [
         {
-          jumbledParts: ['my', 'is', 'This', 'nose'],
-          correctOrder: ['This', 'is', 'my', 'nose'],
-          translationAr: 'هذا أنفي'
+          jumbledParts: ['green', 'is', 'The', 'grass'],
+          correctOrder: ['The', 'grass', 'is', 'green'],
+          translationAr: 'العشب أخضر'
         },
         {
-          jumbledParts: ['your', 'Touch', 'ear'],
-          correctOrder: ['Touch', 'your', 'ear'],
-          translationAr: 'المس أذنك'
+          jumbledParts: ['a', 'This', 'circle', 'is'],
+          correctOrder: ['This', 'is', 'a', 'circle'],
+          translationAr: 'هذه دائرة'
         }
       ]
     },
     tab3_Skills: [
       {
-        type: 'phonics_drill',
-        instruction: 'Identify the initial sound /h/ in Hand and Hat, and /n/ in Nose.',
-        prompt: 'Which word starts with the /h/ sound?',
-        targetResponses: ['Hand', 'Hair', 'Hat'],
-        scaffoldingHints: ['Listen to the sound: /h/ like Hello and Hand']
+        type: 'vocabulary_recognition',
+        instruction: 'Identify garden objects and basic shapes.',
+        prompt: 'Which word names a shape?',
+        targetResponses: ['circle', 'square', 'triangle', 'rectangle'],
+        scaffoldingHints: ['Look for the names of shapes.']
       },
       {
         type: 'guided_writing',
-        instruction: 'Write the command: Touch your ______.',
-        prompt: 'Touch your ______ (أنفك)',
-        targetResponses: ['nose'],
-        scaffoldingHints: ['Starts with letter N']
+        instruction: 'Complete a simple sentence about a color.',
+        prompt: 'The grass is ______.',
+        targetResponses: ['green'],
+        scaffoldingHints: ['Choose the color named in the unit.']
       }
     ],
     examSuite: {
       level1_Foundation: [
-        {
-          id: 'p1_u2_l1_q1',
-          type: 'mcq',
-          questionPrompt: 'We use our ______ to see beautiful pictures.',
-          options: ['eyes', 'ears', 'mouth', 'hands'],
-          correctAnswer: 'eyes',
-          explanationAr: 'نرى الأشياء بأعيننا (eyes).',
-          marks: 1
-        },
-        {
-          id: 'p1_u2_l1_q2',
-          type: 'matching',
-          questionPrompt: 'Which word starts with the letter N /n/?',
-          options: ['Nose', 'Hand', 'Ear', 'Eye'],
-          correctAnswer: 'Nose',
-          explanationAr: 'كلمة Nose تبدأ بحرف N وصوته /n/.',
-          marks: 1
-        }
+        { id: 'p1_u2_l1_q1', type: 'mcq', questionPrompt: 'The grass is ______.', options: ['green', 'circle', 'bird', 'sky'], correctAnswer: 'green', explanationAr: 'الجملة الواردة في تسلسل الوحدة: The grass is green.', marks: 1 },
+        { id: 'p1_u2_l1_q2', type: 'mcq', questionPrompt: 'Which word names a shape?', options: ['triangle', 'flower', 'grass', 'bird'], correctAnswer: 'triangle', explanationAr: 'Triangle تعني مثلث.', marks: 1 }
       ],
       level2_Contextual: [
-        {
-          id: 'p1_u2_l2_q1',
-          type: 'matching',
-          questionPrompt: 'Match the command: "______ your hands with water and soap."',
-          options: ['Wash', 'Touch', 'Listen', 'Look'],
-          correctAnswer: 'Wash',
-          explanationAr: 'نقول: Wash your hands (اغسل يديك).',
-          marks: 1
-        },
-        {
-          id: 'p1_u2_l2_q2',
-          type: 'fill_in_the_blank',
-          questionPrompt: 'Complete: "This ______ my ear."',
-          options: ['is', 'are', 'am', 'be'],
-          correctAnswer: 'is',
-          explanationAr: 'مع المفرد This نستخدم فعل is.',
-          marks: 1
-        }
+        { id: 'p1_u2_l2_q1', type: 'mcq', questionPrompt: 'The sky is ______.', options: ['blue', 'red', 'green', 'yellow'], correctAnswer: 'blue', explanationAr: 'السماء زرقاء: The sky is blue.', marks: 1 },
+        { id: 'p1_u2_l2_q2', type: 'mcq', questionPrompt: 'The flower is ______.', options: ['red', 'blue', 'green', 'yellow'], correctAnswer: 'red', explanationAr: 'الزهرة حمراء: The flower is red.', marks: 1 }
       ],
       level3_AdvancedStructure: [
-        {
-          id: 'p1_u2_l3_q1',
-          type: 'reorder',
-          questionPrompt: 'Reorder: [my - is - This - eye].',
-          options: ['This is my eye', 'My eye is this', 'Is this my eye', 'Eye is my this'],
-          correctAnswer: 'This is my eye',
-          explanationAr: 'الترتيب: This is my eye (هذه عيني).',
-          marks: 2
-        },
-        {
-          id: 'p1_u2_l3_q2',
-          type: 'reorder',
-          questionPrompt: 'Reorder: [your - nose - Touch].',
-          options: ['Touch your nose', 'Nose touch your', 'Your touch nose', 'Touch nose your'],
-          correctAnswer: 'Touch your nose',
-          explanationAr: 'صيغة الأمر: Touch your nose (المس أنفك).',
-          marks: 2
-        }
+        { id: 'p1_u2_l3_q1', type: 'reorder', questionPrompt: 'Reorder: [a - is - This - circle].', options: ['This is a circle', 'A circle this is', 'Is this a circle', 'This a circle is'], correctAnswer: 'This is a circle', explanationAr: 'نستخدم This is a لتسمية الشكل.', marks: 2 },
+        { id: 'p1_u2_l3_q2', type: 'mcq', questionPrompt: 'Choose the correct question to ask about an object.', options: ["What's this?", 'How old are you?', 'Who is this?', 'Where are you?'], correctAnswer: "What's this?", explanationAr: 'السؤال الوارد في تسلسل الوحدة هو What’s this?', marks: 2 }
       ],
       level4_MoeMockExam: [
-        {
-          id: 'p1_u2_l4_q1',
-          type: 'mcq',
-          questionPrompt: 'Practice MOE Mock: "Touch your ______!" — Hana touches her ear.',
-          options: ['ear', 'nose', 'mouth', 'eye'],
-          correctAnswer: 'ear',
-          explanationAr: 'هناء تلمس أذنها (ear).',
-          marks: 1
-        },
-        {
-          id: 'p1_u2_l4_q2',
-          type: 'mcq',
-          questionPrompt: 'MOE Question: Before eating a healthy salad, we must ______ our hands.',
-          options: ['wash', 'sleep', 'kick', 'throw'],
-          correctAnswer: 'wash',
-          explanationAr: 'يجب غسل اليدين قبل الأكل للنظافة الصحية.',
-          marks: 1
-        }
+        { id: 'p1_u2_l4_q1', type: 'mcq', questionPrompt: 'Which sentence matches the unit language pattern?', options: ['The sun is yellow.', 'The sun are yellow.', 'Sun yellow is.', 'The yellow sun are.'], correctAnswer: 'The sun is yellow.', explanationAr: 'النمط الصحيح: The sun is yellow.', marks: 1 },
+        { id: 'p1_u2_l4_q2', type: 'mcq', questionPrompt: 'Which word means فراشة?', options: ['butterfly', 'bird', 'flower', 'tree'], correctAnswer: 'butterfly', explanationAr: 'Butterfly تعني فراشة.', marks: 1 }
       ],
       level5_HigherThinking: [
-        {
-          id: 'p1_u2_l5_q1',
-          type: 'guided_sentence',
-          questionPrompt: 'Write what body part you smile with: "This is my ______."',
-          correctAnswer: 'mouth and I smile happily',
-          explanationAr: 'يكتب الطالب جزء الجسم المناسب (mouth).',
-          marks: 3
-        }
+        { id: 'p1_u2_l5_q1', type: 'guided_sentence', questionPrompt: 'Write a sentence using a shape and the pattern "This is a ...".', correctAnswer: 'This is a square.', explanationAr: 'يكتب الطالب جملة صحيحة باستخدام اسم شكل ونمط This is a.', marks: 3 }
       ]
     }
   },
 
-  // -----------------------------------------------------------------------
-  // P1 - UNIT 3: My School Bag (حقيبتي المدرسية وأدواتي)
+// P1 - UNIT 3: My School Bag (حقيبتي المدرسية وأدواتي)
   // -----------------------------------------------------------------------
   {
     unitId: 'p1_t1_c_u3',
