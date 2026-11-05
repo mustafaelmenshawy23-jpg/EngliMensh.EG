@@ -12,3 +12,15 @@ main{max-width:1050px;margin:auto;padding:30px 22px}.hero{background:linear-grad
 
 /* Six-game Play & Learn visual themes */
 .game-tile{transition:transform .18s ease,box-shadow .18s ease}.game-tile:hover{transform:translateY(-3px);box-shadow:0 13px 28px #18352e20}.football-tile{background:linear-gradient(145deg,#e3f4e7,#c7e8d0)}.water-tile{background:linear-gradient(145deg,#e0f4fa,#c7e8f3)}.court-tile{background:linear-gradient(145deg,#fff0dc,#ffe0b7)}.builder-tile{background:linear-gradient(145deg,#f0e9ff,#ded1ff)}.adventure-tile{background:linear-gradient(145deg,#fff6d9,#f8e7a8)}.target-tile{background:linear-gradient(145deg,#ffe6e6,#f9caca)}.game-scene{min-height:410px;border-radius:20px;position:relative;overflow:hidden;padding:24px;display:flex;align-items:center;justify-content:center}.game-football{background:linear-gradient(#c9e8fa 0 36%,#70b878 36%)}.game-water{background:linear-gradient(#c6effb 0 52%,#57b9d4 52%)}.game-court{background:repeating-linear-gradient(90deg,#f6c48e 0 42px,#f0b779 42px 84px)}.game-builder{background:linear-gradient(145deg,#e8ddff,#cfc0f5)}.game-adventure{background:linear-gradient(145deg,#f8efc9,#d9e9c5)}.game-target{background:linear-gradient(145deg,#fbdada,#f4bcbc)}.game-decor{position:absolute;top:14px;left:20px;font-size:64px;opacity:.45;pointer-events:none}.question-card{max-width:590px}.builder-hint{font-size:12px;color:#7a6c9a;margin:-5px 0 12px}
+
+/* Source-backed Grade 1 learning content */
+.word-list,.source-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+.word-item,.source-item,.dialogue-block{background:#fbfcfa;border:1px solid #e6ece5;border-radius:12px;padding:13px}
+.word-item{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.word-item b,.source-item b{color:#234b3e}
+.word-item small,.source-item small,.dialogue-block h3 small{display:block;color:#849187;font-size:11px;font-weight:500}
+.source-item p{margin:8px 0 0}
+.dialogue-block{margin:14px 0;background:#f8fbf7}
+.dialogue-block h3{margin:0 0 10px;color:#285943;font-size:16px}
+.dialogue-block p{margin:6px 0;padding:7px 10px;background:#fff;border-radius:8px;font-size:14px}
+@media(max-width:650px){.word-list,.source-list{grid-template-columns:1fr}.word-item{align-items:flex-start;flex-direction:column;gap:3px}}
