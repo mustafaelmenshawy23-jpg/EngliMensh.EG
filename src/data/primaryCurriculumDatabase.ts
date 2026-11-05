@@ -1269,7 +1269,7 @@ export const primary2Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 1,
-    unitTitleEn: 'Meet My Family',
+    unitTitleEn: "Let's Get Started!",
     unitTitleAr: 'تعرف على عائلتي والتحيات اليومية',
     tab1_Vocabulary: {
       words: [
@@ -1464,7 +1464,7 @@ export const primary2Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 2,
-    unitTitleEn: 'My Body',
+    unitTitleEn: "Colors, Shapes, and Numbers",
     unitTitleAr: 'جسمي والجمع الشاذ وأعضاء الكائنات الحية',
     tab1_Vocabulary: {
       words: [
@@ -1660,7 +1660,7 @@ export const primary2Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 3,
-    unitTitleEn: 'Off to School',
+    unitTitleEn: "Classroom Actions & Routines",
     unitTitleAr: 'إلى المدرسة والملابس وأوقات الساعة',
     tab1_Vocabulary: {
       words: [
@@ -1855,7 +1855,7 @@ export const primary2Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 4,
-    unitTitleEn: 'Time to Play Sports!',
+    unitTitleEn: "Everyday Life",
     unitTitleAr: 'وقت ممارسة الرياضة والأفعال الحركية والقدرة',
     tab1_Vocabulary: {
       words: [
@@ -2050,7 +2050,7 @@ export const primary2Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 5,
-    unitTitleEn: 'My Day',
+    unitTitleEn: "My Home",
     unitTitleAr: 'يومي والروتين اليومي وأوقات نصف الساعة',
     tab1_Vocabulary: {
       words: [
@@ -2245,7 +2245,7 @@ export const primary2Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 6,
-    unitTitleEn: 'Healthy Habits',
+    unitTitleEn: "Rooms at Home",
     unitTitleAr: 'عادات صحية والتغذية السليمة',
     tab1_Vocabulary: {
       words: [
@@ -2445,7 +2445,7 @@ export const primary3Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 1,
-    unitTitleEn: 'I Feel Happy!',
+    unitTitleEn: "Let's Learn Together!",
     unitTitleAr: 'أشعر بالسعادة والمشاعر المختلفة',
     tab1_Vocabulary: {
       words: [
@@ -2640,7 +2640,7 @@ export const primary3Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 2,
-    unitTitleEn: "What's the Matter?",
+    unitTitleEn: "My Family and I",
     unitTitleAr: 'ما الأمر؟ والأمراض والعلاج والرعاية الصحية',
     tab1_Vocabulary: {
       words: [
@@ -2835,7 +2835,7 @@ export const primary3Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 3,
-    unitTitleEn: 'On the Weekend',
+    unitTitleEn: "New Adventures",
     unitTitleAr: 'في عطلة نهاية الأسبوع والهوايات والأنشطة',
     tab1_Vocabulary: {
       words: [
@@ -3030,7 +3030,7 @@ export const primary3Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 4,
-    unitTitleEn: 'I Love My Home',
+    unitTitleEn: "Let's Tell Stories!",
     unitTitleAr: 'أنا أحب بيتي والأثاث المنزلي وحروف الجر',
     tab1_Vocabulary: {
       words: [
@@ -3225,7 +3225,7 @@ export const primary3Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 5,
-    unitTitleEn: 'At the Zoo',
+    unitTitleEn: "Together Is Better",
     unitTitleAr: 'في حديقة الحيوان وبيئات الحيوانات والاتجاهات',
     tab1_Vocabulary: {
       words: [
@@ -3420,7 +3420,7 @@ export const primary3Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 6,
-    unitTitleEn: "Let's Go to the Circus!",
+    unitTitleEn: "Dare to Dream",
     unitTitleAr: 'هيا نذهب إلى السيرك والشخصيات والوصف',
     tab1_Vocabulary: {
       words: [
