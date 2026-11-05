@@ -42,7 +42,7 @@ export const primary1Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 1,
-    unitTitleEn: 'Hello!',
+    unitTitleEn: 'Welcome to My School',
     unitTitleAr: 'أهلاً وسهلاً والتعريف بالنفس',
     tab1_Vocabulary: {
       words: [
@@ -277,7 +277,7 @@ export const primary1Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 2,
-    unitTitleEn: 'This is me!',
+    unitTitleEn: 'The Garden of Colors and Shapes',
     unitTitleAr: 'هذا أنا وأجزاء الجسم والحواس',
     tab1_Vocabulary: {
       words: [
@@ -484,7 +484,7 @@ export const primary1Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 3,
-    unitTitleEn: 'My School Bag',
+    unitTitleEn: 'I Love My Family',
     unitTitleAr: 'حقيبتي المدرسية والأدوات والأرقام من 1 إلى 5',
     tab1_Vocabulary: {
       words: [
@@ -679,7 +679,7 @@ export const primary1Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 4,
-    unitTitleEn: "It's My Birthday!",
+    unitTitleEn: 'My Body and My Senses',
     unitTitleAr: 'إنه عيد ميلادي والأرقام من 6 إلى 10',
     tab1_Vocabulary: {
       words: [
@@ -874,7 +874,7 @@ export const primary1Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 5,
-    unitTitleEn: 'With My Family',
+    unitTitleEn: 'On the Farm',
     unitTitleAr: 'مع عائلتي وأفراد الأسرة والمشاعر الطيبة',
     tab1_Vocabulary: {
       words: [
@@ -1069,7 +1069,7 @@ export const primary1Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 6,
-    unitTitleEn: "Let's Play Music!",
+    unitTitleEn: 'Animals Around Me',
     unitTitleAr: 'هيا نعزف الموسيقى والآلات الموسيقية',
     tab1_Vocabulary: {
       words: [
