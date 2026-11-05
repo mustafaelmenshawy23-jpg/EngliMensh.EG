@@ -509,7 +509,7 @@ export const primary1Curriculum: PrimaryLessonContent[] = [
     },
     tab3_Skills: [
       {
-        type: 'vocabulary_recognition',
+        type: 'phonics_drill',
         instruction: 'Identify garden objects and basic shapes.',
         prompt: 'Which word names a shape?',
         targetResponses: ['circle', 'square', 'triangle', 'rectangle'],
