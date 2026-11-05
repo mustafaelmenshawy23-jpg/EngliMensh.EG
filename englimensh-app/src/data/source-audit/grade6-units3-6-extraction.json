@@ -1,0 +1,378 @@
+{
+  "schemaVersion": 1,
+  "auditStatus": "partial_source_extraction",
+  "term": "First Term",
+  "source": "English_prim6_t1_Assmt (1).pdf",
+  "sourceType": "assessment_book_only",
+  "pageNumbering": "PDF page numbers (not printed footer numbers)",
+  "units": [
+    {
+      "unit": 3,
+      "title": "Community Builders",
+      "status": "partially_extracted",
+      "sourcePagesReviewed": [24, 25, 26, 27, 28, 34, 35],
+      "lessons": [
+        {
+          "title": "Jobs That Help the Community",
+          "sourcePage": 24,
+          "reading": {
+            "text": "Children are the men and women of the future; we should begin with good children. We should give children good food, good health and good education. They should be given the chance to practice exercises and sport to build their bodies. We should teach them how to love, give and help. We should set the examples for our children in what we say and what we do.",
+            "questions": [
+              {
+                "type": "mcq",
+                "question": "Children need good ...",
+                "options": ["food", "education", "health", "all of these"],
+                "correctAnswer": "all of these"
+              },
+              {
+                "type": "short_answer",
+                "question": "Why should we care about our children?",
+                "verifiedAnswer": "They are the men and women of the future."
+              },
+              {
+                "type": "short_answer",
+                "question": "What does a child need?",
+                "verifiedAnswer": "Good food, good health, good education, and the chance to practise exercises and sport."
+              }
+            ],
+            "sourcePage": 24,
+            "answerKeyCaution": "The printed pronoun-reference MCQ for the word 'them' has duplicated/malformed answer options on the source page. Do not import it as an auto-scored item without editorial review."
+          },
+          "vocabularyExercise": [
+            {
+              "question": "A (...) brings food or packages to places.",
+              "options": ["street cleaner", "delivery person", "nurse", "doctor"],
+              "correctAnswer": "delivery person"
+            },
+            {
+              "question": "Water resources (...) make sure people get clean water.",
+              "options": ["teachers", "doctors", "engineers", "farmers"],
+              "correctAnswer": "engineers"
+            },
+            {
+              "question": "Mechanics fix ...",
+              "options": ["vehicles", "computers", "televisions", "bags"],
+              "correctAnswer": "vehicles"
+            },
+            {
+              "question": "The traffic officer helps people (...) the road.",
+              "options": ["make", "cross", "put", "correct"],
+              "correctAnswer": "cross"
+            },
+            {
+              "question": "A (...) helps patients in emergencies.",
+              "options": ["paramedic", "cleaner", "policeman", "student"],
+              "correctAnswer": "paramedic"
+            }
+          ],
+          "sourcePage": 25
+        },
+        {
+          "title": "Let's Help Our Community",
+          "sourcePage": 26,
+          "grammarFocus": "can / can't and be able to",
+          "items": [
+            "She (not can) walk to school.",
+            "I am (able) run fast.",
+            "(Can't) they do the research? – Yes, they can.",
+            "(Do) they able to tidy the flat?"
+          ]
+        },
+        {
+          "title": "The Proud Rose",
+          "sourcePage": 27,
+          "reading": {
+            "text": "The sandwich has a long history. In 1750 john Montagu invented the sandwich. He used bread and meat for the first sandwich. He liked to eat a sandwich and play cards. The sandwich is now one of America's favorite foods. In the United States, there is a sandwich shop in every town and you can buy sandwiches at every grocery store.",
+            "questions": [
+              {
+                "type": "mcq",
+                "question": "John Montagu used bread and ... for the first sandwich.",
+                "options": ["cheese", "eggs", "meat", "chicken"],
+                "correctAnswer": "meat"
+              },
+              {
+                "type": "mcq",
+                "question": "He liked to eat a sandwich and play ...",
+                "options": ["cards", "tennis", "basketball", "football"],
+                "correctAnswer": "cards"
+              },
+              {
+                "type": "short_answer",
+                "question": "When did John Montagu invent the sandwich?",
+                "verifiedAnswer": "In 1750."
+              },
+              {
+                "type": "short_answer",
+                "question": "What were the ingredients of the first sandwich?",
+                "verifiedAnswer": "Bread and meat."
+              }
+            ]
+          },
+          "note": "The lesson heading is The Proud Rose, but the reading passage is about the history of the sandwich. Source mismatch flagged and preserved."
+        },
+        {
+          "title": "Ice cream passage (Activity 2)",
+          "sourcePage": 28,
+          "reading": {
+            "text": "Ice cream has a long history. Nancy Johnson invented the first ice cream churn. The first ice cream factory opened in 1851. The first ice cream shop opened in New York in 1876. Now you can buy ice cream at every grocery store. There are a lot of flavors. My favorite flavor is chocolate.",
+            "questions": [
+              {
+                "type": "mcq",
+                "question": "Ice cream has a long ...",
+                "options": ["Arabic", "math", "history", "English"],
+                "correctAnswer": "history"
+              },
+              {
+                "type": "mcq",
+                "question": "There are a lot of ice cream ...",
+                "options": ["flavors", "flour", "favor", "flowers"],
+                "correctAnswer": "flavors"
+              },
+              {
+                "type": "short_answer",
+                "question": "Who invented the first ice cream churn?",
+                "verifiedAnswer": "Nancy Johnson."
+              },
+              {
+                "type": "short_answer",
+                "question": "When did the first ice cream factory open?",
+                "verifiedAnswer": "In 1851."
+              }
+            ]
+          }
+        }
+      ],
+      "review": {
+        "sourcePages": [34, 35],
+        "verifiedMcqAnswers": [
+          "post office",
+          "yourself",
+          "sport",
+          "interested",
+          "What",
+          "emergency",
+          "vehicles",
+          "cross",
+          "ability",
+          "able"
+        ],
+        "wordBox": ["community", "emergency", "research", "important"],
+        "readingTopic": "Hany's ice cream shop in Cairo",
+        "readingFacts": [
+          "Hany walks to his shop.",
+          "He opens six days a week and never opens on Fridays.",
+          "He makes the ice cream by himself.",
+          "Vanilla and chocolate are popular flavours.",
+          "A museum is across from his shop."
+        ]
+      },
+      "listening": {
+        "status": "not_found_in_pages_reviewed",
+        "note": "No listening script or listening MCQ was identified in the reviewed pages."
+      },
+      "vocabulary30Status": "not_yet_supported_by_reviewed_pages"
+    },
+    {
+      "unit": 4,
+      "title": "Resources around us",
+      "status": "partially_extracted",
+      "sourcePagesReviewed": [44, 45, 46, 47],
+      "weeklyWritingTasks": [
+        { "prompt": "A meeting with a tourist in Aswan", "sourcePage": 44 },
+        { "prompt": "A meeting about saving energy", "sourcePage": 44 },
+        { "prompt": "A meeting about materials used in Egypt", "sourcePage": 44 }
+      ],
+      "review": {
+        "sourcePage": 45,
+        "mcqAnswers": [
+          "off",
+          "must",
+          "waste",
+          "visit",
+          "visits",
+          "drinks",
+          "do",
+          "under",
+          "protect",
+          "pollute"
+        ],
+        "wordBox": ["must", "cars", "Can", "mustn't", "resources"],
+        "wordBoxIntendedAnswers": ["must", "cars", "resources", "mustn't", "Can"]
+      },
+      "grammarPractice": {
+        "sourcePage": 46,
+        "topics": ["past simple in questions", "must / mustn't", "be able to", "can"],
+        "items": [
+          "Did the Ancient Egyptians (used) linen to wrap mummies?",
+          "She (must) talk loudly in the class.",
+          "I am (able) drive a car.",
+          "(Can't) they do the research? – Yes, they can.",
+          "Egypt (have) many temples that you can visit."
+        ]
+      },
+      "reading": {
+        "sourcePage": 46,
+        "text": "It's spring. The sun is shining and the fields and garden are full of flowers for the animals and insects to eat. It's a lovely day. The bee are buzzing and the butterflies are flying in the sun. The ants, however, are working hard. The lazy grasshopper spends most of his time relaxing. He doesn't like to work. today, he is resting against a tree when he heard strange sound. He wants to find out what it is. He looks over the garden fence and finds an ant working. He asks the ant to play together, but the ant refuses because she has to work hard.",
+        "questions": [
+          {
+            "type": "mcq",
+            "question": "The main idea of the text is ...",
+            "options": ["working hard", "playing", "studying", "relaxing"],
+            "correctAnswer": "working hard"
+          },
+          {
+            "type": "mcq",
+            "question": "Buzzing is the sound of ...",
+            "options": ["butterflies", "ants", "grasshoppers", "bees"],
+            "correctAnswer": "bees"
+          },
+          {
+            "type": "short_answer",
+            "question": "How does the grasshopper spend most of his time?",
+            "verifiedAnswer": "Relaxing."
+          },
+          {
+            "type": "short_answer",
+            "question": "Why does the ant refuse to play with the grasshopper?",
+            "verifiedAnswer": "Because she has to work hard."
+          }
+        ]
+      },
+      "listening": {
+        "status": "not_found_in_pages_reviewed",
+        "note": "No listening script or listening MCQ was identified in the reviewed pages."
+      },
+      "vocabulary30Status": "not_yet_supported_by_reviewed_pages"
+    },
+    {
+      "unit": 5,
+      "title": "Made in Egypt",
+      "status": "partially_extracted",
+      "sourcePagesReviewed": [54, 55, 56, 57, 58],
+      "lessons": [
+        {
+          "title": "Egypt Goes Green",
+          "sourcePage": 54,
+          "reading": {
+            "text": "Egypt is a sunny country, making it ideal for solar energy. One important project is Benban Solar Park near Aswan. It is one of the largest solar stations in the world. The park uses millions of solar panels to make clean electricity for homes, schools, hospitals, and factories. Benban also creates many jobs for engineers, builders, and local workers. This helps families in Upper Egypt earn money and have a better life. By using the power of the sun instead of oil and gas, Benban reduces pollution and protects the environment. It is a proud step toward a greener future for Egypt.",
+            "questions": [
+              {
+                "type": "mcq",
+                "question": "Benban Solar Park is near ...",
+                "options": ["Cairo", "Aswan", "Luxor", "Alexandria"],
+                "correctAnswer": "Aswan"
+              },
+              {
+                "type": "mcq",
+                "question": "Benban helps Egypt by ...",
+                "options": ["cutting down trees", "using more oil", "making clean electricity and jobs", "closing schools"],
+                "correctAnswer": "making clean electricity and jobs"
+              },
+              {
+                "type": "short_answer",
+                "question": "How does Benban Solar Park help people who live in Upper Egypt?",
+                "verifiedAnswer": "It creates jobs for engineers, builders, and local workers, helping families earn money and have a better life."
+              },
+              {
+                "type": "short_answer",
+                "question": "Why is using the sun better than using oil and gas for energy?",
+                "verifiedAnswer": "It reduces pollution and protects the environment."
+              }
+            ]
+          }
+        }
+      ],
+      "weeklyAssessment": {
+        "sourcePages": [56, 57],
+        "passages": [
+          {
+            "topic": "The Grand Egyptian Museum",
+            "facts": [
+              "It is near the Pyramids in Giza.",
+              "Tourists visit to see statues, golden jewellery, tools and real mummies.",
+              "There is an information desk.",
+              "It uses modern technology and active displays."
+            ]
+          },
+          {
+            "topic": "Al Galala City",
+            "facts": [
+              "It is near Ain Sokhna.",
+              "It is built on a high plateau.",
+              "The cable car moves from the mountain to the sea.",
+              "Galala University welcomes students from Egypt and other countries."
+            ]
+          },
+          {
+            "topic": "Egyptian products",
+            "facts": [
+              "Workers in Damietta make strong wooden furniture.",
+              "Factories in other cities make clothes, food and souvenirs.",
+              "Some products are sold in Egypt and others are exported.",
+              "Buying Egyptian products supports workers and helps the country grow."
+            ]
+          }
+        ]
+      },
+      "review": {
+        "sourcePage": 58,
+        "vocabulary": ["nervous", "helpful", "polite", "shy", "roof"],
+        "grammar": ["preposition at in 'at night'", "possessive adjective my"]
+      },
+      "listening": {
+        "status": "not_found_in_pages_reviewed",
+        "note": "No listening script or listening MCQ was identified in the reviewed pages."
+      },
+      "vocabulary30Status": "not_yet_supported_by_reviewed_pages"
+    },
+    {
+      "unit": 6,
+      "title": "The water Savers",
+      "status": "indexed_but_reading_text_extraction_incomplete",
+      "sourcePagesReviewed": [64, 65, 66, 67, 68],
+      "sourceVocabularyBox": ["resources", "dripping", "project", "puddles", "precious"],
+      "verifiedExerciseAnswers": [
+        { "prompt": "In the school, a tap was always ...", "answer": "dripping" },
+        { "prompt": "Water overflowed from a broken pipe and made small ...", "answer": "puddles" },
+        { "prompt": "Noor thought water was too ... to waste.", "answer": "precious" },
+        { "prompt": "Ahmed said they must take care of their ...", "answer": "resources" },
+        { "prompt": "They wanted to do a ... to help the school use water wisely.", "answer": "project" }
+      ],
+      "causeEffectExercise": {
+        "sourcePage": 65,
+        "items": [
+          "The friends took photos and notes about all the water problems.",
+          "Farida made colorful posters with clear messages.",
+          "They didn't stop even when a classmate was unkind.",
+          "The teachers talked every day about saving water."
+        ],
+        "answerMapping": {
+          "1": "B",
+          "2": "D",
+          "3": "C",
+          "4": "A"
+        }
+      },
+      "weeklyAssessment": {
+        "sourcePage": 66,
+        "type": "rearrange_sentences_to_show_sequence",
+        "topics": [
+          "The friends documenting water problems at school",
+          "Speaking to the school cleaner about a leaking sink",
+          "School posters, daily teacher reminders and water-saving challenges"
+        ]
+      },
+      "listening": {
+        "status": "not_found_in_pages_reviewed",
+        "note": "No listening script or listening MCQ was identified in the reviewed pages."
+      },
+      "vocabulary30Status": "not_yet_supported_by_reviewed_pages",
+      "note": "The full story passage and preceding question pages still need extraction before this unit can be considered complete."
+    }
+  ],
+  "editorialWarnings": [
+    "Some lesson headings do not match the reading passages printed beneath them; preserve source content and flag mismatches.",
+    "Some printed questions have malformed answer choices; do not use those as automatic questions without editorial review.",
+    "Only assessment-book content is available for grade 6. Do not infer missing student-book vocabulary or grammar."
+  ]
+}
