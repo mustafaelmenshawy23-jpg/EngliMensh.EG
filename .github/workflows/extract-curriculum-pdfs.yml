@@ -1,0 +1,45 @@
+name: Extract curriculum PDF pages
+
+on:
+  push:
+    branches:
+      - englimensh-new-app
+    paths:
+      - "englimensh-app/public/books/**/*.pdf"
+      - "englimensh-app/scripts/extract-pdf-pages.py"
+      - ".github/workflows/extract-curriculum-pdfs.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: curriculum-pdf-extraction
+  cancel-in-progress: false
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source branch
+        uses: actions/checkout@v4
+        with:
+          ref: englimensh-new-app
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install PDF text extractor
+        run: python -m pip install --upgrade pymupdf
+      - name: Extract each PDF page with source references
+        run: python englimensh-app/scripts/extract-pdf-pages.py
+      - name: Commit extracted source text
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add englimensh-app/src/data/extracted/
+          if git diff --cached --quiet; then
+            echo "No extracted text changes."
+          else
+            git commit -m "Extract source PDF pages for curriculum review"
+            git push origin HEAD:englimensh-new-app
+          fi
