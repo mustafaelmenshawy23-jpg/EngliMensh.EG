@@ -47,15 +47,15 @@ function scrambled(word){
 function makeQuestions(id,source,words,count){
  const names=words.map(x=>x.word), phon=phonics(source), pats=patterns(source), qs=[];
  if(id==='penalty'){
-  for(let i=0;i<count;i++){const p=phon[i%phon.length];const answer=names.find(w=>w.toLowerCase().startsWith(p.letter));if(answer)qs.push(mcq('Choose the word that starts with '+p.letter.toUpperCase()+'.',answer,names,{sourcePage:p.page,kind:'phonics'}));}
+  for(let i=0;i<Math.min(count,phon.length);i++){const p=phon[i];const answer=names.find(w=>w.toLowerCase().startsWith(p.letter));if(answer)qs.push(mcq('Choose the word that starts with '+p.letter.toUpperCase()+'.',answer,names,{sourcePage:p.page,kind:'phonics'}));}
  }
  if(id==='fishing'){
-  for(let i=0;i<count;i++){const w=words[i%words.length];qs.push(mcq('Listen carefully. Which word did you hear?',w.word,names,{spokenWord:w.word,sourcePage:w.sourcePage,kind:'listening'}));}
+  for(let i=0;i<Math.min(count,words.length);i++){const w=words[i];qs.push(mcq('Listen carefully. Which word did you hear?',w.word,names,{spokenWord:w.word,sourcePage:w.sourcePage,kind:'listening'}));}
  }
  if(id==='basketball'||id==='adventure'){
   const usable=pats.filter(p=>p.text.split(' ').length>=3);
-  for(let i=0;i<count&&usable.length;i++){
-   const p=usable[i%usable.length], tokens=p.text.split(' '), candidates=tokens.filter(x=>/^[A-Za-z']+[.!?,]?$/.test(x)&&x.length>2);
+  for(const p of shuffle(usable).slice(0,count)){
+   const tokens=p.text.split(' '), candidates=tokens.filter(x=>/^[A-Za-z']+[.!?,]?$/.test(x)&&x.length>2);
    const target=candidates[candidates.length-1];if(!target)continue;
    const answer=target.replace(/[.!?,]$/,'');
    const blank=p.text.replace(new RegExp('\\b'+answer.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\b','i'),'_____');
@@ -63,12 +63,12 @@ function makeQuestions(id,source,words,count){
   }
  }
  if(id==='builder'){
-  for(let i=0;i<count;i++){const w=words[i%words.length].word;const correct=scrambled(w);const options=shuffle([correct,...Array.from({length:3},()=>scrambled(w))]);qs.push({prompt:'Build the word: listen to the word, then choose its correct letter order.',spokenWord:w,choices:options,correctIndex:options.indexOf(correct),kind:'builder',sourceWord:w});}
+  for(let i=0;i<Math.min(count,words.length);i++){const w=words[i].word;const correct=scrambled(w);const variants=new Set([correct]);while(variants.size<Math.min(4,Math.max(2,w.length)))variants.add(scrambled(w));const options=shuffle([...variants]);qs.push({prompt:'Build the word: listen to the word, then choose its correct letter order.',spokenWord:w,choices:options,correctIndex:options.indexOf(correct),kind:'builder',sourceWord:w});}
  }
  if(id==='shoot'){
   const translated=words.filter(w=>w.arabicMeaning);
-  if(translated.length>=2){for(let i=0;i<count;i++){const w=translated[i%translated.length];qs.push(mcq('Shoot the English word for: '+w.arabicMeaning,w.word,translated.map(x=>x.word),{sourcePage:w.sourcePage,kind:'meaning'}));}}
-  else if(phon.length){for(let i=0;i<count;i++){const p=phon[i%phon.length],answer=names.find(w=>w.toLowerCase().startsWith(p.letter));if(answer)qs.push(mcq('Hit the word that begins with the sound '+p.sound+'.',answer,names,{sourcePage:p.page,kind:'phonics'}));}}
+  if(translated.length>=2){for(let i=0;i<Math.min(count,translated.length);i++){const w=translated[i];qs.push(mcq('Shoot the English word for: '+w.arabicMeaning,w.word,translated.map(x=>x.word),{sourcePage:w.sourcePage,kind:'meaning'}));}}
+  else if(phon.length){for(let i=0;i<Math.min(count,phon.length);i++){const p=phon[i],answer=names.find(w=>w.toLowerCase().startsWith(p.letter));if(answer)qs.push(mcq('Hit the word that begins with the sound '+p.sound+'.',answer,names,{sourcePage:p.page,kind:'phonics'}));}}
  }
  return shuffle(qs).slice(0,count);
 }
