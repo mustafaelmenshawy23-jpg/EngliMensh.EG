@@ -63,7 +63,7 @@ function makeQuestions(id,source,words,count){
   }
  }
  if(id==='builder'){
-  for(let i=0;i<Math.min(count,words.length);i++){const w=words[i].word;const correct=scrambled(w);const variants=new Set([correct]);while(variants.size<Math.min(4,Math.max(2,w.length)))variants.add(scrambled(w));const options=shuffle([...variants]);qs.push({prompt:'Build the word: listen to the word, then choose its correct letter order.',spokenWord:w,choices:options,correctIndex:options.indexOf(correct),kind:'builder',sourceWord:w});}
+  for(let i=0;i<Math.min(count,words.length);i++){const w=words[i].word;const correct=scrambled(w);const variants=new Set([correct]);for(let attempt=0;attempt<30&&variants.size<Math.min(4,Math.max(2,w.length));attempt++)variants.add(scrambled(w));const options=shuffle([...variants]);qs.push({prompt:'Build the word: listen to the word, then choose its correct letter order.',spokenWord:w,choices:options,correctIndex:options.indexOf(correct),kind:'builder',sourceWord:w});}
  }
  if(id==='shoot'){
   const translated=words.filter(w=>w.arabicMeaning);
