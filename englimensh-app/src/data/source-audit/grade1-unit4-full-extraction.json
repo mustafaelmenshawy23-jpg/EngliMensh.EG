@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 1,
+  "grade": 1,
+  "term": 1,
+  "unit": 4,
+  "title": "My Body and My Senses",
+  "source": "English_language_prim1_t1.pdf",
+  "sourceType": "student_book",
+  "reviewedPdfPages": [
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+  ],
+  "status": "source_content_extracted",
+  "learningOutcomes": [
+    "Identify basic body parts.",
+    "Identify the five senses.",
+    "Describe each sense and its related body part.",
+    "Identify the formation, sound, and words that begin with Rr, Ee, Cc, and Kk.",
+    "Name and count body parts using complete sentences.",
+    "Trace and write letters Rr, Ee, Cc, and Kk in uppercase and lowercase forms."
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "title": "Head to Toe",
+      "sourcePages": [
+        67,
+        68,
+        69
+      ],
+      "vocabulary": [
+        {
+          "word": "head",
+          "sourcePage": 66,
+          "arabicMeaning": "رأس"
+        },
+        {
+          "word": "eye",
+          "sourcePage": 66,
+          "arabicMeaning": "عين"
+        },
+        {
+          "word": "ear",
+          "sourcePage": 66,
+          "arabicMeaning": "أذن"
+        },
+        {
+          "word": "nose",
+          "sourcePage": 66,
+          "arabicMeaning": "أنف"
+        },
+        {
+          "word": "mouth",
+          "sourcePage": 66,
+          "arabicMeaning": "فم"
+        },
+        {
+          "word": "tongue",
+          "sourcePage": 66,
+          "arabicMeaning": "لسان"
+        },
+        {
+          "word": "arms",
+          "sourcePage": 66,
+          "arabicMeaning": "ذراعان"
+        },
+        {
+          "word": "hand",
+          "sourcePage": 66,
+          "arabicMeaning": "يد"
+        },
+        {
+          "word": "legs",
+          "sourcePage": 66,
+          "arabicMeaning": "ساقان"
+        },
+        {
+          "word": "foot / feet",
+          "sourcePage": 66,
+          "arabicMeaning": "قدم / أقدام"
+        },
+        {
+          "word": "toes",
+          "sourcePage": 66,
+          "arabicMeaning": "أصابع القدم"
+        }
+      ],
+      "languagePatterns": [
+        "I have 2 eyes.",
+        "I have 1 nose.",
+        "I have 2 legs.",
+        "I have 1 mouth.",
+        "I have 2 feet.",
+        "I have 5 toes.",
+        "I have 2 arms.",
+        "I have 2 hands."
+      ],
+      "reading": {
+        "status": "short_source_sentences",
+        "sourcePages": [
+          67,
+          68
+        ],
+        "texts": [
+          {
+            "text": "I have 2 eyes.",
+            "sourcePage": 67
+          },
+          {
+            "text": "I have 1 nose.",
+            "sourcePage": 67
+          },
+          {
+            "text": "I have 2 legs.",
+            "sourcePage": 67
+          },
+          {
+            "text": "I have 1 mouth.",
+            "sourcePage": 67
+          },
+          {
+            "text": "I have 2 feet.",
+            "sourcePage": 67
+          },
+          {
+            "text": "I have 5 toes.",
+            "sourcePage": 67
+          }
+        ],
+        "note": "Very short sentences are taken directly from the printed student-book activity. No long reading passage is present."
+      },
+      "activities": [
+        {
+          "type": "listen_point_circle",
+          "instruction": "Listen, point, then circle.",
+          "sourcePage": 67,
+          "autoScored": false
+        },
+        {
+          "type": "listen_count_choose",
+          "instruction": "Listen, count, and choose the number.",
+          "sourcePage": 67,
+          "autoScored": false
+        },
+        {
+          "type": "listen_picture_matching",
+          "instruction": "Listen, look, then match.",
+          "items": [
+            "eyes",
+            "ears",
+            "tongue",
+            "hand"
+          ],
+          "sourcePage": 68,
+          "autoScored": false
+        },
+        {
+          "type": "listen_point_circle",
+          "instruction": "Listen, point, then circle.",
+          "sourcePage": 68,
+          "autoScored": false
+        },
+        {
+          "type": "draw_missing_parts",
+          "instruction": "Draw the missing parts of the face.",
+          "sourcePage": 69,
+          "autoScored": false
+        }
+      ]
+    },
+    {
+      "lesson": 2,
+      "title": "Phonics – Letters Rr and Ee",
+      "sourcePages": [
+        70,
+        71,
+        72,
+        73,
+        74
+      ],
+      "phonicsTargets": [
+        {
+          "letter": "Rr",
+          "sound": "/r/",
+          "sourcePage": 70
+        },
+        {
+          "letter": "Ee",
+          "sound": "/e/ (as modelled by the printed example words)",
+          "sourcePage": 72
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "red",
+          "sourcePage": 70
+        },
+        {
+          "word": "ring",
+          "sourcePage": 70
+        },
+        {
+          "word": "robot",
+          "sourcePage": 70
+        },
+        {
+          "word": "rocket",
+          "sourcePage": 70
+        },
+        {
+          "word": "rabbit",
+          "sourcePage": 71
+        },
+        {
+          "word": "eggplant",
+          "sourcePage": 72
+        },
+        {
+          "word": "egg",
+          "sourcePage": 72
+        },
+        {
+          "word": "elephant",
+          "sourcePage": 72
+        },
+        {
+          "word": "enter",
+          "sourcePage": 72
+        },
+        {
+          "word": "elbow",
+          "sourcePage": 72
+        }
+      ],
+      "teacherRepeatAudioText": [
+        {
+          "sourcePage": 70,
+          "words": [
+            "red",
+            "ring",
+            "robot",
+            "rocket"
+          ]
+        },
+        {
+          "sourcePage": 72,
+          "words": [
+            "eggplant",
+            "egg",
+            "elephant",
+            "enter",
+            "elbow"
+          ]
+        }
+      ],
+      "activities": [
+        {
+          "type": "listen_and_repeat",
+          "instruction": "Listen to your teacher and repeat.",
+          "sourcePage": 70,
+          "repeatItems": [
+            "red",
+            "ring",
+            "robot",
+            "rocket"
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "letter_tracing",
+          "instruction": "Trace and write letter Rr in uppercase and lowercase forms.",
+          "sourcePages": [
+            70,
+            71
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "initial_sound_picture_selection",
+          "instruction": "Circle the objects that start with letter Rr.",
+          "sourcePages": [
+            71,
+            74
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "listen_and_repeat",
+          "instruction": "Listen to your teacher and repeat.",
+          "sourcePage": 72,
+          "repeatItems": [
+            "eggplant",
+            "egg",
+            "elephant",
+            "enter",
+            "elbow"
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "letter_tracing",
+          "instruction": "Trace and write letter Ee in uppercase and lowercase forms.",
+          "sourcePages": [
+            72,
+            73
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "initial_sound_picture_matching",
+          "instruction": "Look, say, then match the pictures that start with letter Ee.",
+          "sourcePage": 73,
+          "autoScored": false
+        }
+      ]
+    },
+    {
+      "lesson": 3,
+      "title": "My 5 Senses",
+      "sourcePages": [
+        75,
+        76,
+        77,
+        78
+      ],
+      "vocabulary": [
+        {
+          "word": "see",
+          "sourcePage": 76,
+          "arabicMeaning": "يرى"
+        },
+        {
+          "word": "hear",
+          "sourcePage": 76,
+          "arabicMeaning": "يسمع"
+        },
+        {
+          "word": "smell",
+          "sourcePage": 76,
+          "arabicMeaning": "يشم"
+        },
+        {
+          "word": "taste",
+          "sourcePage": 76,
+          "arabicMeaning": "يتذوق"
+        },
+        {
+          "word": "touch",
+          "sourcePage": 76,
+          "arabicMeaning": "يلمس"
+        }
+      ],
+      "dialogue": {
+        "sourcePage": 75,
+        "lines": [
+          {
+            "speaker": "Aly",
+            "text": "Hi, Omar!"
+          },
+          {
+            "speaker": "Omar",
+            "text": "Hi, Aly. Let's talk about our senses."
+          },
+          {
+            "speaker": "Aly",
+            "text": "Great idea. Tell me—what can you see?"
+          },
+          {
+            "speaker": "Omar",
+            "text": "I can see the teacher and the desk."
+          },
+          {
+            "speaker": "Aly",
+            "text": "Look! A flower!"
+          },
+          {
+            "speaker": "Omar",
+            "text": "Wow! I can see it with my eyes."
+          },
+          {
+            "speaker": "Aly",
+            "text": "I can smell it with my nose. It smells nice!"
+          },
+          {
+            "speaker": "Omar",
+            "text": "I can hear the teacher with my ears."
+          },
+          {
+            "speaker": "Aly",
+            "text": "I can touch the desk with my hands."
+          },
+          {
+            "speaker": "Omar",
+            "text": "I have an apple. I can taste it with my tongue!"
+          },
+          {
+            "speaker": "Aly",
+            "text": "Yummy! We use our five senses every day!"
+          },
+          {
+            "speaker": "Both",
+            "text": "Yes! See, hear, smell, taste, and touch!"
+          }
+        ]
+      },
+      "languagePatterns": [
+        "I can see with my eyes.",
+        "I can hear with my ears.",
+        "I can smell with my nose.",
+        "I can taste with my tongue.",
+        "I can touch with my hands."
+      ],
+      "reading": {
+        "status": "short_source_sentences",
+        "sourcePages": [
+          76,
+          77
+        ],
+        "texts": [
+          {
+            "text": "I can see with my eyes.",
+            "sourcePage": 76
+          },
+          {
+            "text": "I can hear with my ears.",
+            "sourcePage": 76
+          },
+          {
+            "text": "I can smell with my nose.",
+            "sourcePage": 76
+          },
+          {
+            "text": "I can taste with my tongue.",
+            "sourcePage": 76
+          },
+          {
+            "text": "I can touch with my hands.",
+            "sourcePage": 76
+          }
+        ],
+        "note": "Short sentence patterns are printed in the student book and are suitable for Grade 1 reading practice."
+      },
+      "listening": {
+        "status": "printed_dialogue_and_teacher_led_tasks",
+        "audioScriptSource": "The complete dialogue above is printed on page 75 and can be recorded as a listening track.",
+        "teacherLedTasks": [
+          {
+            "sourcePage": 77,
+            "instruction": "Listen, look at the picture, then circle."
+          },
+          {
+            "sourcePage": 77,
+            "instruction": "Listen, look at the picture, then match."
+          }
+        ],
+        "note": "The student book does not print separate spoken scripts for the picture-choice and matching tasks on page 77. Do not invent additional teacher narration."
+      },
+      "activities": [
+        {
+          "type": "listen_and_repeat_dialogue",
+          "sourcePage": 75,
+          "autoScored": false
+        },
+        {
+          "type": "sense_body_part_matching",
+          "instruction": "Match each sense with the correct body part.",
+          "sourcePage": 76,
+          "autoScored": false
+        },
+        {
+          "type": "listening_picture_choice",
+          "instruction": "Listen, look at the picture, then circle.",
+          "sourcePage": 77,
+          "autoScored": false
+        },
+        {
+          "type": "listening_sentence_matching",
+          "instruction": "Listen, look at the picture, then match.",
+          "sourcePage": 77,
+          "autoScored": false
+        },
+        {
+          "type": "sense_identification",
+          "instruction": "Look at the picture and circle the sense you use.",
+          "sourcePage": 78,
+          "autoScored": false
+        },
+        {
+          "type": "picture_sense_matching",
+          "instruction": "Look at the picture and match it to the sense.",
+          "sourcePage": 78,
+          "autoScored": false
+        }
+      ]
+    },
+    {
+      "lesson": 4,
+      "title": "Phonics – Letters Cc and Kk",
+      "sourcePages": [
+        79,
+        80,
+        81,
+        82,
+        83
+      ],
+      "phonicsTargets": [
+        {
+          "letter": "Cc",
+          "sound": "/k/",
+          "sourcePage": 79
+        },
+        {
+          "letter": "Kk",
+          "sound": "/k/",
+          "sourcePage": 81
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "cake",
+          "sourcePage": 79
+        },
+        {
+          "word": "carrot",
+          "sourcePage": 79
+        },
+        {
+          "word": "cat",
+          "sourcePage": 79
+        },
+        {
+          "word": "cup",
+          "sourcePage": 79
+        },
+        {
+          "word": "car",
+          "sourcePage": 79
+        },
+        {
+          "word": "kangaroo",
+          "sourcePage": 81
+        },
+        {
+          "word": "kitchen",
+          "sourcePage": 81
+        },
+        {
+          "word": "kite",
+          "sourcePage": 81
+        },
+        {
+          "word": "king",
+          "sourcePage": 83
+        },
+        {
+          "word": "key",
+          "sourcePage": 83
+        }
+      ],
+      "teacherRepeatAudioText": [
+        {
+          "sourcePage": 79,
+          "words": [
+            "cake",
+            "carrot",
+            "cat",
+            "cup",
+            "car"
+          ]
+        },
+        {
+          "sourcePage": 81,
+          "words": [
+            "kangaroo",
+            "kitchen",
+            "kite"
+          ]
+        }
+      ],
+      "activities": [
+        {
+          "type": "listen_and_repeat",
+          "instruction": "Listen to your teacher and repeat.",
+          "sourcePage": 79,
+          "repeatItems": [
+            "cake",
+            "carrot",
+            "cat",
+            "cup",
+            "car"
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "letter_tracing",
+          "instruction": "Trace and write letter Cc in uppercase and lowercase forms.",
+          "sourcePages": [
+            79,
+            80
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "initial_sound_picture_selection",
+          "instruction": "Circle the objects that start with letter Cc.",
+          "sourcePage": 80,
+          "autoScored": false
+        },
+        {
+          "type": "listen_and_repeat",
+          "instruction": "Listen to your teacher and repeat.",
+          "sourcePage": 81,
+          "repeatItems": [
+            "kangaroo",
+            "kitchen",
+            "kite"
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "letter_tracing",
+          "instruction": "Trace and write letter Kk in uppercase and lowercase forms.",
+          "sourcePages": [
+            81,
+            82
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "initial_sound_picture_matching",
+          "instruction": "Match the objects that start with letter Kk.",
+          "sourcePage": 82,
+          "autoScored": false
+        },
+        {
+          "type": "picture_naming_and_initial_letter",
+          "instruction": "Look, say, then trace the beginning letter of the word.",
+          "sourcePage": 83,
+          "items": [
+            "cake",
+            "kangaroo",
+            "kite",
+            "king",
+            "key",
+            "carrot",
+            "cat",
+            "kitchen",
+            "car"
+          ],
+          "autoScored": false
+        }
+      ]
+    }
+  ],
+  "unitVocabularyIndex": [
+    "head",
+    "eye",
+    "ear",
+    "nose",
+    "mouth",
+    "tongue",
+    "arms",
+    "hand",
+    "legs",
+    "foot",
+    "feet",
+    "toes",
+    "red",
+    "ring",
+    "robot",
+    "rocket",
+    "rabbit",
+    "eggplant",
+    "egg",
+    "elephant",
+    "enter",
+    "elbow",
+    "see",
+    "hear",
+    "smell",
+    "taste",
+    "touch",
+    "cake",
+    "carrot",
+    "cat",
+    "cup",
+    "car",
+    "kangaroo",
+    "kitchen",
+    "kite",
+    "king",
+    "key"
+  ],
+  "vocabularyCount": 37,
+  "vocabularyPolicyNote": "37 distinct source-listed vocabulary items and sense words were indexed from the reviewed student-book pages. No supplementary vocabulary was added. Repeated words are counted once.",
+  "grammar": {
+    "status": "no_formal_grammar_section_identified",
+    "note": "The unit models have + body-part counting and can + sense + with + body part. These are recorded as language patterns from the book, not expanded into unsupported grammar rules."
+  },
+  "reading": {
+    "status": "short_sentences_only",
+    "note": "For Grade 1, reading practice is limited to the very short printed sentences on pages 67, 68, and 76. No longer passage has been added."
+  },
+  "listening": {
+    "status": "dialogue_and_teacher_repeat_word_lists_extracted",
+    "printedDialoguePages": [
+      75
+    ],
+    "teacherRepeatWordListPages": [
+      70,
+      72,
+      79,
+      81
+    ],
+    "teacherLedActivityPages": [
+      67,
+      68,
+      77
+    ],
+    "note": "The full dialogue on page 75 and the explicit listen-and-repeat word lists are available as audio scripts. The book does not provide complete spoken scripts for all picture-based teacher-led tasks; those remain teacher-led rather than fabricated."
+  },
+  "audioProduction": {
+    "status": "scripts_prepared_not_audio_files_generated",
+    "target": "Clear, natural-sounding English pronunciation suitable for young learners; avoid metallic or monotone robotic delivery.",
+    "tracks": [
+      {
+        "id": "g1_u4_l2_rr",
+        "sourcePage": 70,
+        "text": "red. ring. robot. rocket."
+      },
+      {
+        "id": "g1_u4_l2_ee",
+        "sourcePage": 72,
+        "text": "eggplant. egg. elephant. enter. elbow."
+      },
+      {
+        "id": "g1_u4_l3_dialogue",
+        "sourcePage": 75,
+        "dialogueRef": "lessons[2].dialogue"
+      },
+      {
+        "id": "g1_u4_l4_cc",
+        "sourcePage": 79,
+        "text": "cake. carrot. cat. cup. car."
+      },
+      {
+        "id": "g1_u4_l4_kk",
+        "sourcePage": 81,
+        "text": "kangaroo. kitchen. kite."
+      }
+    ],
+    "note": "This extraction records the exact text needed for audio production. No audio file is claimed to have been generated or uploaded in this commit."
+  },
+  "assessment": {
+    "status": "printed_activities_indexed_not_converted_to_auto_scored_items",
+    "sourcePages": [
+      67,
+      68,
+      69,
+      71,
+      73,
+      74,
+      77,
+      78,
+      80,
+      82,
+      83
+    ],
+    "note": "Picture-dependent exercises are indexed from the source. They have not been turned into auto-scored questions without verifying each picture and answer key."
+  }
+}
