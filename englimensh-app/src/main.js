@@ -22,20 +22,21 @@ const sections = [
 const esc = (s='') => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const grade = () => curriculum.grades.find(g => g.id === selectedGrade);
 const term = () => grade().terms.find(t => t.id === selectedTerm);
-const currentUnit = () => (grade().unitIndex || []).find(u => u.id === selectedUnitId) || null;
+const currentUnit = () => { const indexed = selectedTerm === 'term-1' ? (grade().unitIndex || []) : []; const available = term().units?.length ? term().units : indexed; return available.find(u => u.id === selectedUnitId) || null; };
 
 function render(){
   const g=grade(), t=term(), u=currentUnit();
-  const units = g.unitIndex || [];
-  const sourceMode = g.sourceAvailability?.mode || 'not_reviewed';
+  const indexedUnits = selectedTerm === 'term-1' ? (g.unitIndex || []) : [];
+  const units = t.units?.length ? t.units : indexedUnits;
+  const sourceMode = g.sourceAvailability?.mode || 'not_verified';
   const sourceNotice = sourceMode === 'assessment_only'
     ? 'المتاح حاليًا للصف السادس هو كتاب التقييمات فقط. لم يُرفق كتاب الطالب، لذلك لن نضيف مفردات أو قواعد أو نصوصًا من كتاب غير متاح.'
-    : 'تم استلام كتاب الطالب وكتاب التقييمات لهذا الصف. فهرس الوحدات أدناه مستخرج من صفحات Scope and Sequence، أما المحتوى التفصيلي والأسئلة فيُراجع قبل نشره.';
-  const sourceLabel = sourceMode === 'assessment_only' ? 'التقييمات فقط' : 'كتاب الطالب + التقييمات';
+    : sourceMode === 'student_book_and_assessments' ? 'فهرس الوحدات أدناه مستخرج من صفحات Scope and Sequence؛ أما المحتوى التفصيلي والأسئلة فلا تُعرض إلا بعد مراجعتها.' : 'لم يتم ربط مصدر موثق بهذا الصف بعد؛ لذلك لن نعرض محتوى أو وحدات تخمينية.';
+  const sourceLabel = sourceMode === 'assessment_only' ? 'كتاب التقييمات فقط' : sourceMode === 'student_book_and_assessments' ? 'كتاب الطالب + التقييمات' : 'مصدر الكتاب قيد التحقق';
   app.innerHTML = `
     <header class="topbar"><div class="brand"><div class="mark">E</div><div><strong>إنجليمنش</strong><small>EngliMensh · English, step by step</small></div></div><span class="tag">المناهج المصرية</span></header>
     <main>
-      <section class="hero"><div><p class="eyebrow">LEARN · PRACTICE · ACHIEVE</p><h1>الإنجليزي… خطوة بخطوة</h1><p>من أولى ابتدائي إلى ثالثة ثانوي، بنظامي الثانوية العامة والبكالوريا المصرية.</p></div><div class="hero-art" aria-hidden="true">Aa</div></section>
+      <section class="hero"><div><p class="eyebrow">LEARN · PRACTICE · ACHIEVE</p><h1>الإنجليزي… خطوة بخطوة</h1><p>من أولى ابتدائي إلى ثالثة ثانوي عام وفق الكتب المصرية الموثقة.</p></div><div class="hero-art" aria-hidden="true">Aa</div></section>
       <section class="selector card">
         <label>اختار الصف<select id="grade">${curriculum.grades.map(x=>`<option value="${x.id}" ${x.id===selectedGrade?'selected':''}>${esc(x.label)}</option>`).join('')}</select></label>
         <label>اختار الترم<select id="term">${g.terms.map(x=>`<option value="${x.id}" ${x.id===selectedTerm?'selected':''}>${esc(x.label)}</option>`).join('')}</select></label>
@@ -124,11 +125,11 @@ function sectionContent(section,g,t,u){
   const source = u?.indexSource;
   const sourcePages = source?.pdfPages?.join('، ') || 'قيد استكمال التوثيق';
   const sourceName = source?.file || 'لم يحدد مصدر بعد';
-  const sourceType = source?.type === 'assessment-book' ? 'كتاب التقييمات' : 'كتاب الطالب – Scope and Sequence';
+  const sourceType = source?.type === 'assessment-book' ? 'كتاب التقييمات' : source?.type === 'student-book-scope-and-sequence' ? 'كتاب الطالب – Scope and Sequence' : 'لا يوجد مرجع وحدة موثق';
   const pending = '<div class="notice"><b>لم يُنشر محتوى هذا القسم بعد.</b><p>سيُضاف فقط بعد استخراجه من الكتاب أو التقييمات والتحقق من النص والإجابة ورقم الصفحة. لن نستخدم أسئلة أو نصوصًا مؤلفة لسد النقص.</p></div>';
-  const overview = `<div class="notice"><b>الصف:</b> ${esc(g.label)} · ${esc(t.label)}<br><b>الوحدة:</b> ${u ? `Unit ${u.number}: ${esc(u.title)}` : 'لا توجد وحدة موثقة'}<br><b>حالة الفهرسة:</b> اسم الوحدة موثق؛ المحتوى التفصيلي قيد المراجعة.</div>
-    <div class="grid"><article><span>30+</span><b>كلمة لكل وحدة</b><small>معنى عربي + شرح إنجليزي + مثال</small></article><article><span>MCQ</span><b>تدريبات واختبارات</b><small>مع تصحيح ونتيجة بعد توثيق الأسئلة</small></article><article><span>5</span><b>أقسام تعليمية</b><small>Vocabulary · Grammar · Reading · Listening · Practice</small></article></div>
-    <div class="notice"><b>مرجع فهرس الوحدة:</b> ${esc(sourceType)}<br><b>الملف:</b> ${esc(sourceName)}<br><b>صفحات PDF:</b> ${esc(sourcePages)}</div>${pending}`;
+  const overview = `<div class="notice"><b>الصف:</b> ${esc(g.label)} · ${esc(t.label)}<br><b>الوحدة:</b> ${u ? `Unit ${u.number}: ${esc(u.title)}` : 'لا توجد وحدة موثقة لهذا الترم'}<br><b>حالة المحتوى:</b> ${u ? 'فهرس الوحدة موثق؛ المحتوى التفصيلي قيد المراجعة.' : 'لم يُعتمد فهرس وحدات لهذا الترم بعد.'}</div>
+    <div class="grid"><article><span>01</span><b>استخراج المصدر</b><small>تثبيت نص الكتاب ورقم الصفحة قبل الإدخال</small></article><article><span>02</span><b>مراجعة المحتوى</b><small>مطابقة المفردات والقواعد والإجابات مع المصدر</small></article><article><span>03</span><b>اختبار التطبيق</b><small>عدم نشر أي عنصر قبل اجتياز المراجعة</small></article></div>
+    <div class="notice"><b>مرجع فهرس الوحدة:</b> ${esc(sourceType)}<br><b>الملف:</b> ${esc(sourceName)}<br><b>صفحات PDF:</b> ${esc(sourcePages)}</div>${pending}`
   const body = section === 'overview' ? overview : `<p>هذا القسم مخصص لـ ${titles[section]} في ${u ? esc(u.title) : 'الوحدة المحددة'}.</p>${pending}`;
   return `<p class="eyebrow">ENG LISH · ${esc(g.stage.toUpperCase())}</p><h2>${titles[section]}</h2>${body}`;
 }
