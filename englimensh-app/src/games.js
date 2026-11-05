@@ -7,56 +7,78 @@ import u6 from './data/source-audit/grade1-unit6-full-extraction.json';
 
 const gradeOneSources=[u1,u2,u3,u4,u5,u6];
 export const gameCatalog=[
-  {id:'penalty',title:'Penalty Kick',type:'phonics',solo:true},
-  {id:'fishing',title:'Fishing Hunt',type:'listening-vocabulary',solo:true}
+ {id:'penalty',title:'Penalty Kick',subtitle:'اختر الكلمة الصحيحة وسجّل هدفًا',icon:'⚽',theme:'football'},
+ {id:'fishing',title:'Fishing Hunt',subtitle:'استمع واصطد الكلمة الصحيحة',icon:'🎣',theme:'water'},
+ {id:'basketball',title:'Basketball Challenge',subtitle:'أكمل النمط اللغوي وسجّل سلة',icon:'🏀',theme:'court'},
+ {id:'builder',title:'Word Builder',subtitle:'رتّب الحروف لتكوين كلمة المنهج',icon:'🧩',theme:'builder'},
+ {id:'adventure',title:'Grammar Adventure',subtitle:'تقدّم في المسار باختيار الكلمة المناسبة',icon:'🗺️',theme:'adventure'},
+ {id:'shoot',title:'Shoot the Answer',subtitle:'صوّب نحو الإجابة الصحيحة',icon:'🎯',theme:'target'}
 ];
-
-function wordsForUnit(unitId){
-  const source=gradeOneSources.find(x=>x.unit===Number(String(unitId).replace('unit-','')));
-  if(!source)return [];
-  const words=source.unitVocabularyIndex || source.lessons.flatMap(lesson=>[
-    ...(lesson.vocabulary||[]).map(x=>typeof x==='string'?x:x.word),
-    ...(lesson.sourceWords||[]).map(x=>typeof x==='string'?x:x.word),
-    ...(lesson.numberVocabulary||[])
-  ]);
-  return [...new Set(words.map(w=>String(w||'').trim()).filter(w=>/^[a-z]+(?:[ '-][a-z]+)*$/i.test(w)))];
+const shuffle=a=>[...a].sort(()=>Math.random()-.5);
+const unitFor=id=>gradeOneSources.find(x=>x.unit===Number(String(id).replace('unit-','')));
+function sourceWords(source){
+ const entries=source.lessons.flatMap(l=>[...(l.vocabulary||[]),...(l.sourceWords||[])]);
+ const extra=(source.unitVocabularyIndex||[]).map(x=>typeof x==='string'?{word:x}:x);
+ const seen=new Set();
+ return [...entries,...extra].map(x=>typeof x==='string'?{word:x}:x)
+  .filter(x=>x.word && /^[a-z]+(?:[ '-][a-z]+)*$/i.test(x.word))
+  .filter(x=>{const k=x.word.toLowerCase();if(seen.has(k))return false;seen.add(k);return true;});
 }
-function phonicsForUnit(unitId){
-  const source=gradeOneSources.find(x=>x.unit===Number(String(unitId).replace('unit-','')));
-  if(!source)return [];
-  return source.lessons.flatMap(lesson=>{
-    const targets=[...(lesson.phonicsTarget?[lesson.phonicsTarget]:[]),...(lesson.phonicsTargets||[])];
-    return targets.map(t=>({letter:String(t.letter||'').charAt(0).toLowerCase(),sound:t.sound||'',page:t.sourcePage||t.sourcePages?.[0]||lesson.sourcePages?.[0]}));
-  }).filter(x=>x.letter);
+function phonics(source){
+ return source.lessons.flatMap(l=>[...(l.phonicsTarget?[l.phonicsTarget]:[]),...(l.phonicsTargets||[])])
+  .map(x=>({letter:String(x.letter||'').charAt(0).toLowerCase(),sound:x.sound||'',page:x.sourcePage||x.sourcePages?.[0]}))
+  .filter(x=>x.letter);
 }
-function shuffle(list){return [...list].sort(()=>Math.random()-.5);}
-function makeQuestion(gameId, words, phonics, index){
-  if(gameId==='penalty'){
-    const target=phonics[index%phonics.length];
-    const matching=words.filter(w=>w.toLowerCase().startsWith(target.letter));
-    const distractors=shuffle(words.filter(w=>!w.toLowerCase().startsWith(target.letter))).slice(0,3);
-    const choices=shuffle([...matching.slice(0,1),...distractors]);
-    const correctIndex=choices.indexOf(matching[0]);
-    return {prompt:`Choose the word that starts with the letter ${target.letter.toUpperCase()}.`,choices,correctIndex,sourcePage:target.page};
+function patterns(source){
+ return source.lessons.flatMap(l=>(l.languagePatterns||[]).map(p=>({text:p,page:l.sourcePages?.[0]})));
+}
+function mcq(prompt,answer,pool,extra={}){
+ const distractors=shuffle(pool.filter(x=>x.toLowerCase()!==answer.toLowerCase())).slice(0,3);
+ const choices=shuffle([answer,...distractors]);
+ return {prompt,choices,correctIndex:choices.indexOf(answer),...extra};
+}
+function scrambled(word){
+ const chars=[...word.toLowerCase().replace(/[^a-z]/g,'')];
+ if(chars.length<2)return word;
+ let out=chars.join('');
+ for(let n=0;n<8&&out===chars.join('');n++)out=shuffle(chars).join('');
+ return out;
+}
+function makeQuestions(id,source,words,count){
+ const names=words.map(x=>x.word), phon=phonics(source), pats=patterns(source), qs=[];
+ if(id==='penalty'){
+  for(let i=0;i<count;i++){const p=phon[i%phon.length];const answer=names.find(w=>w.toLowerCase().startsWith(p.letter));if(answer)qs.push(mcq('Choose the word that starts with '+p.letter.toUpperCase()+'.',answer,names,{sourcePage:p.page,kind:'phonics'}));}
+ }
+ if(id==='fishing'){
+  for(let i=0;i<count;i++){const w=words[i%words.length];qs.push(mcq('Listen carefully. Which word did you hear?',w.word,names,{spokenWord:w.word,sourcePage:w.sourcePage,kind:'listening'}));}
+ }
+ if(id==='basketball'||id==='adventure'){
+  const usable=pats.filter(p=>p.text.split(' ').length>=3);
+  for(let i=0;i<count&&usable.length;i++){
+   const p=usable[i%usable.length], tokens=p.text.split(' '), candidates=tokens.filter(x=>/^[A-Za-z']+[.!?,]?$/.test(x)&&x.length>2);
+   const target=candidates[candidates.length-1];if(!target)continue;
+   const answer=target.replace(/[.!?,]$/,'');
+   const blank=p.text.replace(new RegExp('\\b'+answer.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\b','i'),'_____');
+   qs.push(mcq((id==='basketball'?'Complete the sentence and score! ':'Choose the missing word on your adventure! ')+blank,answer,names,{sourcePage:p.page,kind:'pattern',originalPattern:p.text}));
   }
-  const spokenWord=words[index%words.length];
-  const choices=shuffle([spokenWord,...shuffle(words.filter(w=>w!==spokenWord)).slice(0,3)]);
-  return {prompt:'Listen carefully. Which word did you hear?',spokenWord,choices,correctIndex:choices.indexOf(spokenWord)};
+ }
+ if(id==='builder'){
+  for(let i=0;i<count;i++){const w=words[i%words.length].word;const correct=scrambled(w);const options=shuffle([correct,...Array.from({length:3},()=>scrambled(w))]);qs.push({prompt:'Build the word: listen to the word, then choose its correct letter order.',spokenWord:w,choices:options,correctIndex:options.indexOf(correct),kind:'builder',sourceWord:w});}
+ }
+ if(id==='shoot'){
+  const translated=words.filter(w=>w.arabicMeaning);
+  if(translated.length>=2){for(let i=0;i<count;i++){const w=translated[i%translated.length];qs.push(mcq('Shoot the English word for: '+w.arabicMeaning,w.word,translated.map(x=>x.word),{sourcePage:w.sourcePage,kind:'meaning'}));}}
+  else if(phon.length){for(let i=0;i<count;i++){const p=phon[i%phon.length],answer=names.find(w=>w.toLowerCase().startsWith(p.letter));if(answer)qs.push(mcq('Hit the word that begins with the sound '+p.sound+'.',answer,names,{sourcePage:p.page,kind:'phonics'}));}}
+ }
+ return shuffle(qs).slice(0,count);
 }
 export function createRound(gameId,gradeId,unitId,count=10){
-  if(gradeId!=='primary-1')return [];
-  const words=wordsForUnit(unitId), phonics=phonicsForUnit(unitId);
-  if(words.length<4)return [];
-  const questions=[];
-  if(gameId==='penalty'&&phonics.length){
-    for(let i=0;i<count;i++){
-      const target=phonics[i%phonics.length];
-      const hasMatch=words.some(w=>w.toLowerCase().startsWith(target.letter));
-      if(hasMatch)questions.push(makeQuestion(gameId,words,phonics,i));
-    }
-  }else if(gameId==='fishing'){
-    for(let i=0;i<count;i++)questions.push(makeQuestion(gameId,words,phonics,i));
-  }
-  return questions;
+ if(gradeId!=='primary-1')return [];
+ const source=unitFor(unitId);if(!source)return [];
+ const words=sourceWords(source);if(words.length<4)return [];
+ const phon=phonics(source);
+ if((gameId==='penalty'||gameId==='shoot')&&!phon.length&&!words.some(w=>w.arabicMeaning))return [];
+ if((gameId==='basketball'||gameId==='adventure')&&!patterns(source).length)return [];
+ return makeQuestions(gameId,source,words,count);
 }
 export function getGameQuestion(question){return question||null;}
