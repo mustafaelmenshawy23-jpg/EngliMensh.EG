@@ -31,8 +31,8 @@ function render(){
   const sourceMode = g.sourceAvailability?.mode || 'not_verified';
   const sourceNotice = sourceMode === 'assessment_only'
     ? 'المتاح حاليًا للصف السادس هو كتاب التقييمات فقط. لم يُرفق كتاب الطالب، لذلك لن نضيف مفردات أو قواعد أو نصوصًا من كتاب غير متاح.'
-    : sourceMode === 'student_book_and_assessments' ? 'فهرس الوحدات أدناه مستخرج من صفحات Scope and Sequence؛ أما المحتوى التفصيلي والأسئلة فلا تُعرض إلا بعد مراجعتها.' : 'لم يتم ربط مصدر موثق بهذا الصف بعد؛ لذلك لن نعرض محتوى أو وحدات تخمينية.';
-  const sourceLabel = sourceMode === 'assessment_only' ? 'كتاب التقييمات فقط' : sourceMode === 'student_book_and_assessments' ? 'كتاب الطالب + التقييمات' : 'مصدر الكتاب قيد التحقق';
+    : sourceMode === 'student_book_and_assessments' ? 'فهرس الوحدات أدناه مستخرج من صفحات Scope and Sequence؛ أما المحتوى التفصيلي والأسئلة فلا تُعرض إلا بعد مراجعتها.' : sourceMode === 'student_book_only' ? 'تم ربط كتاب الطالب. لم يُربط كتاب تقييمات مستقل لهذا الصف؛ وسيُستخرج المحتوى من كتاب الطالب فقط.' : 'لم يتم ربط مصدر موثق بهذا الصف بعد؛ لذلك لن نعرض محتوى أو وحدات تخمينية.';
+  const sourceLabel = sourceMode === 'assessment_only' ? 'كتاب التقييمات فقط' : sourceMode === 'student_book_and_assessments' ? 'كتاب الطالب + التقييمات' : sourceMode === 'student_book_only' ? 'كتاب الطالب فقط' : 'مصدر الكتاب قيد التحقق';
   app.innerHTML = `
     <header class="topbar"><div class="brand"><div class="mark">E</div><div><strong>إنجليمنش</strong><small>EngliMensh · English, step by step</small></div></div><span class="tag">المناهج المصرية</span></header>
     <main>
