@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "grade": 1,
+  "term": 1,
+  "unit": 1,
+  "title": "Welcome to My School",
+  "source": "English_language_prim1_t1.pdf",
+  "sourceType": "student_book",
+  "reviewedPdfPages": [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+  "status": "source_content_extracted",
+  "learningOutcomes": [
+    "Recognize and respond to greetings in simple conversations.",
+    "Follow basic classroom instructions.",
+    "Identify the formation, sound, and words that begin with the letters Tt and Ii.",
+    "Introduce oneself using complete sentences in structured speaking activities.",
+    "Use simple expressions to interact with peers in guided classroom conversations."
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "title": "Greetings",
+      "sourcePages": [8, 9, 10, 11],
+      "dialogue": {
+        "sourcePage": 8,
+        "lines": [
+          { "speaker": "Maya", "text": "Hello!" },
+          { "speaker": "Hana", "text": "Hello! What's your name?" },
+          { "speaker": "Maya", "text": "My name is Maya." },
+          { "speaker": "Hana", "text": "I'm Hana! Nice to meet you, Maya!" },
+          { "speaker": "Maya", "text": "Nice to meet you, too, Hana! Do you want to shake hands?" },
+          { "speaker": "Hana", "text": "Yes! (They shake hands.)" },
+          { "speaker": "Maya", "text": "Goodbye, Hana!" }
+        ]
+      },
+      "vocabulary": [
+        { "word": "hello", "sourcePage": 9 },
+        { "word": "goodbye", "sourcePage": 9 },
+        { "word": "shake hands", "sourcePage": 9 },
+        { "word": "play", "sourcePage": 9 },
+        { "word": "friends", "sourcePage": 9 }
+      ],
+      "languagePatterns": [
+        "What's your name?",
+        "My name is Hana.",
+        "We are friends now!",
+        "Nice to meet you.",
+        "Nice to meet you, too."
+      ],
+      "activities": [
+        {
+          "type": "listen_and_repeat",
+          "instruction": "Listen, repeat, then act out.",
+          "sourcePage": 9
+        },
+        {
+          "type": "trace_lines",
+          "instruction": "Trace the following lines.",
+          "sourcePage": 10,
+          "autoScored": false
+        },
+        {
+          "type": "listening_picture_match",
+          "instruction": "Listen, point, and mark the matching picture: Hello! / Goodbye! / shake hands / play.",
+          "sourcePage": 11,
+          "autoScored": false,
+          "note": "Audio is teacher-led; the PDF page does not provide a separate recording script for this exercise."
+        },
+        {
+          "type": "picture_word_match",
+          "instruction": "Look at the picture and the word. Put a check if they match, or a cross if they don't.",
+          "items": ["friends", "goodbye", "play", "shake hands", "hello"],
+          "sourcePage": 11,
+          "autoScored": false
+        }
+      ]
+    },
+    {
+      "lesson": 2,
+      "title": "Phonics – Letter Tt",
+      "sourcePages": [12, 13, 14, 15, 16],
+      "phonicsTarget": {
+        "letter": "Tt",
+        "sound": "/t/",
+        "sourcePage": 12
+      },
+      "vocabulary": [
+        { "word": "table", "sourcePage": 12 },
+        { "word": "tiger", "sourcePage": 12 },
+        { "word": "tomato", "sourcePage": 12 },
+        { "word": "teacher", "sourcePage": 12 },
+        { "word": "tree", "sourcePage": 12 }
+      ],
+      "activities": [
+        {
+          "type": "listen_and_repeat",
+          "instruction": "Listen to your teacher and repeat.",
+          "sourcePage": 12
+        },
+        {
+          "type": "letter_tracing",
+          "instruction": "Trace letter T in its uppercase and lowercase forms.",
+          "sourcePages": [12, 13, 14],
+          "autoScored": false
+        },
+        {
+          "type": "initial_sound_picture_match",
+          "instruction": "Match the objects that start with the letter Tt.",
+          "sourcePage": 13,
+          "expectedWords": ["tree", "tomato", "tiger", "table"],
+          "autoScored": false
+        },
+        {
+          "type": "trace_lines",
+          "instruction": "Trace the following lines.",
+          "sourcePage": 14,
+          "autoScored": false
+        },
+        {
+          "type": "initial_letter_choice",
+          "instruction": "Look at the picture then circle the beginning letter.",
+          "sourcePage": 15,
+          "expectedWords": ["teacher", "table", "tree"],
+          "autoScored": false
+        },
+        {
+          "type": "trace_initial_letter",
+          "instruction": "Trace the beginning letter in each word.",
+          "sourcePage": 15,
+          "items": ["tomato", "tiger", "table", "tree"],
+          "autoScored": false
+        },
+        {
+          "type": "initial_letter_discrimination",
+          "instruction": "Look at the picture then circle the beginning letter.",
+          "sourcePage": 15,
+          "letterChoices": ["Tt", "Mm", "Ss", "Ii", "Pp"],
+          "autoScored": false
+        }
+      ]
+    },
+    {
+      "lesson": 3,
+      "title": "Around My Classroom",
+      "sourcePages": [17, 18, 19, 20],
+      "vocabulary": [
+        { "word": "teacher", "sourcePage": 17 },
+        { "word": "book", "sourcePage": 17 },
+        { "word": "bag", "sourcePage": 17 },
+        { "word": "pencil", "sourcePage": 17 },
+        { "word": "chair", "sourcePage": 17 },
+        { "word": "desk", "sourcePage": 17 },
+        { "word": "board", "sourcePage": 17 }
+      ],
+      "classroomInstructions": [
+        { "text": "Sit down.", "sourcePage": 18 },
+        { "text": "Stand up.", "sourcePage": 18 },
+        { "text": "Open your books.", "sourcePage": 18 }
+      ],
+      "activities": [
+        {
+          "type": "listen_point_repeat",
+          "instruction": "Listen, point, and repeat.",
+          "sourcePage": 18
+        },
+        {
+          "type": "picture_classification",
+          "instruction": "Circle the pictures that you can find in your classroom.",
+          "sourcePage": 19,
+          "autoScored": false
+        },
+        {
+          "type": "picture_word_match",
+          "instruction": "Look at the picture and the word. Put a check if they match, or a cross if they don't.",
+          "items": ["teacher", "sit down", "pencil", "book", "stand up", "desk", "chair", "bag"],
+          "sourcePage": 19,
+          "autoScored": false
+        },
+        {
+          "type": "listening_picture_match",
+          "instruction": "Listen, point, and write a check for the matching picture.",
+          "items": ["teacher", "sit down", "stand up", "desk", "chair", "pencil", "bag"],
+          "sourcePage": 20,
+          "autoScored": false,
+          "note": "Teacher-led listening activity; no standalone audio script is printed on the page."
+        }
+      ]
+    },
+    {
+      "lesson": 4,
+      "title": "Phonics – Letter Ii",
+      "sourcePages": [21, 22, 23, 24],
+      "phonicsTarget": {
+        "letter": "Ii",
+        "sound": "/ɪ/",
+        "sourcePage": 21
+      },
+      "vocabulary": [
+        { "word": "in", "sourcePage": 21 },
+        { "word": "ill", "sourcePage": 21 },
+        { "word": "insect", "sourcePage": 21 },
+        { "word": "ink", "sourcePage": 21 }
+      ],
+      "activities": [
+        {
+          "type": "listen_and_repeat",
+          "instruction": "Listen to your teacher and repeat.",
+          "sourcePage": 21
+        },
+        {
+          "type": "letter_tracing",
+          "instruction": "Trace letter I in its uppercase and lowercase forms.",
+          "sourcePages": [21, 22, 24],
+          "autoScored": false
+        },
+        {
+          "type": "initial_sound_picture_match",
+          "instruction": "Match the objects that start with the letter Ii.",
+          "sourcePage": 22,
+          "expectedWords": ["in", "ill", "insect", "ink"],
+          "autoScored": false
+        },
+        {
+          "type": "initial_sound_picture_selection",
+          "instruction": "Circle all the pictures that start with the letter Ii.",
+          "sourcePage": 23,
+          "autoScored": false
+        },
+        {
+          "type": "letter_choice",
+          "instruction": "Choose the picture of the word that starts with the following letter.",
+          "sourcePage": 24,
+          "letterChoices": ["Ii", "Tt"],
+          "autoScored": false
+        }
+      ]
+    }
+  ],
+  "unitVocabularyIndex": [
+    "hello", "goodbye", "shake hands", "play", "friends",
+    "table", "tiger", "tomato", "teacher", "tree",
+    "book", "bag", "pencil", "chair", "desk", "board",
+    "in", "ill", "insect", "ink"
+  ],
+  "vocabularyCount": 20,
+  "vocabularyPolicyNote": "Only 20 distinct source-listed vocabulary items were extracted from the reviewed Unit 1 pages. The book's Scope and Sequence lists fewer items than the requested 30-word threshold. No extra words have been invented or presented as book vocabulary.",
+  "grammar": {
+    "status": "no explicit grammar teaching section found in reviewed Unit 1 pages",
+    "note": "The unit teaches greeting expressions, self-introduction patterns and classroom instructions. These are recorded as language patterns, not relabeled as a formal grammar topic."
+  },
+  "reading": {
+    "status": "no standalone reading passage found in reviewed Unit 1 pages",
+    "note": "The dialogue on page 8 is the source text for listening/speaking, not a reading passage."
+  },
+  "listening": {
+    "status": "teacher_led_tasks_present_no_printed_audio_script",
+    "sourcePages": [8, 11, 18, 20, 21],
+    "note": "The book contains listening instructions and a dialogue script on page 8. Several picture-identification listening tasks are teacher-led and do not provide a separate recorded script."
+  },
+  "assessment": {
+    "status": "activities_extracted_not_converted_to_new_questions",
+    "sourcePages": [11, 15, 19, 20, 22, 23, 24],
+    "note": "Activities are recorded as printed. They are not converted into additional MCQs or auto-scored items where picture-dependent answer keys cannot be reliably extracted from text alone."
+  }
+}
