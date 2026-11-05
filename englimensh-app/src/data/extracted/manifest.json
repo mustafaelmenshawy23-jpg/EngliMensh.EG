@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "method": "PyMuPDF page text extraction",
+  "books": [
+    {
+      "source": "public/books/preparatory/new-hello/English 1prep-1تقييمات اولى عYasser Salah .pdf",
+      "pages": 70,
+      "pages_with_text": 70,
+      "extracted_file": "src/data/extracted/English 1prep-1تقييمات اولى عYasser Salah .jsonl",
+      "status": "text_extracted"
+    },
+    {
+      "source": "public/books/preparatory/new-hello/English_Prep1_T1 (1).pdf",
+      "pages": 113,
+      "pages_with_text": 0,
+      "extracted_file": "src/data/extracted/English_Prep1_T1 (1).jsonl",
+      "status": "image_only_or_no_text"
+    },
+    {
+      "source": "public/books/preparatory/new-hello/English_language_prep2_t1 (1).pdf",
+      "pages": 114,
+      "pages_with_text": 0,
+      "extracted_file": "src/data/extracted/English_language_prep2_t1 (1).jsonl",
+      "status": "image_only_or_no_text"
+    },
+    {
+      "source": "public/books/preparatory/new-hello/English_language_prep3_t1 (1).pdf",
+      "pages": 114,
+      "pages_with_text": 1,
+      "extracted_file": "src/data/extracted/English_language_prep3_t1 (1).jsonl",
+      "status": "text_extracted"
+    },
+    {
+      "source": "public/books/preparatory/new-hello/Performance Tasks Prep 2-OnlineMaterials.PDF",
+      "pages": 63,
+      "pages_with_text": 63,
+      "extracted_file": "src/data/extracted/Performance Tasks Prep 2-OnlineMaterials.jsonl",
+      "status": "text_extracted"
+    },
+    {
+      "source": "public/books/preparatory/new-hello/كتاب_تقيمات_الصف_الثالث_الاعدادي_2026.pdf",
+      "pages": 64,
+      "pages_with_text": 64,
+      "extracted_file": "src/data/extracted/كتاب_تقيمات_الصف_الثالث_الاعدادي_2026.jsonl",
+      "status": "text_extracted"
+    },
+    {
+      "source": "public/books/primary/assessments/English_prim1_t1_Assmt (1).pdf",
+      "pages": 74,
+      "pages_with_text": 8,
+      "extracted_file": "src/data/extracted/English_prim1_t1_Assmt (1).jsonl",
+      "status": "text_extracted"
+    },
+    {
+      "source": "public/books/primary/assessments/English_prim2_t1_Assmt (1).pdf",
+      "pages": 73,
+      "pages_with_text": 72,
+      "extracted_file": "src/data/extracted/English_prim2_t1_Assmt (1).jsonl",
+      "status": "text_extracted"
+    },
+    {
+      "source": "public/books/primary/assessments/English_prim4_t1_Assmt (1).pdf",
+      "pages": 66,
+      "pages_with_text": 0,
+      "extracted_file": "src/data/extracted/English_prim4_t1_Assmt (1).jsonl",
+      "status": "image_only_or_no_text"
+    },
+    {
+      "source": "public/books/primary/assessments/English_prim5_t1_Assmt (1).pdf",
+      "pages": 74,
+      "pages_with_text": 1,
+      "extracted_file": "src/data/extracted/English_prim5_t1_Assmt (1).jsonl",
+      "status": "text_extracted"
+    },
+    {
+      "source": "public/books/primary/assessments/English_prim6_t1_Assmt (1).pdf",
+      "pages": 74,
+      "pages_with_text": 73,
+      "extracted_file": "src/data/extracted/English_prim6_t1_Assmt (1).jsonl",
+      "status": "text_extracted"
+    },
+    {
+      "source": "public/books/primary/assessments/كتاب تقييمات الصف الثالث 2026.pdf",
+      "pages": 64,
+      "pages_with_text": 0,
+      "extracted_file": "src/data/extracted/كتاب تقييمات الصف الثالث 2026.jsonl",
+      "status": "image_only_or_no_text"
+    },
+    {
+      "source": "public/books/primary/connect/English_Primary6_T1 (1).pdf",
+      "pages": 113,
+      "pages_with_text": 0,
+      "extracted_file": "src/data/extracted/English_Primary6_T1 (1).jsonl",
+      "status": "image_only_or_no_text"
+    },
+    {
+      "source": "public/books/primary/connect/English_language_prim1_t1.pdf",
+      "pages": 128,
+      "pages_with_text": 113,
+      "extracted_file": "src/data/extracted/English_language_prim1_t1.jsonl",
+      "status": "text_extracted"
+    },
+    {
+      "source": "public/books/primary/connect/English_language_prim2_t1 (1).pdf",
+      "pages": 104,
+      "pages_with_text": 0,
+      "extracted_file": "src/data/extracted/English_language_prim2_t1 (1).jsonl",
+      "status": "image_only_or_no_text"
+    },
+    {
+      "source": "public/books/primary/connect/English_language_prim3_t1 (1).pdf",
+      "pages": 120,
+      "pages_with_text": 0,
+      "extracted_file": "src/data/extracted/English_language_prim3_t1 (1).jsonl",
+      "status": "image_only_or_no_text"
+    },
+    {
+      "source": "public/books/primary/connect/English_language_prim4_t1 (1).pdf",
+      "pages": 121,
+      "pages_with_text": 0,
+      "extracted_file": "src/data/extracted/English_language_prim4_t1 (1).jsonl",
+      "status": "image_only_or_no_text"
+    },
+    {
+      "source": "public/books/primary/connect/English_language_prim5_t1 (1).pdf",
+      "pages": 113,
+      "pages_with_text": 106,
+      "extracted_file": "src/data/extracted/English_language_prim5_t1 (1).jsonl",
+      "status": "text_extracted"
+    },
+    {
+      "source": "public/books/secondary/general-secondary/English_1sec_t1 (1).pdf",
+      "pages": 172,
+      "pages_with_text": 168,
+      "extracted_file": "src/data/extracted/English_1sec_t1 (1).jsonl",
+      "status": "text_extracted"
+    },
+    {
+      "source": "public/books/secondary/general-secondary/English_language_2sec_t1 (1).pdf",
+      "pages": 166,
+      "pages_with_text": 164,
+      "extracted_file": "src/data/extracted/English_language_2sec_t1 (1).jsonl",
+      "status": "text_extracted"
+    },
+    {
+      "source": "public/books/secondary/general-secondary/English_language_Sec3_tr1 (1).pdf",
+      "pages": 286,
+      "pages_with_text": 280,
+      "extracted_file": "src/data/extracted/English_language_Sec3_tr1 (1).jsonl",
+      "status": "text_extracted"
+    }
+  ]
+}
