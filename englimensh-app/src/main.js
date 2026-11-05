@@ -72,11 +72,12 @@ function answerQuestion(choiceIndex){
   const q=getGameQuestion(gameRound[gameIndex]);
   lastAnswerCorrect=choiceIndex===q.correctIndex;
   if(lastAnswerCorrect)gameScore++;
+  gameRound[gameIndex].selectedIndex=choiceIndex;
   answered=true;render();
 }
 function nextQuestion(){
   if(gameIndex<gameRound.length-1){gameIndex++;answered=false;render();}
-  else {activeGame='complete';render();}
+  else {activeGame='complete';const best=Number(localStorage.getItem('englimensh-solo-game-best')||0);if(gameScore>best)localStorage.setItem('englimensh-solo-game-best',String(gameScore));render();}
 }
 function speakCurrentWord(){
   const q=getGameQuestion(gameRound[gameIndex]);
