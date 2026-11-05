@@ -17,7 +17,7 @@ import {
 import { primaryCurriculumDatabase } from './primaryCurriculumDatabase.ts';
 import { UnitCurriculum } from '../types/curriculum.ts';
 
-// Master injected primary curriculum database with all 36 verified units
+// Imported primary curriculum data; source verification is tracked separately.
 export const injectedPrimaryCurriculumDatabase: PrimaryLessonContent[] = primaryCurriculumDatabase;
 
 // Helper to deterministically rotate 4 options so correct answers are balanced across A, B, C, D
@@ -62,8 +62,8 @@ function mapPrimaryQuestionToCurriculumQuestion(
     correctAnswer: letterMap[newCorrectIdx >= 0 ? newCorrectIdx : 0],
     explanation: q.explanationAr,
     explanationAr: q.explanationAr,
-    verificationStatus: 'verified' as const,
-    sourceReference: `Egyptian MOE Connect Series - ${unitTitleEn}`
+    verificationStatus: 'unverified' as const,
+    sourceReference: `Unverified draft data — source page not yet matched: ${unitTitleEn}`
   };
 }
 
@@ -86,8 +86,8 @@ export function convertPrimaryLessonToUnitCurriculum(lesson: PrimaryLessonConten
     gradeLabel: gradeLabelMap[lesson.grade] || `Primary ${gradeNum}`,
     track: lesson.track === 'connect_plus' ? 'Connect Plus' : 'Connect',
     textbookSeries: seriesName,
-    verificationStatus: 'verified',
-    sourceReference: `Egyptian MOE ${seriesName}, Term ${lesson.term}, Unit ${lesson.unitNumber} (${lesson.unitTitleEn})`,
+    verificationStatus: 'unverified',
+    sourceReference: `Unverified draft data — ${seriesName}, Term ${lesson.term}, Unit ${lesson.unitNumber}; awaiting page-level source check`,
     semester: lesson.term,
     unitNumber: lesson.unitNumber,
     unitTitle: lesson.unitTitleEn,
@@ -180,16 +180,13 @@ export function getInjectedPrimaryUnit(
   track: 'connect' | 'connect_plus' = 'connect',
   term: 1 | 2 = 1
 ): PrimaryLessonContent | undefined {
+  // Exact-match only: never substitute a different unit, track, or term.
   return injectedPrimaryCurriculumDatabase.find(
     lesson =>
       lesson.grade === grade &&
       lesson.unitNumber === unitNumber &&
       lesson.track === track &&
       lesson.term === term
-  ) || injectedPrimaryCurriculumDatabase.find(
-    lesson => lesson.grade === grade && lesson.unitNumber === unitNumber
-  ) || injectedPrimaryCurriculumDatabase.find(
-    lesson => lesson.grade === grade
   );
 }
 
