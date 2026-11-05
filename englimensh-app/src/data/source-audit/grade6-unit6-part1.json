@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "grade": 6,
+  "unit": 6,
+  "title": "The water Savers",
+  "source": "English_prim6_t1_Assmt (1).pdf",
+  "reviewedPdfPages": [60, 61, 62, 63, 64],
+  "sourceVocabulary": ["precious", "dripping", "puddles", "curious"],
+  "mcq": [
+    {
+      "question": "Which word means falling in small drops (like water from a tap)?",
+      "options": ["Precious", "Dripping", "Puddles", "Curious"],
+      "correctAnswer": "Dripping",
+      "sourcePage": 60
+    },
+    {
+      "question": "When something is valuable, it is ...",
+      "options": ["bad", "cheap", "precious", "abnormal"],
+      "correctAnswer": "precious",
+      "sourcePage": 60
+    },
+    {
+      "question": "The teacher was (...) about the project.",
+      "options": ["excited", "exciting", "excitement", "excitedly"],
+      "correctAnswer": "excited",
+      "sourcePage": 60
+    },
+    {
+      "question": "You (...) touch statues in the museum.",
+      "options": ["mustn't", "should", "are", "have"],
+      "correctAnswer": "mustn't",
+      "sourcePage": 60
+    },
+    {
+      "question": "We (...) throw rubbish on the beach.",
+      "options": ["should", "mustn't", "aren't", "had"],
+      "correctAnswer": "mustn't",
+      "sourcePage": 60
+    }
+  ],
+  "storyComprehensionPrompts": [
+    "Where did the children see water being wasted?",
+    "What name did Farida give to their group?",
+    "How did the teacher react when they told her their plan?"
+  ],
+  "storyComprehensionSourcePage": 60,
+  "storyTextAvailability": "The reviewed pages refer to a story but do not reproduce the full story text on page 60. The review on page 63 gives the main events and facts only. Do not reconstruct or invent the missing story passage.",
+  "grammar": {
+    "sourcePage": 61,
+    "topics": ["punctuation", "past simple"],
+    "pastSimpleItems": [
+      "We (visit) Al Galala City last year.",
+      "She (see) the beautiful gardens.",
+      "My friend (not go) to the museum.",
+      "I (enjoy) the trip a lot.",
+      "He (choose) the wrong way."
+    ]
+  },
+  "review": {
+    "sourcePage": 63,
+    "mcqAnswers": ["help", "dripping", "pipe", "precious", "Water Savers"],
+    "trueFalseStatements": [
+      { "statement": "Noor, Ahmed, and Farida were lazy and never helped at school.", "answer": false },
+      { "statement": "A tap in the school bathroom kept dripping.", "answer": true },
+      { "statement": "The broken pipe made little puddles near the walkway.", "answer": true },
+      { "statement": "Ahmed didn't care about water and walked away.", "answer": false },
+      { "statement": "The teacher liked their idea and wanted to help.", "answer": true }
+    ],
+    "eventOrder": ["C", "B", "D", "A"],
+    "eventDescriptions": {
+      "A": "They went to their teacher's office and explained their plan.",
+      "B": "They saw a dripping tap and water overflowing from a broken pipe.",
+      "C": "Noor, Ahmed, and Farida wanted to help and not waste water.",
+      "D": "Farida suggested that they could be Water Savers."
+    }
+  },
+  "listening": {
+    "status": "not_found_in_pages_reviewed",
+    "note": "No listening script or listening MCQ was identified on the reviewed pages 60–64."
+  },
+  "vocabulary30Status": "not_yet_supported_by_reviewed_pages"
+}
