@@ -1,0 +1,788 @@
+{
+  "schemaVersion": 1,
+  "grade": 1,
+  "term": 1,
+  "unit": 5,
+  "title": "On the Farm",
+  "source": "English_language_prim1_t1.pdf",
+  "sourceType": "student_book",
+  "reviewedPdfPages": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102
+  ],
+  "status": "source_content_extracted",
+  "learningOutcomes": [
+    "Name farm animals and the food they give using complete sentences.",
+    "Answer simple questions related to counting and describing animals.",
+    "Identify the formation, sound, and words that begin with Mm, Gg, Oo, and Ff.",
+    "Describe animal sizes using opposite words.",
+    "Recognize the formation of numbers 6 to 10 and match them with their correct values.",
+    "Trace and write letters Mm, Gg, Oo, and Ff in uppercase and lowercase forms."
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "title": "Welcome to the Farm",
+      "sourcePages": [
+        85,
+        86,
+        87,
+        88
+      ],
+      "dialogue": {
+        "sourcePage": 85,
+        "lines": [
+          {
+            "speaker": "Noor",
+            "text": "Look at the cow!"
+          },
+          {
+            "speaker": "Ziad",
+            "text": "Wow! The cow is big!"
+          },
+          {
+            "speaker": "Noor",
+            "text": "And look at the duck!"
+          },
+          {
+            "speaker": "Ziad",
+            "text": "The duck is small."
+          },
+          {
+            "speaker": "Noor",
+            "text": "Do you see the horse?"
+          },
+          {
+            "speaker": "Ziad",
+            "text": "Yes! The horse is big, too."
+          },
+          {
+            "speaker": "Noor",
+            "text": "What about the chicken?"
+          },
+          {
+            "speaker": "Ziad",
+            "text": "The chicken is small."
+          },
+          {
+            "speaker": "Noor",
+            "text": "I love farm animals!"
+          }
+        ]
+      },
+      "vocabulary": [
+        {
+          "word": "cow",
+          "sourcePage": 86,
+          "arabicMeaning": "بقرة"
+        },
+        {
+          "word": "duck",
+          "sourcePage": 86,
+          "arabicMeaning": "بطة"
+        },
+        {
+          "word": "horse",
+          "sourcePage": 86,
+          "arabicMeaning": "حصان"
+        },
+        {
+          "word": "chicken",
+          "sourcePage": 86,
+          "arabicMeaning": "دجاجة"
+        },
+        {
+          "word": "big",
+          "sourcePage": 86,
+          "arabicMeaning": "كبير"
+        },
+        {
+          "word": "small",
+          "sourcePage": 86,
+          "arabicMeaning": "صغير"
+        }
+      ],
+      "languagePatterns": [
+        "The cow is big.",
+        "The duck is small.",
+        "The horse is big.",
+        "The chicken is small.",
+        "Do you see the horse?",
+        "I love farm animals!"
+      ],
+      "reading": {
+        "status": "short_source_sentences",
+        "sourcePages": [
+          85,
+          86
+        ],
+        "texts": [
+          {
+            "text": "The cow is big.",
+            "sourcePage": 86
+          },
+          {
+            "text": "The duck is small.",
+            "sourcePage": 86
+          },
+          {
+            "text": "The horse is big.",
+            "sourcePage": 86
+          },
+          {
+            "text": "The chicken is small.",
+            "sourcePage": 86
+          }
+        ],
+        "note": "Reading practice uses the short sentences printed beside the farm-animal pictures; no longer passage is added."
+      },
+      "listening": {
+        "status": "printed_dialogue_and_teacher_led_picture_tasks",
+        "printedDialogueSourcePage": 85,
+        "teacherLedTasks": [
+          {
+            "sourcePage": 86,
+            "instruction": "Listen and repeat."
+          },
+          {
+            "sourcePage": 88,
+            "instruction": "Listen, point, and circle."
+          }
+        ],
+        "note": "The dialogue is printed in full. Page 88 gives a teacher-led listening task but does not print its complete spoken prompt/script."
+      },
+      "activities": [
+        {
+          "type": "listen_and_repeat",
+          "sourcePage": 86,
+          "autoScored": false
+        },
+        {
+          "type": "farm_animal_classification",
+          "instruction": "Circle the animals that belong on the farm.",
+          "sourcePage": 87,
+          "autoScored": false
+        },
+        {
+          "type": "sentence_picture_matching",
+          "instruction": "Mark the picture that matches each sentence.",
+          "sourcePage": 87,
+          "items": [
+            "The cow is big.",
+            "The duck is small."
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "picture_word_check",
+          "instruction": "Write ✓ if the word matches the picture, and ✗ if it does not.",
+          "sourcePage": 88,
+          "autoScored": false
+        },
+        {
+          "type": "size_identification",
+          "instruction": "Circle the pictures that show something big.",
+          "sourcePage": 88,
+          "autoScored": false
+        },
+        {
+          "type": "listening_picture_choice",
+          "instruction": "Listen, point, and circle.",
+          "sourcePage": 88,
+          "autoScored": false
+        }
+      ]
+    },
+    {
+      "lesson": 2,
+      "title": "Phonics – Letters Mm and Gg",
+      "sourcePages": [
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "phonicsTargets": [
+        {
+          "letter": "Mm",
+          "sound": "/m/",
+          "sourcePage": 89
+        },
+        {
+          "letter": "Gg",
+          "sound": "/g/",
+          "sourcePage": 91
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "moon",
+          "sourcePage": 89
+        },
+        {
+          "word": "monkey",
+          "sourcePage": 89
+        },
+        {
+          "word": "milk",
+          "sourcePage": 89
+        },
+        {
+          "word": "mango",
+          "sourcePage": 89
+        },
+        {
+          "word": "mouse",
+          "sourcePage": 89
+        },
+        {
+          "word": "grapes",
+          "sourcePage": 91
+        },
+        {
+          "word": "guitar",
+          "sourcePage": 91
+        },
+        {
+          "word": "goat",
+          "sourcePage": 91
+        },
+        {
+          "word": "girl",
+          "sourcePage": 91
+        },
+        {
+          "word": "gloves",
+          "sourcePage": 91
+        }
+      ],
+      "teacherRepeatAudioText": [
+        {
+          "sourcePage": 89,
+          "words": [
+            "moon",
+            "monkey",
+            "milk",
+            "mango",
+            "mouse"
+          ]
+        },
+        {
+          "sourcePage": 91,
+          "words": [
+            "grapes",
+            "guitar",
+            "goat",
+            "girl",
+            "gloves"
+          ]
+        }
+      ],
+      "activities": [
+        {
+          "type": "listen_and_repeat",
+          "instruction": "Listen to your teacher and repeat.",
+          "sourcePage": 89,
+          "repeatItems": [
+            "moon",
+            "monkey",
+            "milk",
+            "mango",
+            "mouse"
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "letter_tracing",
+          "instruction": "Trace and write letter Mm in uppercase and lowercase forms.",
+          "sourcePages": [
+            89,
+            90
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "initial_sound_picture_selection",
+          "instruction": "Circle the objects that start with letter Mm.",
+          "sourcePage": 90,
+          "autoScored": false
+        },
+        {
+          "type": "listen_and_repeat",
+          "instruction": "Listen to your teacher and repeat.",
+          "sourcePage": 91,
+          "repeatItems": [
+            "grapes",
+            "guitar",
+            "goat",
+            "girl",
+            "gloves"
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "letter_tracing",
+          "instruction": "Trace and write letter Gg in uppercase and lowercase forms.",
+          "sourcePages": [
+            91,
+            92
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "initial_sound_picture_selection",
+          "instruction": "Look, say, then circle the pictures that start with letter Gg.",
+          "sourcePage": 92,
+          "autoScored": false
+        },
+        {
+          "type": "initial_letter_identification",
+          "instruction": "Look at the pictures and circle the beginning letter.",
+          "sourcePage": 93,
+          "autoScored": false
+        },
+        {
+          "type": "missing_letter_completion",
+          "instruction": "Look, say, and write the missing letter.",
+          "sourcePage": 93,
+          "visibleWords": [
+            "house",
+            "guitar",
+            "mango",
+            "grapes"
+          ],
+          "autoScored": false
+        }
+      ]
+    },
+    {
+      "lesson": 3,
+      "title": "Numbers from 6 to 10",
+      "sourcePages": [
+        94,
+        95,
+        96,
+        97
+      ],
+      "numberVocabulary": [
+        "six",
+        "seven",
+        "eight",
+        "nine",
+        "ten"
+      ],
+      "dialogue": {
+        "sourcePage": 94,
+        "lines": [
+          {
+            "speaker": "Sara",
+            "text": "Hi, Tamer!"
+          },
+          {
+            "speaker": "Tamer",
+            "text": "Hi, Sara!"
+          },
+          {
+            "speaker": "Sara",
+            "text": "How many horses can you see?"
+          },
+          {
+            "speaker": "Tamer",
+            "text": "I can see 7 horses!"
+          },
+          {
+            "speaker": "Sara",
+            "text": "Let’s count the ducks."
+          },
+          {
+            "speaker": "Tamer",
+            "text": "Okay! 1, 2, 3, 4, 5, 6, 7, 8, and 9."
+          },
+          {
+            "speaker": "Sara",
+            "text": "There are 9 ducks!"
+          },
+          {
+            "speaker": "Tamer",
+            "text": "That’s a lot of animals!"
+          },
+          {
+            "speaker": "Sara",
+            "text": "Counting farm animals is fun."
+          }
+        ]
+      },
+      "languagePatterns": [
+        "How many horses can you see?",
+        "I can see 7 horses!",
+        "Let’s count the ducks.",
+        "There are 9 ducks!",
+        "Counting farm animals is fun."
+      ],
+      "reading": {
+        "status": "short_source_sentences",
+        "sourcePages": [
+          94,
+          96
+        ],
+        "texts": [
+          {
+            "text": "I can see 7 horses!",
+            "sourcePage": 94
+          },
+          {
+            "text": "There are 9 ducks!",
+            "sourcePage": 94
+          },
+          {
+            "text": "I can see 6 ducks.",
+            "sourcePage": 96
+          },
+          {
+            "text": "I can see 7 birds.",
+            "sourcePage": 96
+          },
+          {
+            "text": "I can see 10 stars.",
+            "sourcePage": 96
+          },
+          {
+            "text": "I can see 8 pens.",
+            "sourcePage": 96
+          }
+        ],
+        "note": "Short model sentences and counting statements are taken from the unit dialogue and printed exercise."
+      },
+      "listening": {
+        "status": "printed_dialogue_and_teacher_led_number_tasks",
+        "printedDialogueSourcePage": 94,
+        "teacherLedTasks": [
+          {
+            "sourcePage": 95,
+            "instruction": "Listen, count, and repeat."
+          },
+          {
+            "sourcePage": 96,
+            "instruction": "Listen, count, and ✓ the correct picture."
+          }
+        ],
+        "note": "The dialogue is printed in full. The listening activity on page 96 has no separate printed spoken script."
+      },
+      "activities": [
+        {
+          "type": "listen_count_repeat",
+          "sourcePage": 95,
+          "autoScored": false
+        },
+        {
+          "type": "number_coloring_and_tracing",
+          "instruction": "Look at the number. Color the correct number of objects, then trace.",
+          "sourcePage": 95,
+          "autoScored": false
+        },
+        {
+          "type": "listening_number_picture_choice",
+          "instruction": "Listen, count, and tick the correct picture.",
+          "sourcePage": 96,
+          "autoScored": false
+        },
+        {
+          "type": "picture_word_check",
+          "instruction": "Write ✓ if the word matches the picture, and ✗ if it does not.",
+          "sourcePage": 96,
+          "autoScored": false
+        },
+        {
+          "type": "count_and_match",
+          "instruction": "Count the objects and match them to the correct number.",
+          "sourcePage": 97,
+          "autoScored": false
+        },
+        {
+          "type": "count_and_write",
+          "instruction": "Count the fruits and write the number in the box.",
+          "sourcePage": 97,
+          "autoScored": false
+        }
+      ]
+    },
+    {
+      "lesson": 4,
+      "title": "Phonics – Letters Oo and Ff",
+      "sourcePages": [
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "phonicsTargets": [
+        {
+          "letter": "Oo",
+          "sound": "/ɒ/ as represented by the printed example words",
+          "sourcePage": 98
+        },
+        {
+          "letter": "Ff",
+          "sound": "/f/",
+          "sourcePage": 100
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "octopus",
+          "sourcePage": 98
+        },
+        {
+          "word": "ostrich",
+          "sourcePage": 98
+        },
+        {
+          "word": "olive",
+          "sourcePage": 98
+        },
+        {
+          "word": "fan",
+          "sourcePage": 100
+        },
+        {
+          "word": "fox",
+          "sourcePage": 100
+        },
+        {
+          "word": "fish",
+          "sourcePage": 100
+        },
+        {
+          "word": "fork",
+          "sourcePage": 100
+        },
+        {
+          "word": "frog",
+          "sourcePage": 100
+        }
+      ],
+      "teacherRepeatAudioText": [
+        {
+          "sourcePage": 98,
+          "words": [
+            "octopus",
+            "ostrich",
+            "olive"
+          ]
+        },
+        {
+          "sourcePage": 100,
+          "words": [
+            "fan",
+            "fox",
+            "fish",
+            "fork",
+            "frog"
+          ]
+        }
+      ],
+      "activities": [
+        {
+          "type": "listen_and_repeat",
+          "instruction": "Listen to your teacher and repeat.",
+          "sourcePage": 98,
+          "repeatItems": [
+            "octopus",
+            "ostrich",
+            "olive"
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "letter_tracing",
+          "instruction": "Trace and write letter Oo in uppercase and lowercase forms.",
+          "sourcePages": [
+            98,
+            99
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "initial_sound_picture_selection",
+          "instruction": "Circle the objects that start with letter Oo.",
+          "sourcePage": 99,
+          "autoScored": false
+        },
+        {
+          "type": "listen_and_repeat",
+          "instruction": "Listen to your teacher and repeat.",
+          "sourcePage": 100,
+          "repeatItems": [
+            "fan",
+            "fox",
+            "fish",
+            "fork",
+            "frog"
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "letter_tracing",
+          "instruction": "Trace and write letter Ff in uppercase and lowercase forms.",
+          "sourcePages": [
+            100,
+            101
+          ],
+          "autoScored": false
+        },
+        {
+          "type": "initial_sound_picture_matching",
+          "instruction": "Look, say, and match the pictures that start with letter Ff.",
+          "sourcePage": 101,
+          "autoScored": false
+        },
+        {
+          "type": "picture_naming_and_initial_letter",
+          "instruction": "Look, say, and trace the beginning letter of the word.",
+          "sourcePage": 102,
+          "items": [
+            "chair",
+            "ostrich",
+            "fork",
+            "fan",
+            "frog"
+          ],
+          "autoScored": false
+        }
+      ]
+    }
+  ],
+  "unitVocabularyIndex": [
+    "cow",
+    "duck",
+    "horse",
+    "chicken",
+    "big",
+    "small",
+    "moon",
+    "monkey",
+    "milk",
+    "mango",
+    "mouse",
+    "grapes",
+    "guitar",
+    "goat",
+    "girl",
+    "gloves",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+    "ten",
+    "octopus",
+    "ostrich",
+    "olive",
+    "fan",
+    "fox",
+    "fish",
+    "fork",
+    "frog"
+  ],
+  "vocabularyCount": 29,
+  "vocabularyPolicyNote": "29 distinct vocabulary items, number words, and descriptive words are indexed from the reviewed source pages. No extra words were added to reach a target count.",
+  "grammar": {
+    "status": "no_formal_grammar_section_identified",
+    "note": "The unit models simple adjective sentences (The cow is big), can-see counting sentences, and How many questions. These are retained as source language patterns, not expanded into unsupported grammar rules."
+  },
+  "reading": {
+    "status": "short_sentences_only",
+    "note": "Grade 1 reading content is restricted to short sentences printed in the unit, especially the animal description models and number sentences. No long passage is added."
+  },
+  "listening": {
+    "status": "two_printed_dialogues_and_teacher_repeat_lists_extracted",
+    "printedDialoguePages": [
+      85,
+      94
+    ],
+    "teacherRepeatWordListPages": [
+      89,
+      91,
+      98,
+      100
+    ],
+    "teacherLedActivityPages": [
+      88,
+      95,
+      96
+    ],
+    "note": "Only the two printed dialogues and explicit listen-and-repeat word lists are transcribed as audio scripts. Other teacher-led listening activities have no complete printed spoken script and are not invented."
+  },
+  "audioProduction": {
+    "status": "scripts_prepared_not_audio_files_generated",
+    "target": "Clear, natural English pronunciation, child-friendly pace, and distinct speaker turns; avoid metallic or monotone robotic delivery.",
+    "tracks": [
+      {
+        "id": "g1_u5_l1_farm_dialogue",
+        "sourcePage": 85,
+        "dialogueRef": "lessons[0].dialogue"
+      },
+      {
+        "id": "g1_u5_l2_mm",
+        "sourcePage": 89,
+        "text": "moon. monkey. milk. mango. mouse."
+      },
+      {
+        "id": "g1_u5_l2_gg",
+        "sourcePage": 91,
+        "text": "grapes. guitar. goat. girl. gloves."
+      },
+      {
+        "id": "g1_u5_l3_numbers_dialogue",
+        "sourcePage": 94,
+        "dialogueRef": "lessons[2].dialogue"
+      },
+      {
+        "id": "g1_u5_l4_oo",
+        "sourcePage": 98,
+        "text": "octopus. ostrich. olive."
+      },
+      {
+        "id": "g1_u5_l4_ff",
+        "sourcePage": 100,
+        "text": "fan. fox. fish. fork. frog."
+      }
+    ],
+    "note": "Audio scripts are prepared from the printed source. No audio file is claimed to have been generated or uploaded in this commit."
+  },
+  "assessment": {
+    "status": "printed_activities_indexed_not_converted_to_auto_scored_items",
+    "sourcePages": [
+      87,
+      88,
+      90,
+      92,
+      93,
+      95,
+      96,
+      97,
+      99,
+      101,
+      102
+    ],
+    "note": "Exercises that depend on illustrations are indexed, but have not been converted into auto-scored questions without verifying each picture and answer."
+  }
+}
