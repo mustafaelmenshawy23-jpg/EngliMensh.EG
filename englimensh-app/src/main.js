@@ -90,34 +90,32 @@ function speakCurrentWord(){
 
 function gamesContent(){
   if(activeGame==='complete'){
-    return `<div class="game-center"><div class="game-emoji">🏆</div><p class="eyebrow">ROUND COMPLETE</p><h2>أحسنت!</h2><p class="game-score">${gameScore} / ${gameRound.length}</p><p>نتيجتك في هذه الجولة الفردية.</p><button class="primary-btn" data-back-games>العودة للألعاب</button><button class="secondary-btn" data-game="${activeGame==='complete'?'penalty':'penalty'}">جولة جديدة · ضربات الجزاء</button></div>`;
+    return `<div class="game-center"><div class="game-emoji">🏆</div><p class="eyebrow">ROUND COMPLETE</p><h2>أحسنت!</h2><p class="game-score">${gameScore} / ${gameRound.length}</p><p>نتيجتك في هذه الجولة الفردية.</p><button class="primary-btn" data-back-games>العودة للألعاب</button></div>`;
   }
   if(activeGame){
     const q=getGameQuestion(gameRound[gameIndex]);
-    if(!q)return '<p>لا توجد أسئلة موثقة كافية لهذه اللعبة في الوحدة المحددة حتى الآن.</p>';
-    const progress=Math.round((gameIndex/gameRound.length)*100);
-    const gameTitle=activeGame==='penalty'?'Penalty Kick · ضربات الجزاء':'Fishing Hunt · صيد الكلمات';
-    return `<div class="game-head"><button class="text-btn" data-back-games>← كل الألعاب</button><span>${gameTitle}</span><b>${gameScore} ⭐</b></div>
+    if(!q)return `<div class="notice"><b>هذه اللعبة غير متاحة في الوحدة الحالية.</b><p>لا توجد بيانات مصدر موثقة كافية لهذا النوع من الأسئلة. جرّب لعبة أخرى أو وحدة أخرى.</p><button class="secondary-btn" data-back-games>العودة للألعاب</button></div>`;
+    const game=gameCatalog.find(x=>x.id===activeGame);
+    const progress=Math.round(((gameIndex+1)/gameRound.length)*100);
+    return `<div class="game-head"><button class="text-btn" data-back-games>← كل الألعاب</button><span>${game.icon} ${game.title}</span><b>${gameScore} ⭐</b></div>
       <div class="progress-track"><span style="width:${progress}%"></span></div>
-      <div class="game-scene ${activeGame==='penalty'?'football-scene':'fishing-scene'}">
-        ${activeGame==='penalty'?'<div class="goal">🥅</div><div class="football">⚽</div>':'<div class="sun">☀️</div><div class="pond">🌊　🐟　🌊　🐠　🌊</div>'}
+      <div class="game-scene game-${game.theme}">
+        <div class="game-decor" aria-hidden="true">${game.icon}</div>
         <div class="question-card">
           <small>QUESTION ${gameIndex+1} / ${gameRound.length}</small>
           <h3>${esc(q.prompt)}</h3>
-          ${q.spokenWord?'<button class="listen-btn" data-speak>🔊 Listen</button>':''}
-          <div class="answer-grid">${q.choices.map((choice,i)=>`<button class="answer-btn ${answered&&i===q.correctIndex?'correct':answered&&i===q.selectedIndex?'wrong':''}" data-answer="${i}" ${answered?'disabled':''}>${activeGame==='fishing'?'🐟 ':''}${esc(choice)}</button>`).join('')}</div>
-          ${answered?`<div class="feedback ${lastAnswerCorrect?'good':'try-again'}">${lastAnswerCorrect?'Excellent! Goal scored!':'Not quite. The correct answer is: '+esc(q.choices[q.correctIndex])}</div><button class="primary-btn" data-next>${gameIndex===gameRound.length-1?'عرض النتيجة':'السؤال التالي'}</button>`:''}
+          ${q.spokenWord?`<button class="listen-btn" data-speak>🔊 Listen</button>`:''}
+          ${q.kind==='builder'?'<p class="builder-hint">Choose the letters in the correct order.</p>':''}
+          <div class="answer-grid">${q.choices.map((choice,i)=>`<button class="answer-btn ${answered&&i===q.correctIndex?'correct':answered&&i===q.selectedIndex?'wrong':''}" data-answer="${i}" ${answered?'disabled':''}>${esc(choice)}</button>`).join('')}</div>
+          ${answered?`<div class="feedback ${lastAnswerCorrect?'good':'try-again'}">${lastAnswerCorrect?'Excellent! Correct answer!':'Not quite. The correct answer is: '+esc(q.choices[q.correctIndex])}</div><button class="primary-btn" data-next>${gameIndex===gameRound.length-1?'عرض النتيجة':'السؤال التالي'}</button>`:''}
         </div>
       </div>`;
   }
   const unit=currentUnit();
   const score=Number(localStorage.getItem('englimensh-solo-game-best')||0);
-  return `<div class="games-intro"><p class="eyebrow">PLAY · THINK · LEARN</p><h2>Play & Learn</h2><p>ألعاب تعليمية فردية لتثبيت كلمات المنهج ومهاراته. لا يوجد لعب جماعي أو منافسة مباشرة مع طلاب آخرين.</p><div class="solo-progress">⭐ أفضل نتيجة محفوظة على هذا الجهاز: ${score}</div></div>
-    <div class="games-grid">
-      <button class="game-tile penalty-tile" data-game="penalty"><span class="tile-art">⚽🥅</span><b>Penalty Kick</b><small>اختر الكلمة التي تبدأ بالصوت أو الحرف المطلوب وسجّل هدفًا.</small><span class="tile-cta">العب الآن ←</span></button>
-      <button class="game-tile fishing-tile" data-game="fishing"><span class="tile-art">🎣🐟</span><b>Fishing Hunt</b><small>استمع إلى الكلمة ثم اصطد السمكة التي تحمل كتابتها الصحيحة.</small><span class="tile-cta">العب الآن ←</span></button>
-    </div>
-    <div class="game-note"><b>مصدر الأسئلة:</b> ${unit?'Unit '+unit.number+': '+esc(unit.title):'الوحدة المحددة'} من كتاب الطالب للصف الأول. تُسحب الكلمات من ملفات الاستخراج الموثقة فقط؛ لا نضيف كلمات خارج الكتاب. بعض الوحدات لا تحتوي على مفردات عربية مقابلة، لذلك تعتمد اللعبة على النطق والتهجئة.</div>`;
+  return `<div class="games-intro"><p class="eyebrow">PLAY · THINK · LEARN</p><h2>Play & Learn</h2><p>ست ألعاب تعليمية فردية، دون لعب جماعي. اختر اللعبة وابدأ التدريب على محتوى الوحدة المحددة.</p><div class="solo-progress">⭐ أفضل نتيجة محفوظة على هذا الجهاز: ${score}</div></div>
+    <div class="games-grid">${gameCatalog.map(game=>`<button class="game-tile ${game.theme}-tile" data-game="${game.id}"><span class="tile-art">${game.icon}</span><b>${game.title}</b><small>${game.subtitle}</small><span class="tile-cta">العب الآن ←</span></button>`).join('')}</div>
+    <div class="game-note"><b>مصدر المحتوى:</b> ${unit?'Unit '+unit.number+': '+esc(unit.title):'الوحدة المحددة'} من ملفات الاستخراج الموثقة للصف الأول. تعتمد الألعاب على المفردات والأصوات والأنماط اللغوية المطبوعة في المصدر فقط. لا تُنشأ قواعد أو ترجمات غير موجودة في المصدر.</div>`;
 }
 
 function sectionContent(section,g,t,u){
