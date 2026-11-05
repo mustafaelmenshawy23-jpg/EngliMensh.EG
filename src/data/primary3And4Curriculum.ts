@@ -1043,7 +1043,7 @@ export const primary3And4Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 1,
-    unitTitleEn: 'I Feel Good',
+    unitTitleEn: "The Five Senses",
     unitTitleAr: 'أشعر أنني بحالة جيدة والجهاز الهضمي والتنفسي',
     tab1_Vocabulary: {
       words: [
@@ -1214,7 +1214,7 @@ export const primary3And4Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 2,
-    unitTitleEn: 'Desert Animals',
+    unitTitleEn: "My Community",
     unitTitleAr: 'حيوانات الصحراء والمقارنة بين الصفات',
     tab1_Vocabulary: {
       words: [
@@ -1385,7 +1385,7 @@ export const primary3And4Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 3,
-    unitTitleEn: 'Why Are Plants Green?',
+    unitTitleEn: "Animals In Our World",
     unitTitleAr: 'لماذا النباتات خضراء؟ وعملية الإنبات وصيغ التفضيل',
     tab1_Vocabulary: {
       words: [
@@ -1556,7 +1556,7 @@ export const primary3And4Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 4,
-    unitTitleEn: 'Where Do You Live?',
+    unitTitleEn: "Egypt – My Homeland",
     unitTitleAr: 'أين تعيش؟ وأنواع المنازل وحروف الجر المكانية',
     tab1_Vocabulary: {
       words: [
@@ -1727,7 +1727,7 @@ export const primary3And4Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 5,
-    unitTitleEn: 'Where Do You Work?',
+    unitTitleEn: "A Day At Work",
     unitTitleAr: 'أين تعمل؟ والمهن الخدمية والأدوات',
     tab1_Vocabulary: {
       words: [
@@ -1898,7 +1898,7 @@ export const primary3And4Curriculum: PrimaryLessonContent[] = [
     track: 'connect',
     term: 1,
     unitNumber: 6,
-    unitTitleEn: 'What Do You Do?',
+    unitTitleEn: "The Hundred Dresses",
     unitTitleAr: 'ماذا تعمل؟ والقطاعات الاقتصادية في مصر',
     tab1_Vocabulary: {
       words: [
