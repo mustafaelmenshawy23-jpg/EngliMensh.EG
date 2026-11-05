@@ -101,16 +101,13 @@ export function getPrimaryLesson(
   track: 'connect' | 'connect_plus' = 'connect',
   term: 1 | 2 = 1
 ): PrimaryLessonContent | undefined {
+  // Exact-match only: never substitute another unit, track, or term.
   return primaryCurriculumDatabase.find(
     lesson =>
       lesson.grade === grade &&
       lesson.unitNumber === unitNumber &&
       lesson.track === track &&
       lesson.term === term
-  ) || primaryCurriculumDatabase.find(
-    lesson => lesson.grade === grade && lesson.unitNumber === unitNumber
-  ) || primaryCurriculumDatabase.find(
-    lesson => lesson.grade === grade
   );
 }
 
