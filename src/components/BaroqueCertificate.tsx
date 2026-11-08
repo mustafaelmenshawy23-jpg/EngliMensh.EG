@@ -359,7 +359,13 @@ export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
       for (let id = 1; id <= 5; id++) push(`${String(offsets[id]).padStart(10, '0')} 00000 n \n`);
       push(`trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF`);
 
-      const pdfBlob = new Blob(chunks, { type: 'application/pdf' });
+      const pdfBytes = new Uint8Array(byteLength);
+      let writeOffset = 0;
+      for (const chunk of chunks) {
+        pdfBytes.set(chunk, writeOffset);
+        writeOffset += chunk.length;
+      }
+      const pdfBlob = new Blob([pdfBytes.buffer as ArrayBuffer], { type: 'application/pdf' });
       const pdfUrl = URL.createObjectURL(pdfBlob);
       const link = document.createElement('a');
       link.href = pdfUrl;
