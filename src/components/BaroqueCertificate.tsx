@@ -25,7 +25,7 @@ export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
   showActions = true,
 }) => {
   const [qrDataUrl, setQrDataUrl] = useState<string>('');
-  const [isGeneratingPng, setIsGeneratingPng] = useState<boolean>(false);
+  const [isGeneratingPdf, setIsGeneratingPng] = useState<boolean>(false);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   // Generate QR code for verification
@@ -337,27 +337,27 @@ export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
         chunks.push(bytes);
         byteLength += bytes.length;
       };
-      push('%PDF-1.4\\n% EngliMensh certificate\\n');
+      push('%PDF-1.4\n% EngliMensh certificate\n');
       const addObject = (id: number, body: string, stream?: Uint8Array) => {
         offsets[id] = byteLength;
         if (stream) {
-          push(`${id} 0 obj\\n${body}\\nstream\\n`);
+          push(`${id} 0 obj\n${body}\nstream\n`);
           push(stream);
-          push('\\nendstream\\nendobj\\n');
+          push('\nendstream\nendobj\n');
         } else {
-          push(`${id} 0 obj\\n${body}\\nendobj\\n`);
+          push(`${id} 0 obj\n${body}\nendobj\n`);
         }
       };
       addObject(1, '<< /Type /Catalog /Pages 2 0 R >>');
       addObject(2, '<< /Type /Pages /Kids [3 0 R] /Count 1 >>');
       addObject(3, '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>');
       addObject(4, `<< /Type /XObject /Subtype /Image /Width 1920 /Height 1080 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${imageBytes.length} >>`, imageBytes);
-      const pageStream = encoder.encode('q\\n960 0 0 540 0 0 cm\\n/Im0 Do\\nQ');
+      const pageStream = encoder.encode('q\n960 0 0 540 0 0 cm\n/Im0 Do\nQ');
       addObject(5, `<< /Length ${pageStream.length} >>`, pageStream);
       const xrefOffset = byteLength;
-      push(`xref\\n0 6\\n0000000000 65535 f \\n`);
-      for (let id = 1; id <= 5; id++) push(`${String(offsets[id]).padStart(10, '0')} 00000 n \\n`);
-      push(`trailer\\n<< /Size 6 /Root 1 0 R >>\\nstartxref\\n${xrefOffset}\\n%%EOF`);
+      push(`xref\n0 6\n0000000000 65535 f \n`);
+      for (let id = 1; id <= 5; id++) push(`${String(offsets[id]).padStart(10, '0')} 00000 n \n`);
+      push(`trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF`);
 
       const pdfBlob = new Blob(chunks, { type: 'application/pdf' });
       const pdfUrl = URL.createObjectURL(pdfBlob);
