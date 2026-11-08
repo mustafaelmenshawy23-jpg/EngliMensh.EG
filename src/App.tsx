@@ -2849,17 +2849,6 @@ export default function App() {
         isOpen={showCertificateModal}
         onClose={() => setShowCertificateModal(false)}
         data={certificateData}
-        onShareToWhatsApp={() => {
-          setShowCertificateModal(false);
-          const shareText = `🎓 شهادة تقدير رسمية من منصة EngliMensh\n` +
-            `الطالب: ${certificateData.studentName}\n` +
-            `المدرسة: ${certificateData.studentSchool}\n` +
-            `الاختبار: ${certificateData.examTitle}\n` +
-            `الدرجة: ${certificateData.score}/${certificateData.maxMarks} (${certificateData.percentage}%)\n` +
-            `إشراف: مستر محمد المنشاوي`;
-          setShareCustomText(shareText);
-          setShowShareModal(true);
-        }}
       />
 
       {/* REDESIGNED BRAND FOOTER (Deep Midnight Navy #07224D) */}
