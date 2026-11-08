@@ -397,6 +397,8 @@ export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
       }
     } catch (err) {
       console.error('Failed to export certificate canvas:', err);
+      const reason = err instanceof Error ? err.message : 'حدث خطأ غير معروف';
+      window.alert(`تعذر حفظ الشهادة بصيغة PDF. ${reason}`);
     } finally {
       setIsGeneratingPdf(false);
     }
