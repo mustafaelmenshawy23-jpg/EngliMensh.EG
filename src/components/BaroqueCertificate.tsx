@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { Capacitor, registerPlugin } from '@capacitor/core';
 import QRCode from 'qrcode';
 import { Download, Star, Award, CheckCircle2 } from 'lucide-react';
 
@@ -12,6 +13,12 @@ export interface BaroqueCertificateData {
   percentage: number;
   dateStr: string;
 }
+
+interface PdfDownloadPlugin {
+  save(options: { fileName: string; base64Data: string }): Promise<{ uri: string; fileName: string }>;
+}
+
+const PdfDownload = registerPlugin<PdfDownloadPlugin>('PdfDownload');
 
 interface BaroqueCertificateProps {
   data: BaroqueCertificateData;
@@ -365,15 +372,29 @@ export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
         pdfBytes.set(chunk, writeOffset);
         writeOffset += chunk.length;
       }
-      const pdfBlob = new Blob([pdfBytes.buffer as ArrayBuffer], { type: 'application/pdf' });
-      const pdfUrl = URL.createObjectURL(pdfBlob);
-      const link = document.createElement('a');
-      link.href = pdfUrl;
-      link.download = `EngliMensh_Certificate_${(data.studentName || 'Student').replace(/[^a-z0-9_-]+/gi, '_')}.pdf`;
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      window.setTimeout(() => URL.revokeObjectURL(pdfUrl), 30000);
+      const fileName = `EngliMensh_Certificate_${(data.studentName || 'Student').replace(/[^a-z0-9_-]+/gi, '_')}.pdf`;
+
+      if (Capacitor.isNativePlatform()) {
+        // Save through Android MediaStore directly into Downloads/EngliMensh.
+        const binaryParts: string[] = [];
+        for (let offset = 0; offset < pdfBytes.length; offset += 0x8000) {
+          binaryParts.push(String.fromCharCode(...pdfBytes.subarray(offset, offset + 0x8000)));
+        }
+        const base64Data = btoa(binaryParts.join(''));
+        await PdfDownload.save({ fileName, base64Data });
+        window.alert('تم حفظ الشهادة بنجاح داخل مجلد التنزيلات / EngliMensh');
+      } else {
+        // Browser fallback for the web version.
+        const pdfBlob = new Blob([pdfBytes.buffer as ArrayBuffer], { type: 'application/pdf' });
+        const pdfUrl = URL.createObjectURL(pdfBlob);
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.setTimeout(() => URL.revokeObjectURL(pdfUrl), 30000);
+      }
     } catch (err) {
       console.error('Failed to export certificate canvas:', err);
     } finally {
