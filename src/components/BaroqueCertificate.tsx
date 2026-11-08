@@ -25,7 +25,7 @@ export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
   showActions = true,
 }) => {
   const [qrDataUrl, setQrDataUrl] = useState<string>('');
-  const [isGeneratingPdf, setIsGeneratingPng] = useState<boolean>(false);
+  const [isGeneratingPdf, setIsGeneratingPdf] = useState<boolean>(false);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   // Generate QR code for verification
@@ -53,7 +53,7 @@ export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
 
   // High-Resolution 1920x1080 (16:9) PNG Rasterizer via Canvas API
   const handleSavePdf = async () => {
-    setIsGeneratingPng(true);
+    setIsGeneratingPdf(true);
     try {
       const canvas = canvasRef.current || document.createElement('canvas');
       canvas.width = 1920;
@@ -377,7 +377,7 @@ export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
     } catch (err) {
       console.error('Failed to export certificate canvas:', err);
     } finally {
-      setIsGeneratingPng(false);
+      setIsGeneratingPdf(false);
     }
   };
 
@@ -399,11 +399,11 @@ export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
           <div className="flex items-center gap-2">
             <button
               onClick={handleSavePdf}
-              disabled={isGeneratingPng}
+              disabled={isGeneratingPdf}
               className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-300 hover:to-yellow-400 text-slate-950 font-black text-xs flex items-center gap-2 transition-all shadow-md active:scale-95 cursor-pointer disabled:opacity-50"
             >
               <Download className="w-4 h-4" />
-              <span>{isGeneratingPng ? 'Preparing PDF...' : 'Save PDF'}</span>
+              <span>{isGeneratingPdf ? 'Preparing PDF...' : 'Save PDF'}</span>
             </button>
           </div>
         </div>
