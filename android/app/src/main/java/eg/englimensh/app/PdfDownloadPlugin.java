@@ -35,6 +35,12 @@ public class PdfDownloadPlugin extends Plugin {
         Uri fileUri = null;
         try {
             byte[] pdfBytes = Base64.decode(base64Data, Base64.DEFAULT);
+            if (pdfBytes.length < 8 ||
+                    pdfBytes[0] != '%' || pdfBytes[1] != 'P' ||
+                    pdfBytes[2] != 'D' || pdfBytes[3] != 'F' || pdfBytes[4] != '-') {
+                call.reject("بيانات الشهادة ليست ملف PDF صالحًا");
+                return;
+            }
             ContentValues values = new ContentValues();
             values.put(MediaStore.MediaColumns.DISPLAY_NAME, fileName);
             values.put(MediaStore.MediaColumns.MIME_TYPE, "application/pdf");
