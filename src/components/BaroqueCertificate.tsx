@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import QRCode from 'qrcode';
-import { Download, Printer, ShieldCheck, Star, Award, CheckCircle2, MessageCircle } from 'lucide-react';
+import { Download, Star, Award, CheckCircle2 } from 'lucide-react';
 
 export interface BaroqueCertificateData {
   studentName: string;
@@ -17,14 +17,12 @@ interface BaroqueCertificateProps {
   data: BaroqueCertificateData;
   onPrint?: () => void;
   showActions?: boolean;
-  onShareToWhatsApp?: () => void;
 }
 
 export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
   data,
   onPrint,
   showActions = true,
-  onShareToWhatsApp,
 }) => {
   const [qrDataUrl, setQrDataUrl] = useState<string>('');
   const [isGeneratingPng, setIsGeneratingPng] = useState<boolean>(false);
@@ -54,7 +52,7 @@ export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
   }, [data]);
 
   // High-Resolution 1920x1080 (16:9) PNG Rasterizer via Canvas API
-  const handleDownloadPng = async () => {
+  const handleSavePdf = async () => {
     setIsGeneratingPng(true);
     try {
       const canvas = canvasRef.current || document.createElement('canvas');
@@ -322,23 +320,58 @@ export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
       ctx.fillText('EngliMensh Official Honors', 1766, 1028);
 
       // 9. Trigger Instant Download
-      const dataUrl = canvas.toDataURL('image/png', 1.0);
+      // Build a real one-page PDF from the high-resolution certificate image.
+      // This does not invoke window.print() or the Android print service.
+      const jpegUrl = canvas.toDataURL('image/jpeg', 0.96);
+      const base64 = jpegUrl.split(',')[1] || '';
+      const binary = atob(base64);
+      const imageBytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) imageBytes[i] = binary.charCodeAt(i);
+
+      const encoder = new TextEncoder();
+      const chunks: Uint8Array[] = [];
+      const offsets: number[] = [0];
+      let byteLength = 0;
+      const push = (part: Uint8Array | string) => {
+        const bytes = typeof part === 'string' ? encoder.encode(part) : part;
+        chunks.push(bytes);
+        byteLength += bytes.length;
+      };
+      push('%PDF-1.4\\n% EngliMensh certificate\\n');
+      const addObject = (id: number, body: string, stream?: Uint8Array) => {
+        offsets[id] = byteLength;
+        if (stream) {
+          push(`${id} 0 obj\\n${body}\\nstream\\n`);
+          push(stream);
+          push('\\nendstream\\nendobj\\n');
+        } else {
+          push(`${id} 0 obj\\n${body}\\nendobj\\n`);
+        }
+      };
+      addObject(1, '<< /Type /Catalog /Pages 2 0 R >>');
+      addObject(2, '<< /Type /Pages /Kids [3 0 R] /Count 1 >>');
+      addObject(3, '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>');
+      addObject(4, `<< /Type /XObject /Subtype /Image /Width 1920 /Height 1080 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${imageBytes.length} >>`, imageBytes);
+      const pageStream = encoder.encode('q\\n960 0 0 540 0 0 cm\\n/Im0 Do\\nQ');
+      addObject(5, `<< /Length ${pageStream.length} >>`, pageStream);
+      const xrefOffset = byteLength;
+      push(`xref\\n0 6\\n0000000000 65535 f \\n`);
+      for (let id = 1; id <= 5; id++) push(`${String(offsets[id]).padStart(10, '0')} 00000 n \\n`);
+      push(`trailer\\n<< /Size 6 /Root 1 0 R >>\\nstartxref\\n${xrefOffset}\\n%%EOF`);
+
+      const pdfBlob = new Blob(chunks, { type: 'application/pdf' });
+      const pdfUrl = URL.createObjectURL(pdfBlob);
       const link = document.createElement('a');
-      link.download = `EngliMensh_Certificate_${(data.studentName || 'Student').replace(/\s+/g, '_')}.png`;
-      link.href = dataUrl;
+      link.href = pdfUrl;
+      link.download = `EngliMensh_Certificate_${(data.studentName || 'Student').replace(/[^a-z0-9_-]+/gi, '_')}.pdf`;
+      document.body.appendChild(link);
       link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(pdfUrl), 30000);
     } catch (err) {
       console.error('Failed to export certificate canvas:', err);
     } finally {
       setIsGeneratingPng(false);
-    }
-  };
-
-  const handlePrintCertificate = () => {
-    if (onPrint) {
-      onPrint();
-    } else {
-      window.print();
     }
   };
 
@@ -358,32 +391,13 @@ export const BaroqueCertificate: React.FC<BaroqueCertificateProps> = ({
           </div>
 
           <div className="flex items-center gap-2">
-            {onShareToWhatsApp && (
-              <button
-                onClick={onShareToWhatsApp}
-                className="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md active:scale-95 cursor-pointer"
-                title="Share Certificate to WhatsApp"
-              >
-                <MessageCircle className="w-4 h-4 fill-current" />
-                <span>WhatsApp</span>
-              </button>
-            )}
-
             <button
-              onClick={handleDownloadPng}
+              onClick={handleSavePdf}
               disabled={isGeneratingPng}
               className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-300 hover:to-yellow-400 text-slate-950 font-black text-xs flex items-center gap-2 transition-all shadow-md active:scale-95 cursor-pointer disabled:opacity-50"
             >
               <Download className="w-4 h-4" />
-              <span>{isGeneratingPng ? 'Generating...' : 'Download PNG (1920x1080)'}</span>
-            </button>
-
-            <button
-              onClick={handlePrintCertificate}
-              className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center gap-2 transition-all shadow-md active:scale-95 cursor-pointer"
-            >
-              <Printer className="w-4 h-4" />
-              <span>Print / PDF</span>
+              <span>{isGeneratingPng ? 'Preparing PDF...' : 'Save PDF'}</span>
             </button>
           </div>
         </div>
