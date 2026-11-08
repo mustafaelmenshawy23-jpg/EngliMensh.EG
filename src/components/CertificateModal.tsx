@@ -8,14 +8,12 @@ interface CertificateModalProps {
   isOpen: boolean;
   onClose: () => void;
   data: CertificateData;
-  onShareToWhatsApp?: () => void;
 }
 
 export const CertificateModal: React.FC<CertificateModalProps> = ({
   isOpen,
   onClose,
   data,
-  onShareToWhatsApp,
 }) => {
   if (!isOpen) return null;
 
@@ -51,7 +49,6 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
         <div className="p-3 sm:p-5 md:p-6 overflow-x-auto">
           <BaroqueCertificate
             data={data}
-            onShareToWhatsApp={onShareToWhatsApp}
             showActions={true}
           />
         </div>
