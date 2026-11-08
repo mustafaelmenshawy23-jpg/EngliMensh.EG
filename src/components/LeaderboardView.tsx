@@ -216,7 +216,6 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
               <BaroqueCertificate
                 data={previewData}
                 showActions={true}
-                onShareToWhatsApp={onOpenShareModal}
               />
             </div>
           );
